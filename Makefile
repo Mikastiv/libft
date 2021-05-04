@@ -1,4 +1,4 @@
-OBJS	=	ft_memset.o ft_bzero.o ft_memcpy.o
+OBJS	=	ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o
 NAME	=	libft.a
 CC		=	clang
 LIBC	=	ar rcs
