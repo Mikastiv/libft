@@ -1,5 +1,5 @@
 OBJS	=	ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o $\
-			ft_memchr.o ft_memcmp.o ft_strlen.o
+			ft_memchr.o ft_memcmp.o ft_strlen.o ft_isalpha.o
 NAME	=	libft.a
 CC		=	clang
 LIBC	=	ar rcs
