@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/04 22:20:36 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 09:45:50 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/05/05 09:42:56 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/05/05 09:46:44 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalpha(int c)
+int	ft_isupper(int c)
 {
-	return (ft_isupper(c) || ft_islower(c));
+	return ((unsigned char)c >= 'A' && (unsigned char)c <= 'Z');
 }

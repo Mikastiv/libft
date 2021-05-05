@@ -6,11 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 08:58:41 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 09:02:41 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/05 09:46:30 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	return (c >= '0' && c <= '9');
+	return ((unsigned char)c >= '0' && (unsigned char)c <= '9');
 }
