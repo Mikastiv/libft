@@ -6,12 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 15:48:07 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 18:05:08 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/05 19:14:18 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdbool.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
