@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 10:54:25 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 11:03:21 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/05 12:04:36 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;
-	
+
 	len = ft_strlen(s);
 	while (len > 0)
 	{
