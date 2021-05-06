@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 15:27:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/06 18:51:49 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/06 19:37:31 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ static void	ft_append_words(char **arr, char const *s, char c)
 	}
 	if (in_word)
 		arr[i++] = ft_get_word(w_start, s - w_start, c);
-	arr[i] = NULL;
 }
 
 static void	ft_free_str_array(char **arr, size_t size)
