@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/06 12:09:27 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/06 13:27:38 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/05/06 13:35:02 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/05/06 13:45:06 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	newlen;
-	char	*substr;
+	char	*newstr;
+	size_t	size;
 
-	newlen = ft_strnlen(s + start, len) + 1;
-	substr = (char *)malloc(newlen * sizeof(char));
-	if (!substr)
+	size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	newstr = (char *)malloc(size * sizeof(char));
+	if (!newstr)
 		return (NULL);
-	ft_strlcpy(substr, s + start, newlen * sizeof(char));
-	return (substr);
+	ft_strlcpy(newstr, s1, size * sizeof(char));
+	ft_strlcat(newstr, s2, size * sizeof(char));
+	return (newstr);
 }
