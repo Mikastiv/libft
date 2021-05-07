@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
+#    Updated: 2021/05/07 16:28:24 by mleblanc         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 OBJS	=	ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o $\
 			ft_memchr.o ft_memcmp.o ft_strlen.o ft_isalpha.o ft_isdigit.o $\
 			ft_isalnum.o ft_isascii.o ft_isprint.o ft_isupper.o ft_islower.o $\
@@ -6,9 +18,8 @@ OBJS	=	ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o $\
 			ft_atoi.o ft_strdup.o ft_calloc.o ft_substr.o ft_strjoin.o $\
 			ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o $\
 			ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
-BONUS	=	ft_lstnew_bonus.o ft_lstadd_front_bonus.o ft_lstsize_bonus.o $\
-			ft_lstlast_bonus.o ft_lstadd_back_bonus.o ft_lstdelone_bonus.o $\
-			ft_lstclear_bonus.o
+BONUS	=	ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o $\
+			ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o
 NAME	=	libft.a
 CC		=	clang
 LIBC	=	ar rcs
