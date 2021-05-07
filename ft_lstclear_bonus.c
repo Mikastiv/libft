@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/06 21:27:55 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/07 11:18:37 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/05/07 11:49:46 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/05/07 13:19:46 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	t_list	*tmp;
+
+	if (*lst)
+	{
+		tmp = ft_lstlast(*lst);
+		while (*lst != tmp)
+		{
+			ft_lstdelone(tmp, del);
+			tmp = ft_lstlast(*lst);
+		}
+		ft_lstdelone(*lst, del);
+		*lst = NULL;
+	}
 }

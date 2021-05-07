@@ -6,7 +6,9 @@ OBJS	=	ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o $\
 			ft_atoi.o ft_strdup.o ft_calloc.o ft_substr.o ft_strjoin.o $\
 			ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o $\
 			ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
-BONUS	=	ft_lstnew.o
+BONUS	=	ft_lstnew_bonus.o ft_lstadd_front_bonus.o ft_lstsize_bonus.o $\
+			ft_lstlast_bonus.o ft_lstadd_back_bonus.o ft_lstdelone_bonus.o $\
+			ft_lstclear_bonus.o
 NAME	=	libft.a
 CC		=	clang
 LIBC	=	ar rcs

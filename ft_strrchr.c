@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 10:54:25 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 12:04:36 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/07 13:28:00 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	len;
+	const char	*ptr;
 
-	len = ft_strlen(s);
-	while (len > 0)
+	ptr = s + ft_strlen(s);
+	while (s <= ptr)
 	{
-		if (s[len] == (unsigned char)c)
-			return ((char *)(s + len));
-		len--;
+		if (*ptr == (unsigned char)c)
+			return ((char *)(ptr));
+		ptr--;
 	}
 	return (NULL);
 }
