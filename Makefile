@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/05/07 16:28:24 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/05/07 18:24:30 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ OBJS	=	ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o $\
 			ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o $\
 			ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
 BONUS	=	ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o $\
-			ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o
+			ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o $\
+			ft_lstmap.o
 NAME	=	libft.a
 CC		=	clang
 LIBC	=	ar rcs
