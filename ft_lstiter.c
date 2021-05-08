@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 15:43:27 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/07 16:03:49 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/08 13:08:21 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)
 	{
-		(*f)(lst->content);
+		f(lst->content);
 		lst = lst->next;
 	}
 }

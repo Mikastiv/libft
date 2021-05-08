@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 16:31:26 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/07 18:40:35 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/08 13:09:12 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new_lst = NULL;
 	while (lst)
 	{
-		tmp = ft_lstnew((*f)(lst->content));
+		tmp = ft_lstnew(f(lst->content));
 		if (!tmp)
 		{
 			ft_lstclear(&new_lst, del);
