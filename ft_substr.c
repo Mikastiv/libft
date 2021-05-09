@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 12:09:27 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/09 02:56:58 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/09 13:26:06 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = (char *)ft_calloc(newlen + 1, sizeof(char));
 	if (!substr)
 		return (NULL);
-	ft_strlcpy(substr, s + start, newlen + 1);
+	ft_strlcpy(substr, s + start, (newlen + 1) * sizeof(char));
 	return (substr);
 }

@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 15:27:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/06 19:37:31 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/09 13:23:49 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static char	*ft_get_word(const char *s, int len, char c)
 	word = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!word)
 		return (NULL);
-	ft_strlcpy(word, s, len + 1);
+	ft_strlcpy(word, s, (len + 1) * sizeof(char));
 	return (word);
 }
 
