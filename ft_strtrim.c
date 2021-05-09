@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 14:25:28 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/06 19:39:48 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/09 01:35:23 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
-	end = s1 + (ft_strlen(s1) - 1) * sizeof(char);
+	len = ft_strlen(s1);
+	if (len > 0)
+		end = s1 + (len - 1) * sizeof(char);
+	else
+		end = s1;
 	while (end > s1 && ft_strchr(set, *end))
 		end--;
 	len = end - s1 + 1;
