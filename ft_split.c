@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 15:27:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/09 13:23:49 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/12 14:33:41 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static char	*ft_get_word(const char *s, int len, char c)
 	return (word);
 }
 
-static void	ft_append_words(char **arr, char const *s, char c)
+static void	ft_append_words(char **arr, const char *s, char c)
 {
 	const char	*w_start;
 	int			i;
@@ -94,7 +94,7 @@ static void	ft_free_str_array(char **arr, size_t size)
 	}
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**ret;
 	size_t	word_count;
