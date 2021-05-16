@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 17:31:45 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/16 00:36:05 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/05/16 00:54:22 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_itoa(int n)
 {
-	return (ft_itoa_base(n, 10));
+	return (ft_itoa_base(n, "0123456789"));
 }
