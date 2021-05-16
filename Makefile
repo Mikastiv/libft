@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/05/16 01:22:07 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/05/16 01:25:29 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ bonus:		$(OBJS) $(BONUS)
 			$(LIBC) $(NAME) $(OBJS) $(BONUS)
 
 norme:
-			norminette $(SRCS) $(B_SRCS)
+			norminette $(SRCS) $(B_SRCS) libft.h
 
 all:		$(NAME)
 
