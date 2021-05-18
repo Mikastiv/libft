@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_ultoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/16 01:50:27 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/18 14:47:29 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/05/18 14:40:47 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/05/18 14:44:02 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_numlen(unsigned int num, unsigned int base)
+static size_t	ft_numlen(unsigned long num, unsigned long base)
 {
 	size_t	len;
 
@@ -25,7 +25,7 @@ static size_t	ft_numlen(unsigned int num, unsigned int base)
 	return (len + 1);
 }
 
-static void	ft_ntoa(char *buf, unsigned int n, const char *base, size_t len)
+static void	ft_ntoa(char *buf, unsigned long n, const char *base, size_t len)
 {
 	size_t	base_len;
 
@@ -37,14 +37,14 @@ static void	ft_ntoa(char *buf, unsigned int n, const char *base, size_t len)
 	}
 }
 
-char	*ft_utoa_base(unsigned int n, const char *base)
+char	*ft_ultoa_base(unsigned long n, const char *base)
 {
 	char	*ret;
 	size_t	len;
 	size_t	base_len;
 
 	base_len = ft_strlen(base);
-	len = ft_numlen(n, (unsigned int)base_len);
+	len = ft_numlen(n, (unsigned long)base_len);
 	ret = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!ret)
 		return (NULL);
