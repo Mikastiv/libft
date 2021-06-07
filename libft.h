@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/26 18:46:54 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/07 17:49:17 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ void	ft_putwchar_fd(wint_t c, int fd);
 void	ft_putwstr_fd(const wchar_t *s, int fd);
 void	ft_putendl_fd(const char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_base_fd(long long n, const char *base, int fd);
+void	ft_putunbr_base_fd(unsigned long long n, const char *base, int fd);
 
 typedef struct s_list
 {
