@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 18:49:21 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 20:39:59 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:23:41 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (*ptr == (unsigned char)c)
 			return ((void *)ptr);
-		ptr++;
+		++ptr;
 	}
 	return (NULL);
 }

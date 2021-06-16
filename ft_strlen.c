@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 22:09:31 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/04 22:11:04 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:24:59 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ size_t	ft_strlen(const char *s)
 
 	len = 0;
 	while (s[len])
-		len++;
+		++len;
 	return (len);
 }

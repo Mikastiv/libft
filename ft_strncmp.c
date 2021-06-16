@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 11:47:58 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 12:03:16 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:25:14 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			return ((unsigned char)*s1 - (unsigned char)*s2);
 		if (*s1 == '\0')
 			break ;
-		s1++;
-		s2++;
+		++s1;
+		++s2;
 	}
 	return (0);
 }

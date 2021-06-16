@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 10:47:57 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/07 10:54:54 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:23:25 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_lstsize(t_list *lst)
 	while (lst)
 	{
 		lst = lst->next;
-		size++;
+		++size;
 	}
 	return (size);
 }

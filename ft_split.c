@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 15:27:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/12 14:33:41 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:26:13 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ static size_t	ft_count_words(const char *s, const char c)
 	while (*s)
 	{
 		if (in_word && *s == c)
-			count++;
+			++count;
 		if (*s == c)
 			in_word = false;
 		else
 			in_word = true;
 		if (!in_word)
 			w_start = s;
-		s++;
+		++s;
 	}
 	if (in_word)
-		count++;
+		++count;
 	return (count);
 }
 
@@ -46,8 +46,8 @@ static char	*ft_get_word(const char *s, int len, char c)
 
 	if (*s == c)
 	{
-		s++;
-		len--;
+		++s;
+		--len;
 	}
 	word = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!word)
@@ -75,7 +75,7 @@ static void	ft_append_words(char **arr, const char *s, char c)
 			in_word = true;
 		if (!in_word)
 			w_start = s;
-		s++;
+		++s;
 	}
 	if (in_word)
 		arr[i++] = ft_get_word(w_start, s - w_start, c);
@@ -90,7 +90,7 @@ static void	ft_free_str_array(char **arr, size_t size)
 	{
 		if (arr[i] != NULL)
 			free(arr[i]);
-		i++;
+		++i;
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 18:21:02 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/07 18:22:01 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:24:14 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_numlen(long long n, long long radix)
 	while (n / radix != 0)
 	{
 		n /= radix;
-		len++;
+		++len;
 	}
 	return (len + 1);
 }

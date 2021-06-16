@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 19:33:10 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/12 14:33:41 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:25:04 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	while (s[i])
 	{
 		ret[i] = f(i, s[i]);
-		i++;
+		++i;
 	}
 	return (ret);
 }

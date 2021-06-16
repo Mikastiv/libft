@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 10:54:25 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/07 13:28:00 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:26:19 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (*ptr == (unsigned char)c)
 			return ((char *)(ptr));
-		ptr--;
+		--ptr;
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 15:48:07 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 19:14:18 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:25:30 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			if (ft_strncmp(haystack, needle, needle_len) == 0)
 				return ((char *)haystack);
 		}
-		len--;
-		haystack++;
+		--len;
+		++haystack;
 	}
 	return (NULL);
 }

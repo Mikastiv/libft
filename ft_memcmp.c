@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 20:10:18 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 20:40:14 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:23:53 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (*ptr1 != *ptr2)
 			return (*ptr1 - *ptr2);
-		ptr1++;
-		ptr2++;
+		++ptr1;
+		++ptr2;
 	}
 	return (0);
 }

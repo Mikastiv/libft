@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 20:14:11 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 20:29:59 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:22:58 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	result = 0;
 	while (ft_isspace(*str))
-		str++;
+		++str;
 	if (*str == '-')
 	{
 		sign = -1;
-		str++;
+		++str;
 	}
 	else if (*str == '+')
-		str++;
+		++str;
 	while (ft_isdigit(*str))
 		result = (result * 10) + (*str++ - '0');
 	return (result * sign);
