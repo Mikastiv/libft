@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/06/15 21:43:01 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/06/16 04:03:25 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,11 @@ SRCS	=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c $\
 			ft_wstrnlen.c ft_wchar_size.c ft_putwchar_fd.c ft_putwstr_fd.c $\
 			ft_wstr_size.c ft_lltoa_base.c ft_lltoa.c ft_ulltoa_base.c $\
 			ft_ulltoa.c ft_putnbr_base_fd.c ft_putunbr_base_fd.c ft_numlen.c $\
-			ft_unumlen.c ft_ntoa_base.c ft_ntoa.c ft_untoa.c ft_ftoa.c
-OBJS	=	$(SRCS:.c=.o)
-B_SRCS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c $\
+			ft_unumlen.c ft_ntoa_base.c ft_ntoa.c ft_untoa.c ft_ftoa.c $\
+			ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c $\
 			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c $\
 			ft_lstmap.c
-BONUS	=	$(B_SRCS:.c=.o)
+OBJS	=	$(SRCS:.c=.o)
 NAME	=	libft.a
 CC		=	clang
 LIBC	=	ar rcs
@@ -41,20 +40,17 @@ RM		=	rm -rf
 $(NAME):	$(OBJS)
 			$(LIBC) $(NAME) $(OBJS)
 
-bonus:		$(OBJS) $(BONUS)
-			$(LIBC) $(NAME) $(OBJS) $(BONUS)
-
 norme:
-			norminette $(SRCS) $(B_SRCS) libft.h
+			norminette $(SRCS) libft.h
 
 all:		$(NAME)
 
 clean:
-			$(RM) $(OBJS) $(BONUS)
+			$(RM) $(OBJS)
 
 fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re bonus norme
+.PHONY:		all clean fclean re norme
