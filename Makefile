@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/06/16 04:03:25 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/06/16 17:58:09 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ OBJS	=	$(SRCS:.c=.o)
 NAME	=	libft.a
 CC		=	clang
 LIBC	=	ar rcs
-CFLAGS	=	-Wall -Werror -Wextra -g
+CFLAGS	=	-Wall -Werror -Wextra
 RM		=	rm -rf
 
 %.o:		%.c
