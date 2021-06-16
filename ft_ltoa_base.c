@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 14:23:59 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/07 18:49:10 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/15 20:39:50 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char	*ft_ltoa_base(long n, const char *base)
 	ret = (char *)ft_calloc(size, sizeof(char));
 	if (!ret)
 		return (NULL);
-	ft_ntoa(ret, n, len, base);
+	ft_ntoa_base(ret, n, len, base);
 	return (ret);
 }

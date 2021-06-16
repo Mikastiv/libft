@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/07 18:47:05 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/16 03:42:52 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <wchar.h>
+# include <stdbool.h>
 
 void	*ft_calloc(size_t count, size_t size);
 void	*ft_memset(void *b, int c, size_t len);
@@ -39,7 +40,8 @@ int		ft_tolower(int c);
 int		ft_atoi(const char *str);
 size_t	ft_numlen(long long n, long long radix);
 size_t	ft_unumlen(unsigned long long n, unsigned long long radix);
-void	ft_ntoa(char *b, long long n, size_t len, const char *base);
+void	ft_ntoa_base(char *b, long long n, size_t len, const char *base);
+void	ft_ntoa(char *b, long long n, size_t len);
 void	ft_untoa(char *b, unsigned long long n, size_t len, const char *base);
 char	*ft_itoa(int n);
 char	*ft_itoa_base(int n, const char *base);
@@ -55,6 +57,21 @@ char	*ft_ulltoa(unsigned long long n);
 char	*ft_ulltoa_base(unsigned long long n, const char *base);
 char	*ft_ptoa(void *ptr);
 char	*ft_ptoa_base(void *ptr, const char *base);
+
+typedef struct s_floatinfo
+{
+	bool			negative;
+	unsigned long	whole;
+	unsigned long	frac;
+	double			diff;
+	double			tmp;
+	size_t			zero_pad;
+	size_t			whole_len;
+	size_t			frac_len;
+	size_t			str_len;
+}	t_floatinfo;
+
+char	*ft_ftoa(double n, int precision);
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strnlen(const char *s, size_t maxlen);
