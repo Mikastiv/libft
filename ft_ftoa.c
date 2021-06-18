@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 13:10:12 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/17 22:26:52 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/17 22:51:01 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	calc_info(double n, int precision, t_floatinfo *info)
 		precision = 9;
 	if (info->negative)
 		info->str_len++;
-	info->whole = (int)n;
+	info->whole = (unsigned long)n;
 	info->tmp = (n - info->whole) * g_power[precision];
 	info->frac = (unsigned long)info->tmp;
 	info->diff = info->tmp - info->frac;
@@ -115,7 +115,7 @@ char	*ft_ftoa(double n, int precision)
 	if (info.negative)
 		++ptr;
 	write_decimal(ptr, n, ++precision, &info);
-	ft_ntoa(ptr, info.whole, info.whole_len);
+	ft_untoa(ptr, info.whole, info.whole_len);
 	if (info.negative)
 		ret[0] = '-';
 	return (ret);
