@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 13:10:12 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/17 22:51:01 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/17 23:18:59 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static void	calc_info(double n, int precision, t_floatinfo *info)
 	if (info->diff > 0.5)
 	{
 		info->frac++;
-		if (info->diff >= g_power[precision])
+		if (info->frac >= g_power[precision])
 		{
 			info->frac = 0;
 			info->whole++;
