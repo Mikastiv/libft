@@ -6,12 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 20:33:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/17 20:38:22 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/17 22:09:32 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
+#include <stdlib.h>
 #include <limits.h>
 
 #ifndef BUFFER_SIZE

@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/17 20:32:29 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/17 22:07:28 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ typedef struct s_floatinfo
 }	t_floatinfo;
 
 char	*ft_ftoa(double n, int precision);
+size_t	ft_float_len(double n, int precision);
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strnlen(const char *s, size_t maxlen);

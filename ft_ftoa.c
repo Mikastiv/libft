@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 13:10:12 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/16 04:00:53 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/17 22:14:42 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,6 @@
 static const double	g_power[] = {
 	1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000
 };
-
-static size_t	float_len(double n, int precision)
-{
-	size_t	len;
-
-	len = ft_numlen((long)n, 10);
-	if (precision > 0)
-		len += (size_t)precision + 1;
-	return (len);
-}
 
 static char	*check_special_values(double n)
 {
@@ -41,7 +31,7 @@ static char	*check_special_values(double n)
 
 static void	calc_info(double n, int precision, t_floatinfo *info)
 {
-	info->str_len = float_len(n, precision);
+	info->str_len = ft_float_len(n, precision);
 	if (precision > 9)
 		precision = 9;
 	if (info->negative)
@@ -66,11 +56,22 @@ static void	calc_info(double n, int precision, t_floatinfo *info)
 	info->zero_pad = 0;
 }
 
-static void	write_decimal(char *b, double n, int precision, t_floatinfo *info)
+static void	write_padding(char *b, int precision, t_floatinfo *info)
 {
 	size_t	i;
 
 	i = 0;
+	info->zero_pad = precision - info->frac_len;
+	if (info->frac == 0)
+		info->zero_pad++;
+	while (i < info->zero_pad)
+		b[info->whole_len + 1 + i++] = '0';
+}
+
+static void	write_decimal(char *b, double n, int precision, t_floatinfo *info)
+{
+	size_t	i;
+
 	if (precision == 0)
 	{
 		info->diff = n - (double)info->whole;
@@ -80,11 +81,7 @@ static void	write_decimal(char *b, double n, int precision, t_floatinfo *info)
 	else
 	{
 		if (info->frac_len < (size_t)precision)
-		{
-			info->zero_pad = precision - info->frac_len;
-			while (i < info->zero_pad)
-				b[info->whole_len + 1 + i++] = '0';
-		}
+			write_padding(b, precision, info);
 		while (info->frac != 0 && precision--)
 		{
 			i = info->whole_len + info->zero_pad + info->frac_len--;
