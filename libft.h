@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/22 22:29:59 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/24 15:05:18 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,5 +121,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 int		ft_lstsize(t_list *lst);
 
 int		get_next_line(int fd, char **line);
+size_t	count_lines(char *file);
 
 #endif
