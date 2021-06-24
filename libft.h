@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/24 15:42:43 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/24 16:15:01 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,8 +94,9 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char	**ft_split(const char *s, char c);
-bool	ft_strany(const char *s, bool(*f)(char));
-void	ft_strforeach(char *s, void(*f)(char));
+bool	ft_str_any(const char *s, bool(*f)(char));
+void	ft_str_foreach(char *s, void(*f)(char));
+size_t	ft_str_count_if(const char *s, bool(*f)(char));
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(const char *s, int fd);

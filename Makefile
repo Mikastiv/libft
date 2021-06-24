@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/06/24 15:40:51 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/06/24 16:16:26 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ SRCS	=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c $\
 			ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c $\
 			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c $\
 			ft_lstmap.c get_next_line.c ft_float_len.c ft_untoa_base.c $\
-			ft_free.c count_lines.c ft_strany.c ft_strforeach.c
+			ft_free.c count_lines.c ft_str_any.c ft_str_foreach.c $\
+			ft_str_count_if.c
 OBJS	=	$(SRCS:.c=.o)
 NAME	=	libft.a
 CC		=	clang
