@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 15:05:29 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/24 15:11:20 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/24 19:25:45 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@
 
 #define BUF_SIZE 1024
 
-size_t	count_lines(char *file)
+int	count_lines(char *file)
 {
 	char	buf[BUF_SIZE + 1];
 	ssize_t	bytes;
-	size_t	count;
+	int	count;
 	char	*newline;
 	int		fd;
 
 	fd = open(file, O_RDONLY);
 	if (fd < 0)
-		return ((size_t)(-1));
+		return (-1);
 	count = 0;
 	bytes = 1;
 	while (bytes > 0)
@@ -35,7 +35,7 @@ size_t	count_lines(char *file)
 		if (bytes < 0)
 			close(fd);
 		if (bytes < 0)
-			return ((size_t)(-1));
+			return (-1);
 		buf[bytes] = 0;
 		newline = ft_strchr(buf, '\n');
 		while (newline && ++count)
