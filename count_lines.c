@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 15:05:29 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/24 19:25:45 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/24 20:27:06 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	count_lines(char *file)
 {
 	char	buf[BUF_SIZE + 1];
 	ssize_t	bytes;
-	int	count;
+	int		count;
 	char	*newline;
 	int		fd;
 
