@@ -6,15 +6,14 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 20:07:46 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/22 22:30:18 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/28 22:53:20 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_free(void **ptr)
+void	*ft_free(void *ptr)
 {
-	free(*ptr);
-	*ptr = NULL;
+	free(ptr);
 	return (NULL);
 }
