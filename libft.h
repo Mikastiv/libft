@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/24 19:25:14 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/06/28 22:19:00 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 
 int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
 size_t	ft_numlen(long n, long radix);
 size_t	ft_unumlen(unsigned long n, unsigned long radix);
 void	ft_ntoa_base(char *b, long n, size_t len, const char *base);
