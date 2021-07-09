@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/29 01:01:09 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/07/09 12:06:20 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,20 +60,6 @@ char	*ft_ulltoa(unsigned long long n);
 char	*ft_ulltoa_base(unsigned long long n, const char *base);
 char	*ft_ptoa(void *ptr);
 char	*ft_ptoa_base(void *ptr, const char *base);
-
-typedef struct s_floatinfo
-{
-	bool			negative;
-	unsigned long	whole;
-	unsigned long	frac;
-	double			diff;
-	double			tmp;
-	size_t			zero_pad;
-	size_t			whole_len;
-	size_t			frac_len;
-	size_t			str_len;
-}	t_floatinfo;
-
 char	*ft_ftoa(double n, int precision);
 size_t	ft_float_len(double n, int precision);
 
@@ -127,5 +113,7 @@ int		ft_lstsize(t_list *lst);
 
 int		get_next_line(int fd, char **line);
 int		count_lines(char *file);
+
+int		ft_printf(const char *format, ...);
 
 #endif

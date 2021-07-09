@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ftoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 13:10:12 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/17 23:18:59 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/07/09 12:06:54 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "convert.h"
 #include <stdbool.h>
 #include <float.h>
 
