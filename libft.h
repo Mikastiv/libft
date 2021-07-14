@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/07/09 12:06:20 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/07/14 16:28:47 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,6 @@ int		ft_tolower(int c);
 
 int		ft_atoi(const char *str);
 long	ft_atol(const char *str);
-size_t	ft_numlen(long n, long radix);
-size_t	ft_unumlen(unsigned long n, unsigned long radix);
 void	ft_ntoa_base(char *b, long n, size_t len, const char *base);
 void	ft_ntoa(char *b, long n, size_t len);
 void	ft_untoa_base(char *b, unsigned long n, size_t len, const char *base);
@@ -61,6 +59,8 @@ char	*ft_ulltoa_base(unsigned long long n, const char *base);
 char	*ft_ptoa(void *ptr);
 char	*ft_ptoa_base(void *ptr, const char *base);
 char	*ft_ftoa(double n, int precision);
+size_t	ft_numlen(long n, long radix);
+size_t	ft_unumlen(unsigned long n, unsigned long radix);
 size_t	ft_float_len(double n, int precision);
 
 size_t	ft_strlen(const char *s);
