@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 21:20:12 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/06 21:21:41 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/07/19 13:01:55 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	write(fd, &c, sizeof(char));
 }
