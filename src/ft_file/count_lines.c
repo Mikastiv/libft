@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 15:05:29 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/24 20:27:06 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/07/19 12:57:51 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#define BUF_SIZE 1024
+#define BUF_SIZE (1024)
 
 int	count_lines(char *file)
 {

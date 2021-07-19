@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 16:45:36 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/26 01:59:03 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/07/19 12:58:07 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 #include <limits.h>
 #include <wchar.h>
 
-#define NULL_STR "(null)"
-#define NULL_WSTR L"(null)"
+#define NULL_STR ("(null)")
+#define NULL_WSTR (L"(null)")
 
 static int	wstr_size(const wchar_t *s, int prec, int extra, bool has_prec)
 {

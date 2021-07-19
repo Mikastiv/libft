@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 20:33:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/17 22:09:32 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/07/19 12:57:45 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 #include <limits.h>
 
 #ifndef BUFFER_SIZE
-# define BUFFER_SIZE 32
+# define BUFFER_SIZE (32)
 #endif
 
 #ifndef OPEN_MAX
-# define OPEN_MAX 256
+# define OPEN_MAX (256)
 #endif
 
 static int	read_file(char	**file_buffer, int fd)
