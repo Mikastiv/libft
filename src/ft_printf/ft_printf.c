@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 19:07:16 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/26 20:13:00 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/07/19 11:27:59 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 static int	ft_putchar(char c)
 {
-	write(1, &c, sizeof(char));
+	write(STDOUT_FILENO, &c, sizeof(char));
 	return (sizeof(char));
 }
 
