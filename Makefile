@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+         #
+#    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/07/14 18:05:48 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/18 16:05:08 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ CONV_SRC	=	ft_atoi.c ft_atol.c ft_float_len.c ft_ftoa.c ft_itoa_base.c\
 FILE_SRC	=	count_lines.c get_next_line.c
 LIST_SRC	=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
 				ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c\
-				ft_lstsize.c
+				ft_lstsize.c ft_lstpop_front.c
 MEM_SRC		=	ft_bzero.c ft_calloc.c ft_free.c ft_memccpy.c ft_memchr.c\
 				ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c
 PRINT_SRC	=	convert_char.c convert_float.c convert_int.c convert_n.c\

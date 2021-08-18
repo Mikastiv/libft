@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 11:43:06 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/08 13:08:55 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/18 16:08:28 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst)
 	{
-		if (del)
-			del(lst->content);
+		del(lst->content);
 		free(lst);
 	}
 }
