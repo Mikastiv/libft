@@ -6,11 +6,12 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/20 16:49:51 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/20 18:08:15 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 OBJ		=	obj
+SRC		=	src
 NAME	=	libft.a
 CC		=	clang
 LIBC	=	ar rcs
@@ -18,82 +19,79 @@ CFLAGS	=	-Wall -Werror -Wextra
 RM		=	rm -rf
 NM		=	norminette
 
-CHAR_SRC	=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c\
+CHAR_DIR	=	$(SRC)/ft_char
+CHAR_C		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c\
 				ft_isprint.c ft_isspace.c ft_isupper.c ft_tolower.c ft_toupper.c
-CONV_SRC	=	ft_atoi.c ft_atol.c ft_float_len.c ft_ftoa.c ft_itoa_base.c\
+CHAR_SRC	=	$(addprefix $(CHAR_DIR)/, $(CHAR_C))
+
+CONV_DIR	=	$(SRC)/ft_convert
+CONV_C		=	ft_atoi.c ft_atol.c ft_float_len.c ft_ftoa.c ft_itoa_base.c\
 				ft_itoa.c ft_lltoa_base.c ft_lltoa.c ft_ltoa_base.c ft_ltoa.c\
 				ft_ntoa_base.c ft_ntoa.c ft_numlen.c ft_ptoa_base.c ft_ptoa.c\
 				ft_ulltoa_base.c ft_ulltoa.c ft_ultoa_base.c ft_ultoa.c\
 				ft_untoa_base.c ft_untoa.c ft_unumlen.c ft_utoa_base.c ft_utoa.c
-FILE_SRC	=	count_lines.c get_next_line.c
-LIST_SRC	=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
+CONV_SRC	=	$(addprefix $(CONV_DIR)/, $(CONV_C))
+
+FILE_DIR	=	$(SRC)/ft_file
+FILE_C		=	count_lines.c get_next_line.c
+FILE_SRC	=	$(addprefix $(FILE_DIR)/, $(FILE_C))
+
+LIST_DIR	=	$(SRC)/ft_list
+LIST_C		=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
 				ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c\
 				ft_lstpop_front.c ft_lstsize.c
-MEM_SRC		=	ft_bzero.c ft_calloc.c ft_free.c ft_memccpy.c ft_memchr.c\
+LIST_SRC	=	$(addprefix $(LIST_DIR)/, $(LIST_C))
+
+MEM_DIR		=	$(SRC)/ft_memory
+MEM_C		=	ft_bzero.c ft_calloc.c ft_free.c ft_memccpy.c ft_memchr.c\
 				ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c
-PRINT_SRC	=	convert_char.c convert_float.c convert_int.c convert_n.c\
+MEM_SRC		=	$(addprefix $(MEM_DIR)/, $(MEM_C))
+
+PRINT_DIR	=	$(SRC)/ft_printf
+PRINT_H		=	convert.h do_printf.h flags.h utils.h
+PRINT_C		=	convert_char.c convert_float.c convert_int.c convert_n.c\
 				convert_num_utils.c convert_percent.c convert_ptr.c convert_str.c\
 				convert_uint.c convert.c do_printf.c ft_printf.c utils.c
-PUT_SRC		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
+PRINT_SRC	=	$(addprefix $(PRINT_DIR)/, $(PRINT_C))
+PRINT_INC	=	$(addprefix $(PRINT_DIR)/include/, $(PRINT_H))
+
+PUT_DIR		=	$(SRC)/ft_put
+PUT_C		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
 				ft_putstr_fd.c ft_putunbr_base_fd.c ft_putwchar_fd.c\
 				ft_putwstr_fd.c
-STR_SRC		=	ft_split.c ft_str_any.c ft_str_count_if.c ft_str_foreach.c\
+PUT_SRC		=	$(addprefix $(PUT_DIR)/, $(PUT_C))
+
+STR_DIR		=	$(SRC)/ft_string
+STR_C		=	ft_split.c ft_str_any.c ft_str_count_if.c ft_str_foreach.c\
 				ft_strchr.c ft_strdup.c ft_strjoin.c ft_strjoin_free.c ft_strlcat.c\
 				ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c\
 				ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_wchar_size.c\
 				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c
+STR_SRC		=	$(addprefix $(STR_DIR)/, $(STR_C))
 
-OFILES	=	$(CHAR_SRC:.c=.o) $(CONV_SRC:.c=.o) $(FILE_SRC:.c=.o) $(LIST_SRC:.c=.o)\
-			$(MEM_SRC:.c=.o) $(PRINT_SRC:.c=.o) $(PUT_SRC:.c=.o) $(STR_SRC:.c=.o)
+OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
+			$(MEM_C:.c=.o) $(PRINT_C:.c=.o) $(PUT_C:.c=.o) $(STR_C:.c=.o)
 OBJS	=	$(addprefix $(OBJ)/, $(OFILES))
 
-ARGS		=	CC="$(CC)" CFLAGS="$(CFLAGS)" RM="$(RM)" NM="$(NM)"
-MAKE_CHAR	=	@$(MAKE) -C src/ft_char $(ARGS) CFILES="$(CHAR_SRC)"
-MAKE_CONV	=	@$(MAKE) -C src/ft_convert $(ARGS) CFILES="$(CONV_SRC)"
-MAKE_FILE	=	@$(MAKE) -C src/ft_file $(ARGS) CFILES="$(FILE_SRC)"
-MAKE_LIST	=	@$(MAKE) -C src/ft_list $(ARGS) CFILES="$(LIST_SRC)"
-MAKE_MEM	=	@$(MAKE) -C src/ft_memory $(ARGS) CFILES="$(MEM_SRC)"
-MAKE_PRINT	=	@$(MAKE) -C src/ft_printf $(ARGS) CFILES="$(PRINT_SRC)"
-MAKE_PUT	=	@$(MAKE) -C src/ft_put $(ARGS) CFILES="$(PUT_SRC)"
-MAKE_STR	=	@$(MAKE) -C src/ft_string $(ARGS) CFILES="$(STR_SRC)"
+VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR)\
+			$(PUT_DIR) $(STR_DIR)
 
-$(NAME):	$(OBJ)
-			$(MAKE_CHAR) all
-			$(MAKE_CONV) all
-			$(MAKE_FILE) all
-			$(MAKE_LIST) all
-			$(MAKE_MEM) all
-			$(MAKE_PRINT) all
-			$(MAKE_PUT) all
-			$(MAKE_STR) all
+$(OBJ)/%.o:	%.c
+			$(CC) $(CFLAGS) -c -I. -I$(PRINT_DIR)/include $< -o $@
+
+$(NAME):	$(OBJ) $(OBJS)
 			$(LIBC) $(NAME) $(OBJS)
-
 
 $(OBJ):
 			@mkdir -p $(OBJ)
 
 norme:
-			$(MAKE_CHAR) norme
-			$(MAKE_CONV) norme
-			$(MAKE_FILE) norme
-			$(MAKE_LIST) norme
-			$(MAKE_MEM) norme
-			$(MAKE_PRINT) norme
-			$(MAKE_PUT) norme
-			$(MAKE_STR) norme
-			norminette libft.h
+			norminette libft.h $(PRINT_INC) $(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC)\
+			$(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(STR_SRC)
 
 all:		$(NAME)
 
 clean:
-			$(MAKE_CHAR) clean
-			$(MAKE_CONV) clean
-			$(MAKE_FILE) clean
-			$(MAKE_LIST) clean
-			$(MAKE_MEM) clean
-			$(MAKE_PRINT) clean
-			$(MAKE_PUT) clean
-			$(MAKE_STR) clean
 			@$(RM) $(OBJS)
 
 fclean:		clean
