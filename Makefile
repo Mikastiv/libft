@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/18 16:05:08 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/20 16:49:51 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ CONV_SRC	=	ft_atoi.c ft_atol.c ft_float_len.c ft_ftoa.c ft_itoa_base.c\
 FILE_SRC	=	count_lines.c get_next_line.c
 LIST_SRC	=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
 				ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c\
-				ft_lstsize.c ft_lstpop_front.c
+				ft_lstpop_front.c ft_lstsize.c
 MEM_SRC		=	ft_bzero.c ft_calloc.c ft_free.c ft_memccpy.c ft_memchr.c\
 				ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c
 PRINT_SRC	=	convert_char.c convert_float.c convert_int.c convert_n.c\
@@ -38,9 +38,9 @@ PUT_SRC		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
 				ft_putstr_fd.c ft_putunbr_base_fd.c ft_putwchar_fd.c\
 				ft_putwstr_fd.c
 STR_SRC		=	ft_split.c ft_str_any.c ft_str_count_if.c ft_str_foreach.c\
-				ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c\
-				ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c ft_strnstr.c\
-				ft_strrchr.c ft_strtrim.c ft_substr.c ft_wchar_size.c\
+				ft_strchr.c ft_strdup.c ft_strjoin.c ft_strjoin_free.c ft_strlcat.c\
+				ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c\
+				ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_wchar_size.c\
 				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c
 
 OFILES	=	$(CHAR_SRC:.c=.o) $(CONV_SRC:.c=.o) $(FILE_SRC:.c=.o) $(LIST_SRC:.c=.o)\
