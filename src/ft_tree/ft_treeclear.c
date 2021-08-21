@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_treeclear.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/07 10:01:23 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/21 01:35:03 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/21 01:38:28 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/21 02:08:21 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-t_list	*ft_lstnew(void *content)
+void	ft_treeclear(t_tree **tree, void (*del)(void *))
 {
-	t_list	*node;
-
-	node = (t_list *)ft_calloc(1, sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	return (node);
+	if (tree && *tree)
+	{
+		if ((*tree)->left)
+			ft_treeclear(&(*tree)->left, del);
+		if ((*tree)->right)
+			ft_treeclear(&(*tree)->right, del);
+		del((*tree)->content);
+		free(*tree);
+		*tree = NULL;
+	}
 }

@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/20 18:08:15 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/21 02:18:33 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,12 +69,16 @@ STR_C		=	ft_split.c ft_str_any.c ft_str_count_if.c ft_str_foreach.c\
 				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c
 STR_SRC		=	$(addprefix $(STR_DIR)/, $(STR_C))
 
+TREE_DIR	=	$(SRC)/ft_tree
+TREE_C		=	ft_treeclear.c ft_treedelone.c ft_treenew.c
+TREE_SRC	=	$(addprefix $(TREE_DIR)/, $(TREE_C))
+
 OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
-			$(MEM_C:.c=.o) $(PRINT_C:.c=.o) $(PUT_C:.c=.o) $(STR_C:.c=.o)
+			$(MEM_C:.c=.o) $(PRINT_C:.c=.o) $(PUT_C:.c=.o) $(STR_C:.c=.o)\
+			$(TREE_C:.c=.o)
 OBJS	=	$(addprefix $(OBJ)/, $(OFILES))
 
-VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR)\
-			$(PUT_DIR) $(STR_DIR)
+VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(STR_DIR) $(TREE_DIR)
 
 $(OBJ)/%.o:	%.c
 			$(CC) $(CFLAGS) -c -I. -I$(PRINT_DIR)/include $< -o $@
@@ -86,8 +90,7 @@ $(OBJ):
 			@mkdir -p $(OBJ)
 
 norme:
-			norminette libft.h $(PRINT_INC) $(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC)\
-			$(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(STR_SRC)
+			norminette libft.h $(PRINT_INC) $(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(STR_SRC) $(TREE_SRC)
 
 all:		$(NAME)
 

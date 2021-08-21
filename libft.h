@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/20 16:50:18 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/21 01:51:25 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,17 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 bool	ft_lstany(t_list *lst, bool (*f)(void *));
 int		ft_lstsize(t_list *lst);
+
+typedef struct s_tree
+{
+	void			*content;
+	struct s_tree	*left;
+	struct s_tree	*right;
+}	t_tree;
+
+t_tree	*ft_treenew(void *content);
+void	ft_treedelone(t_tree *tree, void (*del)(void *));
+void	ft_treeclear(t_tree **tree, void (*del)(void *));
 
 int		get_next_line(int fd, char **line);
 int		count_lines(char *file);
