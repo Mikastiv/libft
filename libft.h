@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/21 04:00:12 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/21 18:53:09 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stddef.h>
 # include <wchar.h>
 # include <stdbool.h>
+
+# define WHITESPACE (" \t\n\v\f\r")
 
 void	*ft_calloc(size_t count, size_t size);
 void	*ft_free(void *ptr);
