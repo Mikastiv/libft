@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/21 02:18:33 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/21 03:44:38 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ PUT_C		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
 PUT_SRC		=	$(addprefix $(PUT_DIR)/, $(PUT_C))
 
 STR_DIR		=	$(SRC)/ft_string
-STR_C		=	ft_split.c ft_str_any.c ft_str_count_if.c ft_str_foreach.c\
+STR_C		=	ft_free_strarr.c ft_split.c ft_str_any.c ft_str_count_if.c ft_str_foreach.c\
 				ft_strchr.c ft_strdup.c ft_strjoin.c ft_strjoin_free.c ft_strlcat.c\
 				ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c\
 				ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_wchar_size.c\
@@ -77,6 +77,7 @@ OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
 			$(MEM_C:.c=.o) $(PRINT_C:.c=.o) $(PUT_C:.c=.o) $(STR_C:.c=.o)\
 			$(TREE_C:.c=.o)
 OBJS	=	$(addprefix $(OBJ)/, $(OFILES))
+SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(STR_SRC) $(TREE_SRC)
 
 VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(STR_DIR) $(TREE_DIR)
 
@@ -90,7 +91,7 @@ $(OBJ):
 			@mkdir -p $(OBJ)
 
 norme:
-			norminette libft.h $(PRINT_INC) $(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(STR_SRC) $(TREE_SRC)
+			$(NM) libft.h $(PRINT_INC) $(SRCS)
 
 all:		$(NAME)
 
