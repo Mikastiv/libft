@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/23 17:49:12 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/23 19:55:50 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,8 +74,8 @@ TREE_C		=	ft_treeclear.c ft_treedelone.c ft_treenew.c
 TREE_SRC	=	$(addprefix $(TREE_DIR)/, $(TREE_C))
 
 STR_DIR		=	$(SRC)/ft_string
-STR_C		=	ft_string_add_back.c ft_string_append.c ft_string_clear.c ft_string_cpy.c\
-				ft_string_new.c
+STR_C		=	ft_string_add_back.c ft_string_append_cstr.c ft_string_append.c ft_string_clear.c\
+				ft_string_cpy.c ft_string_new.c
 STR_SRC		=	$(addprefix $(STR_DIR)/, $(STR_C))
 
 OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
@@ -96,7 +96,7 @@ $(OBJ):
 			@mkdir -p $(OBJ)
 
 norme:
-			$(NM) libft.h $(PRINT_INC) $(SRCS)
+			@$(NM) libft.h $(PRINT_INC) $(SRCS) | grep Error
 
 all:		$(NAME)
 
