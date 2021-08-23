@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/23 17:45:55 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/23 19:35:25 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ typedef struct s_string
 
 t_string	*ft_string_new(char *cstr);
 t_string	*ft_string_add_back(t_string *str, char c);
-t_string	*ft_string_append(t_string *str, const char *cstr);
+t_string	*ft_string_append(t_string *dst, const t_string *src);
 t_string	*ft_string_cpy(t_string *dst, const t_string *src);
 void		ft_string_clear(t_string *str);
 
