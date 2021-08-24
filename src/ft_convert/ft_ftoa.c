@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ftoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 13:10:12 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/07/14 16:56:20 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/24 16:48:07 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ char	*ft_ftoa(double n, int precision)
 	if (info.negative)
 		n = 0 - n;
 	calc_info(n, precision, &info);
-	ret = (char *)ft_calloc(info.str_len + 1, sizeof(char));
+	ret = ft_calloc(info.str_len + 1, sizeof(char));
 	if (!ret)
 		return (NULL);
 	ptr = ret + info.str_len - 1;

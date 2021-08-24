@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 15:27:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/15 20:26:13 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/24 16:49:23 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static char	*ft_get_word(const char *s, int len, char c)
 		++s;
 		--len;
 	}
-	word = (char *)ft_calloc(len + 1, sizeof(char));
+	word = ft_calloc(len + 1, sizeof(char));
 	if (!word)
 		return (NULL);
 	ft_strlcpy(word, s, (len + 1) * sizeof(char));
@@ -101,7 +101,7 @@ char	**ft_split(const char *s, char c)
 	size_t	i;
 
 	word_count = ft_count_words(s, c);
-	ret = (char **)ft_calloc(word_count + 1, sizeof(char *));
+	ret = ft_calloc(word_count + 1, sizeof(char *));
 	if (!ret)
 		return (NULL);
 	ft_append_words(ret, s, c);
