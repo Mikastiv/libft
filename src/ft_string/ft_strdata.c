@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string_new.c                                    :+:      :+:    :+:   */
+/*   ft_strdata.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 15:40:41 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/23 21:43:48 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/23 22:48:20 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/23 22:59:27 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
+#include "ft_string.h"
 
-t_string	*ft_string_new(char *cstr)
+char	*ft_strdata(t_string str)
 {
-	t_string	*str;
+	t_string_	*s;
 
-	str = (t_string *)ft_calloc(1, sizeof(t_string));
-	if (!str)
-		return (NULL);
-	if (!cstr)
-	{
-		str->data = (char *)ft_calloc(1, sizeof(char));
-		if (!str->data)
-		{
-			free(str);
-			return (NULL);
-		}
-		str->capacity = 1;
-		return (str);
-	}
-	str->data = cstr;
-	str->len = ft_strlen(cstr);
-	str->capacity = str->len + 1;
-	return (str);
+	s = (t_string_ *)str;
+	return (s->data);
 }

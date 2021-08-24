@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/23 19:45:51 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/23 22:58:08 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ int			ft_atoi(const char *str);
 long		ft_atol(const char *str);
 void		ft_ntoa_base(char *b, long n, size_t len, const char *base);
 void		ft_ntoa(char *b, long n, size_t len);
-void		ft_untoa_base(char *b, unsigned long n, size_t len,
-				const char *base);
+void		ft_untoa_base(char *b, unsigned long n,
+				size_t len, const char *base);
 void		ft_untoa(char *b, unsigned long n, size_t len);
 char		*ft_itoa(int n);
 char		*ft_itoa_base(int n, const char *base);
@@ -133,18 +133,16 @@ int			count_lines(char *file);
 
 int			ft_printf(const char *format, ...);
 
-typedef struct s_string
-{
-	char	*data;
-	size_t	capacity;
-	size_t	len;
-}	t_string;
+typedef void	*t_string;
 
-t_string	*ft_string_new(char *cstr);
-t_string	*ft_string_add_back(t_string *str, char c);
-t_string	*ft_string_append(t_string *dst, const t_string *src);
-t_string	*ft_string_append_cstr(t_string *dst, const char *src);
-t_string	*ft_string_cpy(t_string *dst, const t_string *src);
-void		ft_string_clear(t_string *str);
+t_string	ft_strnew(char *cstr);
+t_string	ft_stradd_back(t_string str, char c);
+t_string	ft_strappend(t_string dst, const t_string src);
+t_string	ft_strappend_cstr(t_string dst, const char *src);
+t_string	ft_strcopy(t_string dst, const t_string src);
+void		ft_strfree(t_string str);
+size_t		ft_strlength(t_string str);
+size_t		ft_strcapacity(t_string str);
+char		*ft_strdata(t_string str);
 
 #endif

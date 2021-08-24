@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string_append.c                                 :+:      :+:    :+:   */
+/*   ft_string.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 17:25:36 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/23 19:38:30 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/23 22:13:17 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/23 22:27:37 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_STRING_H
+# define FT_STRING_H
 
-t_string	*ft_string_append(t_string *dst, const t_string *src)
+# include <stddef.h>
+
+typedef struct s_string_
 {
-	size_t	i;
+	char	*data;
+	size_t	capacity;
+	size_t	len;
+}	t_string_;
 
-	i = 0;
-	while (i < src->len)
-	{
-		ft_string_add_back(dst, src->data[i]);
-		++i;
-	}
-	return (dst);
-}
+#endif

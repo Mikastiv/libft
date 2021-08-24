@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string_cpy.c                                    :+:      :+:    :+:   */
+/*   ft_strappend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 17:45:37 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/23 17:48:41 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/23 17:25:36 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/23 22:59:06 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
+#include "ft_string.h"
 
-t_string	*ft_string_cpy(t_string *dst, const t_string *src)
+t_string	ft_strappend(t_string dst, const t_string src)
 {
-	free(dst->data);
-	dst->data = (char *)ft_calloc(src->capacity, sizeof(char));
-	ft_strlcpy(dst->data, src->data, src->capacity);
-	dst->capacity = src->capacity;
-	dst->len = src->len;
+	const t_string_	*s;
+	size_t			i;
+
+	s = (const t_string_ *)src;
+	i = 0;
+	while (i < s->len)
+	{
+		ft_stradd_back(dst, s->data[i]);
+		++i;
+	}
 	return (dst);
 }
