@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 16:01:22 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/23 17:44:55 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/23 21:43:04 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	grow_buffer(t_string *str)
 
 t_string	*ft_string_add_back(t_string *str, char c)
 {
-	if (str->len >= str->capacity || str->len >= str->capacity - 1)
+	if (str->len >= str->capacity - 1)
 		grow_buffer(str);
 	str->data[str->len++] = c;
 	return (str);
