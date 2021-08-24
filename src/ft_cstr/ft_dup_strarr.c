@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 14:01:24 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 14:10:16 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/24 16:55:56 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	**ft_dup_strarr(char **arr)
 	i = 0;
 	while (arr[i])
 		++i;
-	dup = (char **)ft_calloc(i + 1, sizeof(char *));
+	dup = ft_calloc(i + 1, sizeof(char *));
 	if (!dup)
 		return (NULL);
 	i = 0;
