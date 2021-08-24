@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/23 23:00:46 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/24 14:14:40 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ PUT_C		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
 PUT_SRC		=	$(addprefix $(PUT_DIR)/, $(PUT_C))
 
 CSTR_DIR	=	$(SRC)/ft_cstr
-CSTR_C		=	ft_free_strarr.c ft_split.c ft_str_any.c ft_str_count_if.c ft_str_foreach.c\
+CSTR_C		=	ft_dup_strarr.c ft_free_strarr.c ft_split.c ft_str_any.c ft_str_count_if.c ft_str_foreach.c\
 				ft_strchr.c ft_strdup.c ft_strjoin.c ft_strjoin_free.c ft_strlcat.c\
 				ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c\
 				ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_wchar_size.c\
@@ -77,7 +77,8 @@ TREE_SRC	=	$(addprefix $(TREE_DIR)/, $(TREE_C))
 STR_DIR		=	$(SRC)/ft_string
 STR_H		=	ft_string.h
 STR_C		=	ft_stradd_back.c ft_strappend_cstr.c ft_strappend.c ft_strcapacity.c\
-				ft_strcopy.c ft_strdata.c ft_strfree.c ft_strlength.c ft_strnew.c
+				ft_strcopy.c ft_strdata.c ft_strduplicate.c ft_strfree.c ft_strlength.c\
+				ft_strnew.c
 STR_SRC		=	$(addprefix $(STR_DIR)/, $(STR_C))
 STR_INC		=	$(addprefix $(STR_DIR)/$(INC)/, $(STR_H))
 
