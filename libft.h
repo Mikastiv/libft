@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/23 22:58:08 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/23 23:16:02 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,9 +140,9 @@ t_string	ft_stradd_back(t_string str, char c);
 t_string	ft_strappend(t_string dst, const t_string src);
 t_string	ft_strappend_cstr(t_string dst, const char *src);
 t_string	ft_strcopy(t_string dst, const t_string src);
-void		ft_strfree(t_string str);
 size_t		ft_strlength(t_string str);
 size_t		ft_strcapacity(t_string str);
+void		ft_strfree(t_string str);
 char		*ft_strdata(t_string str);
 
 #endif
