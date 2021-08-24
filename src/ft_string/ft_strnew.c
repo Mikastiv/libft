@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/07 10:01:23 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:52:43 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/23 15:40:41 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/23 22:59:45 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_string.h"
+#include <stdlib.h>
 
-t_list	*ft_lstnew(void *content)
+t_string	ft_strnew(char *cstr)
 {
-	t_list	*node;
+	t_string_	*str;
 
-	node = ft_calloc(1, sizeof(t_list));
-	if (!node)
+	str = (t_string_ *)ft_calloc(1, sizeof(t_string_));
+	if (!str)
 		return (NULL);
-	node->content = content;
-	return (node);
+	if (!cstr)
+	{
+		str->data = (char *)ft_calloc(1, sizeof(char));
+		if (!str->data)
+		{
+			free(str);
+			return (NULL);
+		}
+		str->capacity = 1;
+		return (str);
+	}
+	str->data = cstr;
+	str->len = ft_strlen(cstr);
+	str->capacity = str->len + 1;
+	return ((t_string)str);
 }

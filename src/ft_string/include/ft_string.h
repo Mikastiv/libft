@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_string.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/07 10:01:23 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:52:43 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/23 22:13:17 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/23 22:27:37 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_STRING_H
+# define FT_STRING_H
 
-t_list	*ft_lstnew(void *content)
+# include <stddef.h>
+
+typedef struct s_string_
 {
-	t_list	*node;
+	char	*data;
+	size_t	capacity;
+	size_t	len;
+}	t_string_;
 
-	node = ft_calloc(1, sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	return (node);
-}
+#endif

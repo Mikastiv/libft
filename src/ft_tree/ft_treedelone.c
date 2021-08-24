@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_treedelone.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/07 10:01:23 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:52:43 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/21 01:35:43 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/21 01:51:41 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-t_list	*ft_lstnew(void *content)
+void	ft_treedelone(t_tree *tree, void (*del)(void *))
 {
-	t_list	*node;
-
-	node = ft_calloc(1, sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	return (node);
+	if (tree)
+	{
+		del(tree->content);
+		free(tree);
+	}
 }

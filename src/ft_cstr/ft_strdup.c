@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/07 10:01:23 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:52:43 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/05/05 20:34:07 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/24 16:52:35 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+char	*ft_strdup(const char *s)
 {
-	t_list	*node;
+	size_t	size;
+	char	*dup;
 
-	node = ft_calloc(1, sizeof(t_list));
-	if (!node)
+	size = ft_strlen(s1) + 1;
+	s2 = ft_calloc(size, sizeof(char));
+	if (!s2)
 		return (NULL);
-	node->content = content;
-	return (node);
+	ft_memcpy(dup, s, size * sizeof(char));
+	return (dup);
 }

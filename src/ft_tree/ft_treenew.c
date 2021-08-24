@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_treenew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/07 10:01:23 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:52:43 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/21 01:31:21 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/21 01:35:10 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_tree	*ft_treenew(void *content)
 {
-	t_list	*node;
+	t_tree	*node;
 
-	node = ft_calloc(1, sizeof(t_list));
+	node = (t_tree *)ft_calloc(1, sizeof(t_tree));
 	if (!node)
 		return (NULL);
 	node->content = content;

@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strappend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/07 10:01:23 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:52:43 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/23 17:25:36 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/23 22:59:06 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_string.h"
 
-t_list	*ft_lstnew(void *content)
+t_string	ft_strappend(t_string dst, const t_string src)
 {
-	t_list	*node;
+	const t_string_	*s;
+	size_t			i;
 
-	node = ft_calloc(1, sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	return (node);
+	s = (const t_string_ *)src;
+	i = 0;
+	while (i < s->len)
+	{
+		ft_stradd_back(dst, s->data[i]);
+		++i;
+	}
+	return (dst);
 }

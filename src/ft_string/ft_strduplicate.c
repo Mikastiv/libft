@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strduplicate.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/07 10:01:23 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:52:43 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/24 14:11:55 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/24 14:14:59 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_string.h"
 
-t_list	*ft_lstnew(void *content)
+t_string	ft_strduplicate(const t_string str)
 {
-	t_list	*node;
+	t_string_	*dup;
 
-	node = ft_calloc(1, sizeof(t_list));
-	if (!node)
+	dup = ft_strnew(NULL);
+	if (!dup)
 		return (NULL);
-	node->content = content;
-	return (node);
+	ft_strcopy(dup, str);
+	return (dup);
 }
