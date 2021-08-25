@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 16:01:22 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:56:06 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/24 23:51:00 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	grow_buffer(t_string_ *str)
 	char		*buf;
 	size_t		newsize;
 
-	newsize = (size_t)((str->capacity + 2) * 1.5);
+	newsize = (size_t)((str->capacity + 1) * 1.5);
 	buf = ft_calloc(newsize, sizeof(char));
 	if (str->data)
 	{

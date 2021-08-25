@@ -6,13 +6,12 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 20:17:32 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/13 20:21:53 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/24 23:58:10 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define UCHAR unsigned char
-
 int	ft_isspace(int c)
 {
-	return (((UCHAR)c >= '\t' && (UCHAR)c <= '\r') || (UCHAR)c == ' ');
+	return (((unsigned char)c >= '\t' && (unsigned char)c <= '\r')
+		|| (unsigned char)c == ' ');
 }

@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/24 21:34:03 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/24 23:44:00 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,12 +49,13 @@ MEM_C		=	ft_bzero.c ft_calloc.c ft_free.c ft_memccpy.c ft_memchr.c\
 MEM_SRC		=	$(addprefix $(MEM_DIR)/, $(MEM_C))
 
 PRINT_DIR	=	$(SRC)/ft_printf
+PRINT_INC	=	$(PRINT_DIR)/$(INC)
 PRINT_H		=	convert.h do_printf.h flags.h utils.h
 PRINT_C		=	convert_char.c convert_float.c convert_int.c convert_n.c\
 				convert_num_utils.c convert_percent.c convert_ptr.c convert_str.c\
 				convert_uint.c convert.c do_printf.c ft_printf.c utils.c
 PRINT_SRC	=	$(addprefix $(PRINT_DIR)/, $(PRINT_C))
-PRINT_INC	=	$(addprefix $(PRINT_DIR)/$(INC)/, $(PRINT_H))
+PRINT_INCS	=	$(addprefix $(PRINT_DIR)/$(INC)/, $(PRINT_H))
 
 PUT_DIR		=	$(SRC)/ft_put
 PUT_C		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
@@ -75,23 +76,25 @@ TREE_C		=	ft_treeclear.c ft_treedelone.c ft_treenew.c
 TREE_SRC	=	$(addprefix $(TREE_DIR)/, $(TREE_C))
 
 STR_DIR		=	$(SRC)/ft_string
+STR_INC		=	$(STR_DIR)/$(INC)
 STR_H		=	ft_string.h
 STR_C		=	ft_stradd_back.c ft_strappend_cstr.c ft_strappend.c ft_strcapacity.c ft_strclear.c\
 				ft_strcopy.c ft_strdata.c ft_strduplicate.c ft_strfree.c ft_strlength.c\
 				ft_strnew.c ft_strsub.c
 STR_SRC		=	$(addprefix $(STR_DIR)/, $(STR_C))
-STR_INC		=	$(addprefix $(STR_DIR)/$(INC)/, $(STR_H))
+STR_INCS	=	$(addprefix $(STR_DIR)/$(INC)/, $(STR_H))
 
 OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
 			$(MEM_C:.c=.o) $(PRINT_C:.c=.o) $(PUT_C:.c=.o) $(CSTR_C:.c=.o)\
 			$(TREE_C:.c=.o) $(STR_C:.c=.o)
 OBJS	=	$(addprefix $(OBJ)/, $(OFILES))
 SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(CSTR_SRC) $(TREE_SRC) $(STR_SRC)
+INCS	=	$(PRINT_INCS) $(STR_INCS)
 
 VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(CSTR_DIR) $(TREE_DIR) $(STR_DIR)
 
 $(OBJ)/%.o:	%.c
-			$(CC) $(CFLAGS) -c -I. -I$(PRINT_DIR)/$(INC) -I$(STR_DIR)/$(INC) $< -o $@
+			$(CC) $(CFLAGS) -c -I. -I$(PRINT_INC) -I$(STR_INC) $< -o $@
 
 $(NAME):	$(OBJ) $(OBJS)
 			$(LIBC) $(NAME) $(OBJS)
@@ -100,7 +103,7 @@ $(OBJ):
 			@mkdir -p $(OBJ)
 
 norme:
-			@$(NM) libft.h $(PRINT_INC) $(SRCS) | grep Error
+			@$(NM) libft.h $(INCS) $(SRCS) | grep Error
 
 all:		$(NAME)
 

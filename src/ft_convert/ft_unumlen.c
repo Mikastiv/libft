@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 18:22:31 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/17 22:55:24 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/25 00:06:12 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	ft_unumlen(unsigned long n, unsigned long radix)
+size_t	ft_unumlen(unsigned long long n, unsigned long long radix)
 {
 	size_t	len;
 
