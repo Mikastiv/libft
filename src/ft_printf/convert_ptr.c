@@ -6,15 +6,14 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 23:57:12 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/26 02:01:37 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/25 15:52:03 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "convert.h"
-#include "libft.h"
 #include "utils.h"
 #include "flags.h"
-#include "utils.h"
+#include "libft.h"
 #include <stdlib.h>
 
 static void	print_number(t_pinfo *info, char *str, char pad_char)

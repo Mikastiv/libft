@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/25 02:19:05 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/25 15:51:13 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,13 +49,12 @@ MEM_C		=	ft_bzero.c ft_calloc.c ft_free.c ft_memccpy.c ft_memchr.c\
 MEM_SRC		=	$(addprefix $(MEM_DIR)/, $(MEM_C))
 
 PRINT_DIR	=	$(SRC)/ft_printf
-PRINT_INC	=	$(PRINT_DIR)/$(INC)
 PRINT_H		=	convert.h do_printf.h flags.h utils.h
 PRINT_C		=	convert_char.c convert_float.c convert_int.c convert_n.c\
 				convert_num_utils.c convert_percent.c convert_ptr.c convert_str.c\
 				convert_uint.c convert.c do_printf.c ft_printf.c utils.c
 PRINT_SRC	=	$(addprefix $(PRINT_DIR)/, $(PRINT_C))
-PRINT_INCS	=	$(addprefix $(PRINT_DIR)/$(INC)/, $(PRINT_H))
+PRINT_INCS	=	$(addprefix $(INC)/, $(PRINT_H))
 
 PUT_DIR		=	$(SRC)/ft_put
 PUT_C		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
@@ -76,13 +75,12 @@ TREE_C		=	ft_treeclear.c ft_treedelone.c ft_treenew.c
 TREE_SRC	=	$(addprefix $(TREE_DIR)/, $(TREE_C))
 
 STR_DIR		=	$(SRC)/ft_string
-STR_INC		=	$(STR_DIR)/$(INC)
 STR_H		=	ft_string.h
 STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.c ft_str_clear.c\
 				ft_str_copy.c ft_str_copy_cstr.c ft_str_data.c ft_str_dup.c ft_str_dup_cstr.c ft_str_free.c\
 				ft_str_len.c ft_str_new.c ft_str_sub.c ft_str_sub_cstr.c ft_str_trim.c ft_str_trim_cstr.c
 STR_SRC		=	$(addprefix $(STR_DIR)/, $(STR_C))
-STR_INCS	=	$(addprefix $(STR_DIR)/$(INC)/, $(STR_H))
+STR_INCS	=	$(addprefix $(INC)/, $(STR_H))
 
 OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
 			$(MEM_C:.c=.o) $(PRINT_C:.c=.o) $(PUT_C:.c=.o) $(CSTR_C:.c=.o)\
@@ -94,7 +92,7 @@ INCS	=	$(PRINT_INCS) $(STR_INCS)
 VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(CSTR_DIR) $(TREE_DIR) $(STR_DIR)
 
 $(OBJ)/%.o:	%.c
-			$(CC) $(CFLAGS) -c -I. -I$(PRINT_INC) -I$(STR_INC) $< -o $@
+			$(CC) $(CFLAGS) -c -I. -I$(INC) $< -o $@
 
 $(NAME):	$(OBJ) $(OBJS)
 			$(LIBC) $(NAME) $(OBJS)

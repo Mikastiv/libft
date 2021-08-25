@@ -6,15 +6,14 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 21:24:02 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/26 02:01:37 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/25 15:51:45 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "convert.h"
 #include "flags.h"
+#include "utils.h"
 #include "libft.h"
-#include "utils.h"
-#include "utils.h"
 #include <stdlib.h>
 #include <limits.h>
 #include <float.h>

@@ -6,14 +6,14 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 16:45:36 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/07/19 12:58:07 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/25 15:52:08 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "convert.h"
 #include "flags.h"
-#include "libft.h"
 #include "utils.h"
+#include "libft.h"
 #include <limits.h>
 #include <wchar.h>
 
