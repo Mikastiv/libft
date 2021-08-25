@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcopy.c                                       :+:      :+:    :+:   */
+/*   ft_str_data.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 17:45:37 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:56:11 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/23 22:48:20 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/25 01:22:36 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_string.h"
-#include <stdlib.h>
 
-t_string	ft_strcopy(t_string dst, const t_string src)
+char	*ft_str_data(t_string str)
 {
-	t_string_		*d;
-	const t_string_	*s;
+	t_string_	*s;
 
-	d = (t_string_ *)dst;
-	s = (const t_string_ *)src;
-	free(d->data);
-	d->data = ft_calloc(s->capacity, sizeof(char));
-	ft_strlcpy(d->data, s->data, s->capacity);
-	d->capacity = s->capacity;
-	d->len = s->len;
-	return (dst);
+	s = (t_string_ *)str;
+	return (s->data);
 }

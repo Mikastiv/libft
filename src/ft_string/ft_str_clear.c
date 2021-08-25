@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_str_clear.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 21:30:32 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 21:32:53 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/24 21:24:17 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/25 01:22:30 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_string.h"
 
-t_string	ft_strsub(t_string str, unsigned int index, size_t len)
+t_string	ft_str_clear(t_string str)
 {
 	t_string_	*s;
-	t_string_	*sub;
 
 	s = (t_string_ *)str;
-	sub = ft_strnew(ft_substr(s->data, index, len));
-	return ((t_string)sub);
+	ft_bzero(s->data, s->capacity);
+	s->len = 0;
+	return (str);
 }

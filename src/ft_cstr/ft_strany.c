@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcapacity.c                                   :+:      :+:    :+:   */
+/*   ft_strany.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 22:49:47 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/23 22:59:13 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/06/24 15:36:42 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/25 01:31:10 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "ft_string.h"
+#include <stdbool.h>
 
-size_t	ft_strcapacity(t_string str)
+bool	ft_strany(const char *s, bool(*f)(char))
 {
-	t_string_	*s;
-
-	s = (t_string_ *)str;
-	return (s->capacity);
+	while (*s)
+	{
+		if (f(*s))
+			return (true);
+		++s;
+	}
+	return (false);
 }

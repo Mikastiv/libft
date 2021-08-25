@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strduplicate.c                                  :+:      :+:    :+:   */
+/*   ft_str_copy_cstr.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 14:11:55 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 14:14:59 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/25 01:49:21 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/25 02:01:56 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_string.h"
+#include <stdlib.h>
 
-t_string	ft_strduplicate(const t_string str)
+t_string	ft_str_copy_cstr(t_string dst, const char *src)
 {
-	t_string_	*dup;
+	char		*cpy;
+	t_string_	*d;
 
-	dup = ft_strnew(NULL);
-	if (!dup)
+	cpy = ft_strdup(src);
+	if (!cpy)
 		return (NULL);
-	ft_strcopy(dup, str);
-	return (dup);
+	d = (t_string_ *)dst;
+	free(d->data);
+	d->data = cpy;
+	d->len = ft_strlen(src);
+	d->capacity = d->len + 1;
+	return (dst);
 }

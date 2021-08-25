@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/25 00:05:57 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/25 02:14:40 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,9 @@ char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char		**ft_split(const char *s, char c);
 char		**ft_dup_strarr(char **arr);
 void		ft_free_strarr(char **arr);
-bool		ft_str_any(const char *s, bool(*f)(char));
-void		ft_str_foreach(char *s, void(*f)(char));
-size_t		ft_str_count_if(const char *s, bool(*f)(char));
+bool		ft_strany(const char *s, bool(*f)(char));
+void		ft_strforeach(char *s, void(*f)(char));
+size_t		ft_strcount_if(const char *s, bool(*f)(char));
 
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(const char *s, int fd);
@@ -136,17 +136,22 @@ int			ft_printf(const char *format, ...);
 
 typedef void	*t_string;
 
-t_string	ft_strnew(char *cstr);
-t_string	ft_stradd_back(t_string str, char c);
-t_string	ft_strappend(t_string dst, const t_string src);
-t_string	ft_strappend_cstr(t_string dst, const char *src);
-t_string	ft_strcopy(t_string dst, const t_string src);
-t_string	ft_strduplicate(const t_string str);
-t_string	ft_strclear(t_string str);
-t_string	ft_strsub(t_string str, unsigned int index, size_t len);
-size_t		ft_strlength(t_string str);
-size_t		ft_strcapacity(t_string str);
-void		ft_strfree(t_string str);
-char		*ft_strdata(t_string str);
+t_string	ft_str_new(char *cstr);
+t_string	ft_str_add_back(t_string str, char c);
+t_string	ft_str_append(t_string dst, const t_string src);
+t_string	ft_str_append_cstr(t_string dst, const char *src);
+t_string	ft_str_copy(t_string dst, const t_string src);
+t_string	ft_str_copy_cstr(t_string dst, const char *src);
+t_string	ft_str_dup(const t_string str);
+t_string	ft_str_dup_cstr(const char *str);
+t_string	ft_str_sub(t_string str, unsigned int index, size_t len);
+t_string	ft_str_sub_cstr(const char *str, unsigned int index, size_t len);
+t_string	ft_str_trim(const t_string str, const char *set);
+t_string	ft_str_trim_cstr(const char *str, const char *set);
+t_string	ft_str_clear(t_string str);
+size_t		ft_str_len(t_string str);
+size_t		ft_str_capacity(t_string str);
+void		ft_str_free(t_string str);
+char		*ft_str_data(t_string str);
 
 #endif

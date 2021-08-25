@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_foreach.c                                   :+:      :+:    :+:   */
+/*   ft_str_append_cstr.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/24 15:41:07 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/24 16:15:57 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/23 19:46:12 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/25 02:00:33 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_str_foreach(char *s, void(*f)(char))
+#include "libft.h"
+
+t_string	ft_str_append_cstr(t_string dst, const char *src)
 {
-	while (*s)
-	{
-		f(*s);
-		++s;
-	}
+	while (*src)
+		ft_str_add_back(dst, *src++);
+	return (dst);
 }
