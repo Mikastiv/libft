@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 14:25:28 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/15 20:26:24 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/24 16:49:44 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	while (end > s1 && ft_strchr(set, *end))
 		--end;
 	len = end - s1 + 1;
-	ret = (char *)ft_calloc(len + 1, sizeof(char));
+	ret = ft_calloc(len + 1, sizeof(char));
 	if (!ret)
 		return (NULL);
 	ft_memcpy(ret, s1, len * sizeof(char));

@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/23 23:16:02 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/24 14:13:21 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,13 +78,14 @@ int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
-char		*ft_strdup(const char *s1);
+char		*ft_strdup(const char *s);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
 char		*ft_strjoin(const char *s1, const char *s2);
 char		*ft_strjoin_free(char *s1, char *s2);
 char		*ft_strtrim(const char *s1, const char *set);
 char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char		**ft_split(const char *s, char c);
+char		**ft_dup_strarr(char **arr);
 void		ft_free_strarr(char **arr);
 bool		ft_str_any(const char *s, bool(*f)(char));
 void		ft_str_foreach(char *s, void(*f)(char));
@@ -140,6 +141,7 @@ t_string	ft_stradd_back(t_string str, char c);
 t_string	ft_strappend(t_string dst, const t_string src);
 t_string	ft_strappend_cstr(t_string dst, const char *src);
 t_string	ft_strcopy(t_string dst, const t_string src);
+t_string	ft_strduplicate(const t_string str);
 size_t		ft_strlength(t_string str);
 size_t		ft_strcapacity(t_string str);
 void		ft_strfree(t_string str);

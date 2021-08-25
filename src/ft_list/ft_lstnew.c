@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 10:01:23 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/21 01:35:03 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/24 16:52:43 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;
 
-	node = (t_list *)ft_calloc(1, sizeof(t_list));
+	node = ft_calloc(1, sizeof(t_list));
 	if (!node)
 		return (NULL);
 	node->content = content;

@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_dup_strarr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/06 19:33:10 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:49:40 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/24 14:01:24 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/24 16:55:56 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
+char	**ft_dup_strarr(char **arr)
 {
-	unsigned int	i;
-	char			*ret;
+	size_t	i;
+	char	**dup;
 
-	ret = ft_calloc(ft_strlen(s) + 1, sizeof(char));
-	if (!ret)
+	i = 0;
+	while (arr[i])
+		++i;
+	dup = ft_calloc(i + 1, sizeof(char *));
+	if (!dup)
 		return (NULL);
 	i = 0;
-	while (s[i])
+	while (arr[i])
 	{
-		ret[i] = f(i, s[i]);
+		dup[i] = ft_strdup(arr[i]);
+		if (!dup[i])
+		{
+			ft_free_strarr(dup);
+			return (NULL);
+		}
 		++i;
 	}
-	return (ret);
+	return (dup);
 }
