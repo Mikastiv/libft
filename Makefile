@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/24 14:14:40 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/24 21:34:03 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,9 +76,9 @@ TREE_SRC	=	$(addprefix $(TREE_DIR)/, $(TREE_C))
 
 STR_DIR		=	$(SRC)/ft_string
 STR_H		=	ft_string.h
-STR_C		=	ft_stradd_back.c ft_strappend_cstr.c ft_strappend.c ft_strcapacity.c\
+STR_C		=	ft_stradd_back.c ft_strappend_cstr.c ft_strappend.c ft_strcapacity.c ft_strclear.c\
 				ft_strcopy.c ft_strdata.c ft_strduplicate.c ft_strfree.c ft_strlength.c\
-				ft_strnew.c
+				ft_strnew.c ft_strsub.c
 STR_SRC		=	$(addprefix $(STR_DIR)/, $(STR_C))
 STR_INC		=	$(addprefix $(STR_DIR)/$(INC)/, $(STR_H))
 
