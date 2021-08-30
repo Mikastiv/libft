@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 16:25:29 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/30 16:34:25 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/30 18:43:31 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void	ft_dlstadd_back(t_dlist **lst, t_dlist *new)
 		{
 			last = ft_dlstlast(*lst);
 			last->next = new;
-			new->prev = last;
+			if (new)
+				new->prev = last;
 		}
 		else
 			*lst = new;
