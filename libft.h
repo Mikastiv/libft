@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/27 19:35:52 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/30 16:53:22 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,22 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 bool		ft_lstany(t_list *lst, bool (*f)(void *));
 int			ft_lstsize(t_list *lst);
+
+typedef struct s_dlist
+{
+	void			*content;
+	struct s_dlist	*next;
+	struct s_dlist	*prev;
+}	t_dlist;
+
+t_dlist		*ft_dlstnew(void *content);
+t_dlist		*ft_dlstfirst(t_dlist *lst);
+t_dlist		*ft_dlstlast(t_dlist *lst);
+void		ft_dlstadd_back(t_dlist **lst, t_dlist *new);
+void		ft_dlstadd_front(t_dlist **lst, t_dlist *new);
+void		ft_dlstdelone(t_dlist *lst, void (*del)(void *));
+void		ft_dlstclear(t_dlist **lst, void (*del)(void *));
+int			ft_dlstsize(t_dlist *lst);
 
 typedef struct s_tree
 {

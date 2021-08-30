@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_dlstnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/07 10:57:19 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/30 16:32:16 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/30 16:19:16 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/30 16:21:12 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+t_dlist	*ft_dlstnew(void *content)
 {
-	t_list	*last;
+	t_dlist	*node;
 
-	if (lst)
-	{
-		if (*lst)
-		{
-			last = ft_lstlast(*lst);
-			last->next = new;
-		}
-		else
-			*lst = new;
-	}
+	node = ft_calloc(1, sizeof(t_dlist));
+	if (!node)
+		return (NULL);
+	node->content = content;
+	return (node);
 }

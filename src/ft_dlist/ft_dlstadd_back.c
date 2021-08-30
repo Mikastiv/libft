@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_dlstadd_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/07 10:57:19 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/30 16:32:16 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/30 16:25:29 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/30 16:34:25 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_dlstadd_back(t_dlist **lst, t_dlist *new)
 {
-	t_list	*last;
+	t_dlist	*last;
 
 	if (lst)
 	{
 		if (*lst)
 		{
-			last = ft_lstlast(*lst);
+			last = ft_dlstlast(*lst);
 			last->next = new;
+			new->prev = last;
 		}
 		else
 			*lst = new;

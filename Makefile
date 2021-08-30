@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/27 19:29:54 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/30 16:53:19 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,11 @@ LIST_C		=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
 				ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c\
 				ft_lstpop_front.c ft_lstsize.c
 LIST_SRC	=	$(addprefix $(LIST_DIR)/, $(LIST_C))
+
+DLIST_DIR	=	$(SRC)/ft_dlist
+DLIST_C		=	ft_dlstadd_back.c ft_dlstadd_front.c ft_dlstclear.c	ft_dlstdelone.c\
+				ft_dlstlast.c ft_dlstnew.c ft_dlstfirst.c ft_dlstsize.c
+DLIST_SRC	=	$(addprefix $(DLIST_DIR)/, $(DLIST_C))
 
 MEM_DIR		=	$(SRC)/ft_memory
 MEM_C		=	ft_bzero.c ft_calloc.c ft_free.c ft_memccpy.c ft_memchr.c\
@@ -84,12 +89,12 @@ STR_INCS	=	$(addprefix $(INC)/, $(STR_H))
 
 OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
 			$(MEM_C:.c=.o) $(PRINT_C:.c=.o) $(PUT_C:.c=.o) $(CSTR_C:.c=.o)\
-			$(TREE_C:.c=.o) $(STR_C:.c=.o)
+			$(TREE_C:.c=.o) $(STR_C:.c=.o) $(DLIST_C:.c=.o)
 OBJS	=	$(addprefix $(OBJ)/, $(OFILES))
-SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(CSTR_SRC) $(TREE_SRC) $(STR_SRC)
+SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(CSTR_SRC) $(TREE_SRC) $(STR_SRC) $(DLIST_SRC)
 INCS	=	$(PRINT_INCS) $(STR_INCS)
 
-VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(CSTR_DIR) $(TREE_DIR) $(STR_DIR)
+VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(CSTR_DIR) $(TREE_DIR) $(STR_DIR) $(DLIST_DIR)
 
 $(OBJ)/%.o:	%.c
 			$(CC) $(CFLAGS) -c -I. -I$(INC) $< -o $@
@@ -101,7 +106,7 @@ $(OBJ):
 			@mkdir -p $(OBJ)
 
 norme:
-			@$(NM) libft.h $(INCS) $(SRCS) | grep Error
+			$(NM) libft.h $(INCS) $(SRCS) | grep "Error[:!]"
 
 all:		$(NAME)
 
