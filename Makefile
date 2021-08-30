@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/30 16:53:19 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/30 17:06:47 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ PRINT_DIR	=	$(SRC)/ft_printf
 PRINT_H		=	convert.h do_printf.h flags.h utils.h
 PRINT_C		=	convert_char.c convert_float.c convert_int.c convert_n.c\
 				convert_num_utils.c convert_percent.c convert_ptr.c convert_str.c\
-				convert_uint.c convert.c do_printf.c ft_printf.c utils.c
+				convert_uint.c convert.c do_printf.c ft_printf.c printf_utils.c
 PRINT_SRC	=	$(addprefix $(PRINT_DIR)/, $(PRINT_C))
 PRINT_INCS	=	$(addprefix $(INC)/, $(PRINT_H))
 
