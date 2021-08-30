@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 15:53:31 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/25 01:22:41 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/30 19:49:19 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_str_free(t_string str)
 	t_string_	*s;
 
 	s = (t_string_ *)str;
-	free(s->data);
+	if (str)
+		free(s->data);
 	free(str);
 }
