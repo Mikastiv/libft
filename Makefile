@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/30 18:05:13 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/30 21:44:00 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,12 +40,13 @@ FILE_SRC	=	$(addprefix $(FILE_DIR)/, $(FILE_C))
 LIST_DIR	=	$(SRC)/ft_list
 LIST_C		=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
 				ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c\
-				ft_lstpop_front.c ft_lstsize.c
+				ft_lstpop_front.c ft_lstsize.c ft_lstnext.c
 LIST_SRC	=	$(addprefix $(LIST_DIR)/, $(LIST_C))
 
 DLIST_DIR	=	$(SRC)/ft_dlist
 DLIST_C		=	ft_dlstadd_back.c ft_dlstadd_front.c ft_dlstclear.c	ft_dlstdelone.c\
-				ft_dlstlast.c ft_dlstnew.c ft_dlstfirst.c ft_dlstsize.c
+				ft_dlstlast.c ft_dlstnew.c ft_dlstfirst.c ft_dlstsize.c ft_dlstnext.c\
+				ft_dlstprev.c
 DLIST_SRC	=	$(addprefix $(DLIST_DIR)/, $(DLIST_C))
 
 MEM_DIR		=	$(SRC)/ft_memory

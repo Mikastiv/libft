@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/30 16:53:22 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/30 21:36:28 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,7 @@ typedef struct s_list
 t_list		*ft_lstnew(void *content);
 t_list		*ft_lstlast(t_list *lst);
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list		*ft_lstnext(t_list **lst);
 void		ft_lstadd_front(t_list **lst, t_list *new);
 void		ft_lstadd_back(t_list **lst, t_list *new);
 void		ft_lstpop_front(t_list **lst, void (*del)(void *));
@@ -129,6 +130,8 @@ typedef struct s_dlist
 t_dlist		*ft_dlstnew(void *content);
 t_dlist		*ft_dlstfirst(t_dlist *lst);
 t_dlist		*ft_dlstlast(t_dlist *lst);
+t_dlist		*ft_dlstnext(t_dlist **lst);
+t_dlist		*ft_dlstprev(t_dlist **lst);
 void		ft_dlstadd_back(t_dlist **lst, t_dlist *new);
 void		ft_dlstadd_front(t_dlist **lst, t_dlist *new);
 void		ft_dlstdelone(t_dlist *lst, void (*del)(void *));
