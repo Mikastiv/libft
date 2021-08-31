@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/30 21:36:28 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/08/30 21:56:41 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@
 
 # define WHITESPACE " \t\n\v\f\r"
 
+/*
+** Memory functions
+*/
+
 void		*ft_calloc(size_t count, size_t size);
 void		*ft_free(void *ptr);
 void		*ft_memset(void *b, int c, size_t len);
@@ -28,6 +32,10 @@ void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		ft_bzero(void *s, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
+
+/*
+** Character test functions
+*/
 
 int			ft_isupper(int c);
 int			ft_islower(int c);
@@ -39,6 +47,10 @@ int			ft_isspace(int c);
 int			ft_isprint(int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
+
+/*
+** Conversion functions
+*/
 
 int			ft_atoi(const char *str);
 long		ft_atol(const char *str);
@@ -66,6 +78,10 @@ size_t		ft_numlen(long long n, long long radix);
 size_t		ft_unumlen(unsigned long long n, unsigned long long radix);
 size_t		ft_float_len(double n, int precision);
 
+/*
+** C-string functions
+*/
+
 size_t		ft_strlen(const char *s);
 size_t		ft_strnlen(const char *s, size_t maxlen);
 size_t		ft_wchar_size(wint_t c);
@@ -92,6 +108,10 @@ bool		ft_strany(const char *s, bool(*f)(char));
 void		ft_strforeach(char *s, void(*f)(char));
 size_t		ft_strcount_if(const char *s, bool(*f)(char));
 
+/*
+** Output functions
+*/
+
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(const char *s, int fd);
 void		ft_putwchar_fd(wint_t c, int fd);
@@ -100,6 +120,10 @@ void		ft_putendl_fd(const char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putnbr_base_fd(long long n, const char *base, int fd);
 void		ft_putunbr_base_fd(unsigned long long n, const char *base, int fd);
+
+/*
+** Linked list functions
+*/
 
 typedef struct s_list
 {
@@ -120,6 +144,10 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 bool		ft_lstany(t_list *lst, bool (*f)(void *));
 int			ft_lstsize(t_list *lst);
 
+/*
+** Doubly linked list functions
+*/
+
 typedef struct s_dlist
 {
 	void			*content;
@@ -138,21 +166,37 @@ void		ft_dlstdelone(t_dlist *lst, void (*del)(void *));
 void		ft_dlstclear(t_dlist **lst, void (*del)(void *));
 int			ft_dlstsize(t_dlist *lst);
 
-typedef struct s_tree
+/*
+** Binary tree functions
+*/
+
+typedef struct s_btree
 {
 	void			*content;
-	struct s_tree	*left;
-	struct s_tree	*right;
-}	t_tree;
+	struct s_btree	*left;
+	struct s_btree	*right;
+}	t_btree;
 
-t_tree		*ft_treenew(void *content);
-void		ft_treedelone(t_tree *tree, void (*del)(void *));
-void		ft_treeclear(t_tree **tree, void (*del)(void *));
+t_btree		*ft_btreenew(void *content);
+void		ft_btreedelone(t_btree *tree, void (*del)(void *));
+void		ft_btreeclear(t_btree **tree, void (*del)(void *));
+
+/*
+** File functions
+*/
 
 int			get_next_line(int fd, char **line);
 int			count_lines(char *file);
 
+/*
+** Custom printf
+*/
+
 int			ft_printf(const char *format, ...);
+
+/*
+** String functions
+*/
 
 typedef void	*t_string;
 

@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/08/30 21:44:00 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/08/30 21:56:18 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,9 +76,9 @@ CSTR_C		=	ft_dup_strarr.c ft_free_strarr.c ft_split.c ft_strany.c ft_strcount_if
 				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c
 CSTR_SRC	=	$(addprefix $(CSTR_DIR)/, $(CSTR_C))
 
-TREE_DIR	=	$(SRC)/ft_tree
-TREE_C		=	ft_treeclear.c ft_treedelone.c ft_treenew.c
-TREE_SRC	=	$(addprefix $(TREE_DIR)/, $(TREE_C))
+BTREE_DIR	=	$(SRC)/ft_tree
+BTREE_C		=	ft_treeclear.c ft_treedelone.c ft_treenew.c
+BTREE_SRC	=	$(addprefix $(BTREE_DIR)/, $(BTREE_C))
 
 STR_DIR		=	$(SRC)/ft_string
 STR_H		=	ft_string.h
@@ -92,10 +92,10 @@ OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
 			$(MEM_C:.c=.o) $(PRINT_C:.c=.o) $(PUT_C:.c=.o) $(CSTR_C:.c=.o)\
 			$(TREE_C:.c=.o) $(STR_C:.c=.o) $(DLIST_C:.c=.o)
 OBJS	=	$(addprefix $(OBJ)/, $(OFILES))
-SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(CSTR_SRC) $(TREE_SRC) $(STR_SRC) $(DLIST_SRC)
+SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(CSTR_SRC) $(BTREE_SRC) $(STR_SRC) $(DLIST_SRC)
 INCS	=	$(PRINT_INCS) $(STR_INCS)
 
-VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(CSTR_DIR) $(TREE_DIR) $(STR_DIR) $(DLIST_DIR)
+VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(CSTR_DIR) $(BTREE_DIR) $(STR_DIR) $(DLIST_DIR)
 
 $(OBJ)/%.o:	%.c
 			$(CC) $(CFLAGS) -c -I. -I$(INC) $< -o $@
