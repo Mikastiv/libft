@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/30 16:53:22 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/03 17:14:39 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,6 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strdup(const char *s);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
 char		*ft_strjoin(const char *s1, const char *s2);
-char		*ft_strjoin_free(char *s1, char *s2);
 char		*ft_strtrim(const char *s1, const char *set);
 char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char		**ft_split(const char *s, char c);
@@ -89,7 +88,7 @@ char		**ft_dup_strarr(char **arr);
 char		**ft_expand_strarr(char **arr, char *back_str);
 void		ft_free_strarr(char **arr);
 bool		ft_strany(const char *s, bool(*f)(char));
-void		ft_strforeach(char *s, void(*f)(char));
+void		ft_strforeach(char *s, void (*f)(char));
 size_t		ft_strcount_if(const char *s, bool(*f)(char));
 
 void		ft_putchar_fd(char c, int fd);

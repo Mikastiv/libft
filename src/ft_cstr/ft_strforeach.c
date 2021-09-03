@@ -6,11 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 15:41:07 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/25 01:31:01 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/03 17:14:35 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strforeach(char *s, void(*f)(char))
+void	ft_strforeach(char *s, void (*f)(char))
 {
 	while (*s)
 	{
