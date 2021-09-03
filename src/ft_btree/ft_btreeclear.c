@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_free.c                                      :+:      :+:    :+:   */
+/*   ft_btreeclear.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 15:53:31 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/30 19:49:19 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/21 01:38:28 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/30 21:55:34 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_string.h"
 #include <stdlib.h>
 
-void	ft_str_free(t_string str)
+void	ft_treeclear(t_btree **tree, void (*del)(void *))
 {
-	t_string_	*s;
-
-	s = (t_string_ *)str;
-	if (str)
-		free(s->data);
-	free(str);
+	if (tree && *tree)
+	{
+		if ((*tree)->left)
+			ft_treeclear(&(*tree)->left, del);
+		if ((*tree)->right)
+			ft_treeclear(&(*tree)->right, del);
+		del((*tree)->content);
+		free(*tree);
+		*tree = NULL;
+	}
 }

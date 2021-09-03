@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_treedelone.c                                    :+:      :+:    :+:   */
+/*   ft_dlstprev.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/21 01:35:43 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/21 01:51:41 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/30 21:40:16 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/30 21:43:12 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	ft_treedelone(t_tree *tree, void (*del)(void *))
+t_dlist	*ft_dlstprev(t_dlist **lst)
 {
-	if (tree)
+	if (lst && *lst)
 	{
-		del(tree->content);
-		free(tree);
+		*lst = (*lst)->prev;
+		return (*lst);
 	}
+	return (NULL);
 }
