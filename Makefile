@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/03 17:16:39 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/06 16:38:21 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ INC		=	include
 NAME	=	libft.a
 CC		=	clang
 LIBC	=	ar rcs
-CFLAGS	=	-Wall -Werror -Wextra
+CFLAGS	=	-Wall -Werror -Wextra -O2
 RM		=	rm -rf
 NM		=	norminette
 
