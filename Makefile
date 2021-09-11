@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/07 19:16:28 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/11 18:33:17 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ CONV_C		=	ft_atoi.c ft_atol.c ft_float_len.c ft_ftoa.c ft_itoa_base.c\
 CONV_SRC	=	$(addprefix $(CONV_DIR)/, $(CONV_C))
 
 FILE_DIR	=	$(SRC)/ft_file
-FILE_C		=	count_lines.c get_next_line.c
+FILE_C		=	count_lines.c get_next_line.c read_to_str.c
 FILE_SRC	=	$(addprefix $(FILE_DIR)/, $(FILE_C))
 
 LIST_DIR	=	$(SRC)/ft_list
@@ -84,7 +84,8 @@ STR_DIR		=	$(SRC)/ft_string
 STR_H		=	ft_string.h
 STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.c ft_str_clear.c\
 				ft_str_copy.c ft_str_copy_cstr.c ft_str_data.c ft_str_dup.c ft_str_dup_cstr.c ft_str_free.c\
-				ft_str_len.c ft_str_new.c ft_str_sub.c ft_str_sub_cstr.c ft_str_trim.c ft_str_trim_cstr.c
+				ft_str_len.c ft_str_new.c ft_str_sub.c ft_str_sub_cstr.c ft_str_trim.c ft_str_trim_cstr.c\
+				ft_str_take.c
 STR_SRC		=	$(addprefix $(STR_DIR)/, $(STR_C))
 STR_INCS	=	$(addprefix $(INC)/, $(STR_H))
 

@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/07 19:15:56 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/11 18:22:26 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,6 +187,7 @@ void		ft_btreeclear(t_btree **tree, void (*del)(void *));
 
 int			get_next_line(int fd, char **line);
 int			count_lines(char *file);
+char		*read_to_str(int fd);
 
 /*
 ** Custom printf
@@ -217,5 +218,6 @@ size_t		ft_str_len(t_string str);
 size_t		ft_str_capacity(t_string str);
 void		ft_str_free(t_string str);
 char		*ft_str_data(t_string str);
+char		*ft_str_take(t_string str);
 
 #endif

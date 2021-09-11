@@ -4,3 +4,4 @@ libft.a
 main.c
 *.o
 .DS_Store
+test.txt
