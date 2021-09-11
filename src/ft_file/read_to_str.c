@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 18:25:38 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/11 18:32:56 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/11 19:49:46 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ char	*read_to_str(int fd)
 	content = ft_str_new(NULL);
 	if (!content)
 		return (NULL);
-	bytes = 1;
-	while (bytes > 0)
+	bytes = BUFFER_SIZE;
+	while (bytes == BUFFER_SIZE)
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes < 0)
