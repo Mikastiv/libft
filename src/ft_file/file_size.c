@@ -1,44 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_to_str.c                                      :+:      :+:    :+:   */
+/*   file_size.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/11 18:25:38 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/11 20:55:10 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/09/11 20:45:52 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/09/11 20:55:03 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <fcntl.h>
 
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE (1024)
 #endif
 
-char	*read_to_str(int fd)
+ssize_t	file_size(const char *file)
 {
-	char		buffer[BUFFER_SIZE + 1];
-	ssize_t		bytes;
-	t_string	content;
-	char		*ret;
+	char	buffer[BUFFER_SIZE];
+	ssize_t	bytes;
+	ssize_t	size;
+	int		fd;
 
-	content = ft_str_new(NULL);
-	if (!content)
-		return (NULL);
+	fd = open(file, O_RDONLY);
+	if (fd < 0)
+		return (-1);
+	size = 0;
 	bytes = BUFFER_SIZE;
 	while (bytes == BUFFER_SIZE)
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes < 0)
-		{
-			ft_str_free(content);
-			return (NULL);
-		}
-		buffer[bytes] = '\0';
-		ft_str_append_cstr(content, buffer);
+			return (-1);
+		size += bytes;
 	}
-	ret = ft_str_take(content);
-	ft_str_free(content);
-	return (ret);
+	return (size);
 }

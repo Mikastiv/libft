@@ -6,12 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 21:22:14 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/25 22:11:53 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/11 20:55:20 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(const char *s, int fd)
 {

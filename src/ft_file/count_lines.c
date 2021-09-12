@@ -6,21 +6,22 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 15:05:29 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/07/19 12:57:51 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/11 20:54:40 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <fcntl.h>
-#include <unistd.h>
 
-#define BUF_SIZE (1024)
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE (1024)
+#endif
 
-int	count_lines(char *file)
+ssize_t	count_lines(const char *file)
 {
-	char	buf[BUF_SIZE + 1];
+	char	buf[BUFFER_SIZE + 1];
 	ssize_t	bytes;
-	int		count;
+	ssize_t	count;
 	char	*newline;
 	int		fd;
 
@@ -28,10 +29,10 @@ int	count_lines(char *file)
 	if (fd < 0)
 		return (-1);
 	count = 0;
-	bytes = 1;
-	while (bytes > 0)
+	bytes = BUFFER_SIZE;
+	while (bytes == BUFFER_SIZE)
 	{
-		bytes = read(fd, &buf, BUF_SIZE);
+		bytes = read(fd, &buf, BUFFER_SIZE);
 		if (bytes < 0)
 			close(fd);
 		if (bytes < 0)

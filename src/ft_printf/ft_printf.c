@@ -6,13 +6,12 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 19:07:16 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 21:17:13 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/11 20:55:12 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "do_printf.h"
 #include "libft.h"
-#include <unistd.h>
 
 static int	ft_putchar(char c)
 {

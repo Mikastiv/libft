@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/11 18:33:17 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/11 20:53:27 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ CONV_C		=	ft_atoi.c ft_atol.c ft_float_len.c ft_ftoa.c ft_itoa_base.c\
 CONV_SRC	=	$(addprefix $(CONV_DIR)/, $(CONV_C))
 
 FILE_DIR	=	$(SRC)/ft_file
-FILE_C		=	count_lines.c get_next_line.c read_to_str.c
+FILE_C		=	count_lines.c get_next_line.c read_to_str.c file_size.c
 FILE_SRC	=	$(addprefix $(FILE_DIR)/, $(FILE_C))
 
 LIST_DIR	=	$(SRC)/ft_list

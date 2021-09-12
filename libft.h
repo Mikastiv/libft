@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/11 18:22:26 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/11 20:54:55 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 # include <wchar.h>
 # include <stdbool.h>
+# include <unistd.h>
 
 # define WHITESPACE " \t\n\v\f\r"
 
@@ -186,8 +187,9 @@ void		ft_btreeclear(t_btree **tree, void (*del)(void *));
 */
 
 int			get_next_line(int fd, char **line);
-int			count_lines(char *file);
 char		*read_to_str(int fd);
+ssize_t		count_lines(const char *file);
+ssize_t		file_size(const char *file);
 
 /*
 ** Custom printf

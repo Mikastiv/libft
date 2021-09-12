@@ -6,12 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 22:12:49 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/25 22:22:47 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/11 20:55:30 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 static unsigned int	get_header(wint_t c)
 {
