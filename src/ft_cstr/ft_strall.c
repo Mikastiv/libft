@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcount_if.c                                   :+:      :+:    :+:   */
+/*   ft_strall.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/24 16:16:50 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/15 13:25:14 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/09/15 13:25:41 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/09/15 13:28:28 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdbool.h>
-#include <stddef.h>
-
-size_t	ft_strcount_if(const char *s, int (*f)(char))
+int	ft_strall(const char *s, int (*f)(char))
 {
-	size_t	count;
-
-	count = 0;
 	while (*s)
 	{
-		if (f(*s))
-			++count;
+		if (!f(*s))
+			return (0);
 		++s;
 	}
-	return (count);
+	return (1);
 }

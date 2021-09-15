@@ -6,19 +6,19 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 15:36:42 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/25 01:31:10 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/15 13:28:40 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdbool.h>
 
-bool	ft_strany(const char *s, bool(*f)(char))
+int	ft_strany(const char *s, int (*f)(char))
 {
 	while (*s)
 	{
 		if (f(*s))
-			return (true);
+			return (1);
 		++s;
 	}
-	return (false);
+	return (0);
 }
