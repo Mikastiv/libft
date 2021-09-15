@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/15 13:29:59 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/15 13:33:59 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,16 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 ** Character test and convertion functions
 */
 
-int			ft_isupper(int c);
-int			ft_islower(int c);
-int			ft_isalpha(int c);
-int			ft_isdigit(int c);
-int			ft_isalnum(int c);
-int			ft_isascii(int c);
-int			ft_isspace(int c);
-int			ft_isprint(int c);
-int			ft_toupper(int c);
-int			ft_tolower(int c);
+int			ft_isupper(char c);
+int			ft_islower(char c);
+int			ft_isalpha(char c);
+int			ft_isdigit(char c);
+int			ft_isalnum(char c);
+int			ft_isascii(char c);
+int			ft_isspace(char c);
+int			ft_isprint(char c);
+int			ft_toupper(char c);
+int			ft_tolower(char c);
 
 /*
 ** Conversion functions

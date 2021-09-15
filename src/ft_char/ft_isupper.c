@@ -6,11 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 09:42:56 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 09:46:44 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/15 13:35:01 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isupper(int c)
+int	ft_isupper(char c)
 {
 	return ((unsigned char)c >= 'A' && (unsigned char)c <= 'Z');
 }

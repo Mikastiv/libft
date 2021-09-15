@@ -6,11 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 20:17:32 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 23:58:10 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/15 13:35:01 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(int c)
+int	ft_isspace(char c)
 {
 	return (((unsigned char)c >= '\t' && (unsigned char)c <= '\r')
 		|| (unsigned char)c == ' ');
