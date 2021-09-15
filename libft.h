@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/14 12:22:13 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/15 11:59:59 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -204,6 +204,7 @@ int			ft_printf(const char *format, ...);
 typedef void	*t_string;
 
 t_string	ft_str_new(char *cstr);
+t_string	ft_str_new_copy(const char *cstr);
 t_string	ft_str_add_back(t_string str, char c);
 t_string	ft_str_append(t_string dst, const t_string src);
 t_string	ft_str_append_cstr(t_string dst, const char *src);
