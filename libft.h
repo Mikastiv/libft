@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/15 21:20:38 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/15 22:55:29 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,6 +219,8 @@ t_string	ft_str_sub_cstr(const char *str, unsigned int index, size_t len);
 t_string	ft_str_trim(const t_string str, const char *set);
 t_string	ft_str_trim_cstr(const char *str, const char *set);
 t_string	ft_str_clear(t_string str);
+int			ft_str_cmp(const t_string s1, const t_string s2, size_t n);
+int			ft_str_cmp_cstr(const t_string s1, const char *s2, size_t n);
 size_t		ft_str_len(t_string str);
 size_t		ft_str_capacity(t_string str);
 void		ft_str_free(t_string str);
