@@ -6,11 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 08:58:41 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/15 13:35:01 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/16 10:00:27 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+#include <stdbool.h>
+
+bool	ft_isdigit(char c)
 {
 	return ((unsigned char)c >= '0' && (unsigned char)c <= '9');
 }

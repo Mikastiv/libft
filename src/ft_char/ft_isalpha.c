@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 22:20:36 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/15 13:35:01 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/16 09:57:19 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char c)
+bool	ft_isalpha(char c)
 {
 	return (ft_isupper(c) || ft_islower(c));
 }

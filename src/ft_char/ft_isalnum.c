@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 09:03:57 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/15 13:34:17 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/16 09:57:15 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(char c)
+bool	ft_isalnum(char c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }

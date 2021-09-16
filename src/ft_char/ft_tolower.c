@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 09:51:22 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/15 13:35:01 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/16 09:58:12 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(char c)
+char	ft_tolower(char c)
 {
 	if (ft_isupper(c))
 		return (c + ('a' - 'A'));
