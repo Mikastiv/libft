@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/15 13:33:59 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/15 21:20:38 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,7 @@ char		**ft_split(const char *s, char c);
 char		**ft_dup_strarr(char **arr);
 char		**ft_expand_strarr(char **arr, char *back_str);
 size_t		ft_strarr_size(char **arr);
+void		ft_shrink_strarr(char **arr, size_t index);
 void		ft_free_strarr(char **arr);
 int			ft_strany(const char *s, int (*f)(char));
 int			ft_strall(const char *s, int (*f)(char));
