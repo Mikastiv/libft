@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/17 19:56:05 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/17 19:56:39 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@
 # define C_MAG "\033[35m"
 # define C_CYA "\033[36m"
 # define C_WHI "\033[37m"
+
 # define C_BBLA "\033[90m"
 # define C_BRED "\033[91m"
 # define C_BGRE "\033[92m"
