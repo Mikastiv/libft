@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/17 19:54:17 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/17 19:56:05 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 ** ANSI Colors
 */
 
-# define TXT_RST "\033[m"
+# define C_RST "\033[m"
 
 # define C_BLA "\033[30m"
 # define C_RED "\033[31m"
