@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 11:53:57 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/15 11:59:22 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/15 16:56:11 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 t_string	ft_str_new_copy(const char *cstr)
 {
-	char	*copy;
+	char		*copy;
 	t_string_	*str;
 
 	copy = ft_strdup(cstr);

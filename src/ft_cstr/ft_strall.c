@@ -6,11 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 13:25:41 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/15 13:28:28 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/16 09:59:38 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strall(const char *s, int (*f)(char))
+#include <stdbool.h>
+
+bool	ft_strall(const char *s, bool (*f)(char))
 {
 	while (*s)
 	{

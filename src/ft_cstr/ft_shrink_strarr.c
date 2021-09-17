@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_shrink_strarr.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/05 09:33:55 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/16 10:00:39 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/09/15 21:13:43 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/09/15 21:20:23 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdbool.h>
+#include "libft.h"
+#include <stdlib.h>
 
-bool	ft_isprint(char c)
+void	ft_shrink_strarr(char **arr, size_t index)
 {
-	return ((unsigned char)c >= ' ' && (unsigned char)c <= '~');
+	if (index >= ft_strarr_size(arr))
+		return ;
+	free(arr[index]);
+	while (arr[index])
+	{
+		arr[index] = arr[index + 1];
+		++index;
+	}
 }

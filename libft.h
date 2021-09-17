@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/17 19:50:16 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/17 19:51:11 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,16 +61,16 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 ** Character test and convertion functions
 */
 
-int			ft_isupper(char c);
-int			ft_islower(char c);
-int			ft_isalpha(char c);
-int			ft_isdigit(char c);
-int			ft_isalnum(char c);
-int			ft_isascii(char c);
-int			ft_isspace(char c);
-int			ft_isprint(char c);
-int			ft_toupper(char c);
-int			ft_tolower(char c);
+bool		ft_isupper(char c);
+bool		ft_islower(char c);
+bool		ft_isalpha(char c);
+bool		ft_isdigit(char c);
+bool		ft_isalnum(char c);
+bool		ft_isascii(char c);
+bool		ft_isspace(char c);
+bool		ft_isprint(char c);
+char		ft_toupper(char c);
+char		ft_tolower(char c);
 
 /*
 ** Conversion functions
@@ -127,11 +127,12 @@ char		**ft_split(const char *s, char c);
 char		**ft_dup_strarr(char **arr);
 char		**ft_expand_strarr(char **arr, char *back_str);
 size_t		ft_strarr_size(char **arr);
+void		ft_shrink_strarr(char **arr, size_t index);
 void		ft_free_strarr(char **arr);
-int			ft_strany(const char *s, int (*f)(char));
-int			ft_strall(const char *s, int (*f)(char));
+bool		ft_strany(const char *s, bool (*f)(char));
+bool		ft_strall(const char *s, bool (*f)(char));
 void		ft_strforeach(char *s, void (*f)(char));
-size_t		ft_strcount_if(const char *s, int (*f)(char));
+size_t		ft_strcount_if(const char *s, bool (*f)(char));
 
 /*
 ** Output functions
@@ -241,6 +242,8 @@ t_string	ft_str_sub_cstr(const char *str, unsigned int index, size_t len);
 t_string	ft_str_trim(const t_string str, const char *set);
 t_string	ft_str_trim_cstr(const char *str, const char *set);
 t_string	ft_str_clear(t_string str);
+int			ft_str_cmp(const t_string s1, const t_string s2, size_t n);
+int			ft_str_cmp_cstr(const t_string s1, const char *s2, size_t n);
 size_t		ft_str_len(t_string str);
 size_t		ft_str_capacity(t_string str);
 void		ft_str_free(t_string str);

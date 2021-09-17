@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_str_cmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/05 09:33:55 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/16 10:00:39 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/09/15 22:56:07 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/09/15 22:57:02 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdbool.h>
+#include "libft.h"
+#include "ft_string.h"
 
-bool	ft_isprint(char c)
+int	ft_str_cmp(const t_string s1, const t_string s2, size_t n)
 {
-	return ((unsigned char)c >= ' ' && (unsigned char)c <= '~');
+	return (ft_strncmp(ft_str_data(s1), ft_str_data(s2), n));
 }

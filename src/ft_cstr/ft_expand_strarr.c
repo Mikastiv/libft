@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 19:21:06 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/27 19:36:16 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/15 17:19:53 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ char	**ft_expand_strarr(char **arr, char *back_str)
 	size_t	i;
 	char	**new;
 
-	i = 0;
-	while (arr[i])
-		++i;
+	i = ft_strarr_size(arr);
 	new = ft_calloc(i + 2, sizeof(char *));
 	if (!new)
 		return (NULL);
