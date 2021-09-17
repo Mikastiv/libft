@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/15 13:33:59 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/17 19:50:16 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,29 @@
 # include <unistd.h>
 
 # define WHITESPACE " \t\n\v\f\r"
+
+/*
+** ANSI Colors
+*/
+
+# define TXT_RST "\033[m"
+
+# define TXT_BLA "\033[30m"
+# define TXT_RED "\033[31m"
+# define TXT_GRE "\033[32m"
+# define TXT_YEL "\033[33m"
+# define TXT_BLU "\033[34m"
+# define TXT_MAG "\033[35m"
+# define TXT_CYA "\033[36m"
+# define TXT_WHI "\033[37m"
+# define TXT_BBLA "\033[60m"
+# define TXT_BRED "\033[61m"
+# define TXT_BGRE "\033[62m"
+# define TXT_BYEL "\033[63m"
+# define TXT_BBLU "\033[64m"
+# define TXT_BMAG "\033[65m"
+# define TXT_BCYA "\033[66m"
+# define TXT_BWHI "\033[67m"
 
 /*
 ** Memory functions
