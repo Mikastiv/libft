@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/17 19:51:11 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/17 19:54:17 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,22 @@
 
 # define TXT_RST "\033[m"
 
-# define TXT_BLA "\033[30m"
-# define TXT_RED "\033[31m"
-# define TXT_GRE "\033[32m"
-# define TXT_YEL "\033[33m"
-# define TXT_BLU "\033[34m"
-# define TXT_MAG "\033[35m"
-# define TXT_CYA "\033[36m"
-# define TXT_WHI "\033[37m"
-# define TXT_BBLA "\033[60m"
-# define TXT_BRED "\033[61m"
-# define TXT_BGRE "\033[62m"
-# define TXT_BYEL "\033[63m"
-# define TXT_BBLU "\033[64m"
-# define TXT_BMAG "\033[65m"
-# define TXT_BCYA "\033[66m"
-# define TXT_BWHI "\033[67m"
+# define C_BLA "\033[30m"
+# define C_RED "\033[31m"
+# define C_GRE "\033[32m"
+# define C_YEL "\033[33m"
+# define C_BLU "\033[34m"
+# define C_MAG "\033[35m"
+# define C_CYA "\033[36m"
+# define C_WHI "\033[37m"
+# define C_BBLA "\033[90m"
+# define C_BRED "\033[91m"
+# define C_BGRE "\033[92m"
+# define C_BYEL "\033[93m"
+# define C_BBLU "\033[94m"
+# define C_BMAG "\033[95m"
+# define C_BCYA "\033[96m"
+# define C_BWHI "\033[97m"
 
 /*
 ** Memory functions
