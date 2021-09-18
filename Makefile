@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/17 22:08:32 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/17 22:10:39 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,7 +91,7 @@ STR_INCS	=	$(addprefix $(INC)/, $(STR_H))
 
 OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
 			$(MEM_C:.c=.o) $(PRINT_C:.c=.o) $(PUT_C:.c=.o) $(CSTR_C:.c=.o)\
-			$(TREE_C:.c=.o) $(STR_C:.c=.o) $(DLIST_C:.c=.o)
+			$(BTREE_C:.c=.o) $(STR_C:.c=.o) $(DLIST_C:.c=.o)
 OBJS	=	$(addprefix $(OBJ)/, $(OFILES))
 SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(CSTR_SRC) $(BTREE_SRC) $(STR_SRC) $(DLIST_SRC)
 INCS	=	$(PRINT_INCS) $(STR_INCS)
