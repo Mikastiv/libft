@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/15 22:55:49 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/17 22:08:32 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,8 +76,8 @@ CSTR_C		=	ft_dup_strarr.c ft_free_strarr.c ft_split.c ft_strany.c ft_strcount_if
 				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c ft_strarr_size.c
 CSTR_SRC	=	$(addprefix $(CSTR_DIR)/, $(CSTR_C))
 
-BTREE_DIR	=	$(SRC)/ft_tree
-BTREE_C		=	ft_treeclear.c ft_treedelone.c ft_treenew.c
+BTREE_DIR	=	$(SRC)/ft_btree
+BTREE_C		=	ft_btreeclear.c ft_btreedelone.c ft_btreenew.c
 BTREE_SRC	=	$(addprefix $(BTREE_DIR)/, $(BTREE_C))
 
 STR_DIR		=	$(SRC)/ft_string
