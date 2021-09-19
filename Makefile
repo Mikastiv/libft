@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/18 05:03:08 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/19 00:22:16 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ CSTR_C		=	ft_dup_strarr.c ft_free_strarr.c ft_split.c ft_strany.c ft_strcount_if
 				ft_expand_strarr.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strall.c\
 				ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c ft_shrink_strarr.c\
 				ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_wchar_size.c\
-				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c ft_strarr_size.c
+				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c ft_strarr_size.c ft_strarr_replace.c
 BTREE_C		=	ft_btreeclear.c ft_btreedelone.c ft_btreenew.c
 STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.c ft_str_clear.c\
 				ft_str_copy.c ft_str_copy_cstr.c ft_str_data.c ft_str_dup.c ft_str_dup_cstr.c ft_str_free.c\
