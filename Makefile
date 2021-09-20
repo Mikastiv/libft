@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/19 23:27:27 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/20 03:54:45 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,11 +45,11 @@ PRINT_C		=	convert_char.c convert_float.c convert_int.c convert_n.c\
 PUT_C		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
 				ft_putstr_fd.c ft_putunbr_base_fd.c ft_putwchar_fd.c\
 				ft_putwstr_fd.c
-CSTR_C		=	ft_dup_strarr.c ft_free_strarr.c ft_split.c ft_strany.c ft_strcount_if.c ft_strforeach.c\
-				ft_expand_strarr.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strall.c\
-				ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c ft_shrink_strarr.c\
+CSTR_C		=	ft_strarr_dup.c ft_free_strarr.c ft_split.c ft_strany.c ft_strcount_if.c ft_strforeach.c\
+				ft_strarr_extend.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strall.c\
+				ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c ft_strarr_remove.c\
 				ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_wchar_size.c\
-				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c ft_strarr_size.c ft_strarr_replace.c
+				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c ft_strarr_size.c ft_strarr_remove.c
 BTREE_C		=	ft_btreeclear.c ft_btreedelone.c ft_btreenew.c
 STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.c ft_str_clear.c\
 				ft_str_copy.c ft_str_copy_cstr.c ft_str_data.c ft_str_dup.c ft_str_dup_cstr.c ft_str_free.c\
