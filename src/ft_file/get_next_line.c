@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 20:33:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/11 20:55:07 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/19 23:42:56 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@
 # define OPEN_MAX (256)
 #endif
 
+static void	free_and_set(char **ptr, char *value)
+{
+	free(*ptr);
+	*ptr = value;
+}
+
 static int	read_file(char	**file_buffer, int fd)
 {
 	char		read_buffer[BUFFER_SIZE + 1];
@@ -35,8 +41,7 @@ static int	read_file(char	**file_buffer, int fd)
 	tmp = ft_strjoin(*file_buffer, read_buffer);
 	if (!tmp)
 		return (-1);
-	free(*file_buffer);
-	*file_buffer = tmp;
+	free_and_set(file_buffer, tmp);
 	if (bytes < BUFFER_SIZE)
 		return (0);
 	return (1);
@@ -56,8 +61,7 @@ static int	get_line(char **buffer, char **line)
 		return (-1);
 	if (!newline)
 	{
-		free(*buffer);
-		*buffer = NULL;
+		free_and_set(buffer, NULL);
 		return (0);
 	}
 	else
@@ -65,8 +69,7 @@ static int	get_line(char **buffer, char **line)
 		tmp = ft_substr(*buffer, ft_strlen(*line) + 1, BUFFER_SIZE);
 		if (!tmp)
 			return (-1);
-		free(*buffer);
-		*buffer = tmp;
+		free_and_set(buffer, tmp);
 		return (1);
 	}
 }
@@ -76,6 +79,8 @@ int	get_next_line(int fd, char **line)
 	static char	*buffer[OPEN_MAX] = {};
 	int			code;
 
+	if (!line)
+		free_and_set(&buffer[fd], NULL);
 	if (fd < 0 || fd >= OPEN_MAX || !line)
 		return (-1);
 	if (!buffer[fd])
@@ -88,13 +93,9 @@ int	get_next_line(int fd, char **line)
 			break ;
 	}
 	if (code < 0)
-		free(buffer[fd]);
-	if (code < 0)
+	{
+		free_and_set(&buffer[fd], NULL);
 		return (-1);
-	code = get_line(&buffer[fd], line);
-	if (code < 0)
-		return (-1);
-	if (code == 0)
-		return (0);
-	return (1);
+	}
+	return (get_line(&buffer[fd], line));
 }

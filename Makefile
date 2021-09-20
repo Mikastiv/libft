@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/19 00:22:16 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/19 23:27:27 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,8 @@ LIST_C		=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
 DLIST_C		=	ft_dlstadd_back.c ft_dlstadd_front.c ft_dlstclear.c	ft_dlstdelone.c\
 				ft_dlstlast.c ft_dlstnew.c ft_dlstfirst.c ft_dlstsize.c ft_dlstnext.c\
 				ft_dlstprev.c
-MEM_C		=	ft_bzero.c ft_calloc.c ft_free.c ft_memccpy.c ft_memchr.c\
-				ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c
+MEM_C		=	ft_bzero.c ft_calloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c\
+				ft_memcpy.c ft_memmove.c ft_memset.c
 PRINT_C		=	convert_char.c convert_float.c convert_int.c convert_n.c\
 				convert_num_utils.c convert_percent.c convert_ptr.c convert_str.c\
 				convert_uint.c convert.c do_printf.c ft_printf.c printf_utils.c
