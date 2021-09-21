@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 20:45:52 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/11 20:55:03 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/21 05:01:52 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ ssize_t	file_size(const char *file)
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes < 0)
+		{
+			close(fd);
 			return (-1);
+		}
 		size += bytes;
 	}
 	return (size);

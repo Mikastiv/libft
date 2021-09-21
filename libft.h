@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/21 00:11:13 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/21 04:55:47 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,25 +24,25 @@
 ** ANSI Colors
 */
 
-# define C_RST "\033[m"
+# define FT_RST "\033[m"
 
-# define C_BLA "\033[30m"
-# define C_RED "\033[31m"
-# define C_GRE "\033[32m"
-# define C_YEL "\033[33m"
-# define C_BLU "\033[34m"
-# define C_MAG "\033[35m"
-# define C_CYA "\033[36m"
-# define C_WHI "\033[37m"
+# define FT_BLA "\033[30m"
+# define FT_RED "\033[31m"
+# define FT_GRE "\033[32m"
+# define FT_YEL "\033[33m"
+# define FT_BLU "\033[34m"
+# define FT_MAG "\033[35m"
+# define FT_CYA "\033[36m"
+# define FT_WHI "\033[37m"
 
-# define C_BBLA "\033[90m"
-# define C_BRED "\033[91m"
-# define C_BGRE "\033[92m"
-# define C_BYEL "\033[93m"
-# define C_BBLU "\033[94m"
-# define C_BMAG "\033[95m"
-# define C_BCYA "\033[96m"
-# define C_BWHI "\033[97m"
+# define FT_BBLA "\033[90m"
+# define FT_BRED "\033[91m"
+# define FT_BGRE "\033[92m"
+# define FT_BYEL "\033[93m"
+# define FT_BBLU "\033[94m"
+# define FT_BMAG "\033[95m"
+# define FT_BCYA "\033[96m"
+# define FT_BWHI "\033[97m"
 
 /*
 ** Memory functions
