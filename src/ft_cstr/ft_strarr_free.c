@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_strarr.c                                   :+:      :+:    :+:   */
+/*   ft_strarr_free.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 03:39:16 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/30 18:54:59 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/21 00:10:53 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	ft_free_strarr(char **arr)
+void	ft_strarr_free(char **arr)
 {
 	size_t	i;
 

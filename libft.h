@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/20 16:15:17 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/21 00:11:13 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,13 +123,13 @@ char		*ft_substr(const char *s, unsigned int start, size_t len);
 char		*ft_strjoin(const char *s1, const char *s2);
 char		*ft_strtrim(const char *s1, const char *set);
 char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
-char		**ft_split(const char *s, char c);
+char		**ft_split(const char *s, char delim);
 char		**ft_strarr_dup(char **arr);
 char		**ft_strarr_extend(char **arr, char *back_str);
 size_t		ft_strarr_size(char **arr);
 void		ft_strarr_replace(char **arr, char *new, size_t index);
 void		ft_strarr_remove(char **arr, size_t index);
-void		ft_free_strarr(char **arr);
+void		ft_strarr_free(char **arr);
 bool		ft_strany(const char *s, bool (*f)(char));
 bool		ft_strall(const char *s, bool (*f)(char));
 void		ft_strforeach(char *s, void (*f)(char));

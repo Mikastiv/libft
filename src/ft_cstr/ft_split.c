@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 15:27:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:49:23 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/21 00:10:39 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,105 +14,74 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-static size_t	ft_count_words(const char *s, const char c)
+static char	*word_start(const char **s, char delim)
+{
+	while (**s && **s == delim)
+		++(*s);
+	return ((char *)*s);
+}
+
+static char	*word_end(const char **s, char delim)
+{
+	while (**s && **s != delim)
+		++(*s);
+	return ((char *)*s);
+}
+
+static size_t	count_words(const char *s, char delim)
 {
 	size_t		count;
 	const char	*w_start;
-	bool		in_word;
+	const char	*w_end;
 
 	count = 0;
-	in_word = 0;
-	w_start = s;
 	while (*s)
 	{
-		if (in_word && *s == c)
+		w_start = word_start(&s, delim);
+		w_end = word_end(&s, delim);
+		if (w_start != w_end)
 			++count;
-		if (*s == c)
-			in_word = false;
-		else
-			in_word = true;
-		if (!in_word)
-			w_start = s;
-		++s;
+		if (*s)
+			++s;
 	}
-	if (in_word)
-		++count;
 	return (count);
 }
 
-static char	*ft_get_word(const char *s, int len, char c)
-{
-	char	*word;
-
-	if (*s == c)
-	{
-		++s;
-		--len;
-	}
-	word = ft_calloc(len + 1, sizeof(char));
-	if (!word)
-		return (NULL);
-	ft_strlcpy(word, s, (len + 1) * sizeof(char));
-	return (word);
-}
-
-static void	ft_append_words(char **arr, const char *s, char c)
+static bool	append_words(char **arr, const char *s, char delim)
 {
 	const char	*w_start;
-	int			i;
-	bool		in_word;
+	const char	*w_end;
+	size_t		i;
 
-	w_start = s;
-	in_word = false;
 	i = 0;
 	while (*s)
 	{
-		if (in_word && *s == c)
-			arr[i++] = ft_get_word(w_start, s - w_start, c);
-		if (*s == c)
-			in_word = false;
-		else
-			in_word = true;
-		if (!in_word)
-			w_start = s;
-		++s;
-	}
-	if (in_word)
-		arr[i++] = ft_get_word(w_start, s - w_start, c);
-}
-
-static void	ft_free_str_array(char **arr, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < size)
-	{
-		if (arr[i] != NULL)
-			free(arr[i]);
+		w_start = word_start(&s, delim);
+		w_end = word_end(&s, delim);
+		if (w_start != w_end)
+		{
+			arr[i] = ft_substr(w_start, 0, w_end - w_start);
+			if (!arr[i])
+				return (false);
+		}
 		++i;
 	}
+	return (true);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(const char *s, char delim)
 {
 	char	**ret;
 	size_t	word_count;
-	size_t	i;
 
-	word_count = ft_count_words(s, c);
+	word_count = count_words(s, delim);
 	ret = ft_calloc(word_count + 1, sizeof(char *));
 	if (!ret)
 		return (NULL);
-	ft_append_words(ret, s, c);
-	i = 0;
-	while (i < word_count)
+	if (!append_words(ret, s, delim))
 	{
-		if (ret[i++] == NULL)
-		{
-			ft_free_str_array(ret, word_count);
-			return (NULL);
-		}
+		ft_strarr_free(ret);
+		return (NULL);
 	}
 	return (ret);
 }
