@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/21 00:10:32 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/22 05:10:54 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ BTREE_C		=	ft_btreeclear.c ft_btreedelone.c ft_btreenew.c
 STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.c ft_str_clear.c\
 				ft_str_copy.c ft_str_copy_cstr.c ft_str_data.c ft_str_dup.c ft_str_dup_cstr.c ft_str_free.c\
 				ft_str_len.c ft_str_new.c ft_str_sub.c ft_str_sub_cstr.c ft_str_trim.c ft_str_trim_cstr.c\
-				ft_str_take.c ft_str_new_copy.c ft_str_cmp.c ft_str_cmp_cstr.c
+				ft_str_take.c ft_str_new_copy.c ft_str_cmp.c ft_str_cmp_cstr.c ft_strcmp.c
 
 CHAR_DIR	=	$(SRC)/ft_char
 CONV_DIR	=	$(SRC)/ft_convert
