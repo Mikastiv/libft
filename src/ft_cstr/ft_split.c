@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 15:27:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/21 00:10:39 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/22 19:47:46 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ static size_t	count_words(const char *s, char delim)
 		w_end = word_end(&s, delim);
 		if (w_start != w_end)
 			++count;
-		if (*s)
-			++s;
 	}
 	return (count);
 }
