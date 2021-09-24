@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/22 05:10:54 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/24 16:10:21 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,13 +48,13 @@ PUT_C		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
 CSTR_C		=	ft_strarr_dup.c ft_strarr_free.c ft_split.c ft_strany.c ft_strcount_if.c ft_strforeach.c\
 				ft_strarr_extend.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strall.c\
 				ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c ft_strarr_replace.c\
-				ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_wchar_size.c\
+				ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_wchar_size.c ft_strcmp.c\
 				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c ft_strarr_size.c ft_strarr_remove.c
 BTREE_C		=	ft_btreeclear.c ft_btreedelone.c ft_btreenew.c
 STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.c ft_str_clear.c\
 				ft_str_copy.c ft_str_copy_cstr.c ft_str_data.c ft_str_dup.c ft_str_dup_cstr.c ft_str_free.c\
 				ft_str_len.c ft_str_new.c ft_str_sub.c ft_str_sub_cstr.c ft_str_trim.c ft_str_trim_cstr.c\
-				ft_str_take.c ft_str_new_copy.c ft_str_cmp.c ft_str_cmp_cstr.c ft_strcmp.c
+				ft_str_take.c ft_str_new_copy.c ft_str_cmp.c ft_str_cmp_cstr.c
 
 CHAR_DIR	=	$(SRC)/ft_char
 CONV_DIR	=	$(SRC)/ft_convert
