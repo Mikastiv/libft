@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/22 05:10:43 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/26 14:57:17 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void		ft_bzero(void *s, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /*
-** Character test and convertion functions
+** Character classification and convertion functions
 */
 
 bool		ft_isupper(char c);
