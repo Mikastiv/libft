@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/24 16:10:21 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/26 16:30:03 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ PRINT_H		=	convert.h do_printf.h flags.h utils.h
 STR_H		=	ft_string.h
 
 CHAR_C		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c\
-				ft_isprint.c ft_isspace.c ft_isupper.c ft_tolower.c ft_toupper.c
+				ft_isprint.c ft_isspace.c ft_isupper.c ft_tolower.c ft_toupper.c\
+				ft_isblank.c ft_isgraph.c ft_isxdigit.c ft_ispunct.c
 CONV_C		=	ft_atoi.c ft_atol.c ft_float_len.c ft_ftoa.c ft_itoa_base.c\
 				ft_itoa.c ft_lltoa_base.c ft_lltoa.c ft_ltoa_base.c ft_ltoa.c\
 				ft_ntoa_base.c ft_ntoa.c ft_numlen.c ft_ptoa_base.c ft_ptoa.c\

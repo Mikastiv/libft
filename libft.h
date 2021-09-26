@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/26 14:57:17 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/26 16:26:12 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,14 @@ bool		ft_isupper(char c);
 bool		ft_islower(char c);
 bool		ft_isalpha(char c);
 bool		ft_isdigit(char c);
+bool		ft_isxdigit(char c);
 bool		ft_isalnum(char c);
 bool		ft_isascii(char c);
 bool		ft_isspace(char c);
+bool		ft_isblank(char c);
+bool		ft_isgraph(char c);
 bool		ft_isprint(char c);
+bool		ft_ispunct(char c);
 char		ft_toupper(char c);
 char		ft_tolower(char c);
 
