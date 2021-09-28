@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/28 12:44:21 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/28 18:00:17 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,8 @@ STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.
 				ft_str_len.c ft_str_new.c ft_str_sub.c ft_str_sub_cstr.c ft_str_trim.c ft_str_trim_cstr.c\
 				ft_str_take.c ft_str_new_copy.c ft_str_cmp.c ft_str_cmp_cstr.c
 HASH_C		=	ft_hash.c ft_hash_combine.c ft_hashmap_new.c ft_hashmap_free.c ft_hashmap_insert.c\
-				ft_hashmap_find.c ft_hashmap_size.c get_buckets.c ft_hashmap_remove.c delete_pair.c
+				ft_hashmap_find.c ft_hashmap_size.c get_hash_buckets.c ft_hashmap_remove.c delete_pair.c\
+				get_hash_index.c
 
 CHAR_DIR	=	$(SRC)/ft_char
 CONV_DIR	=	$(SRC)/ft_convert

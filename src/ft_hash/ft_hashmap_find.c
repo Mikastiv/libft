@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 11:53:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 12:38:24 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/28 18:01:19 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_hashmap_find(t_hashmap m, const char *key)
 	t_list		*lst;
 	t_pair		*pair;
 
-	lst = *get_buckets(m, key);
+	lst = *get_hash_buckets(m, key);
 	while (lst)
 	{
 		pair = lst->content;

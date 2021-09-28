@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 11:18:10 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 16:33:05 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/28 18:02:02 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ static t_pair	*create_pair(const char *key, void *value)
 
 bool	ft_hashmap_insert(t_hashmap m, const char *key, void *value)
 {
-	t_list		**ptr;
 	t_list		*new;
 	t_pair		*pair;
 	void		*exists;
@@ -51,7 +50,6 @@ bool	ft_hashmap_insert(t_hashmap m, const char *key, void *value)
 		free(pair);
 		return (false);
 	}
-	ptr = get_buckets(m, key);
-	ft_lstadd_back(ptr, new);
+	ft_lstadd_back(get_hash_buckets(m, key), new);
 	return (true);
 }

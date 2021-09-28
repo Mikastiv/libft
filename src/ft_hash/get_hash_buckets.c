@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_buckets.c                                      :+:      :+:    :+:   */
+/*   get_hash_buckets.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 12:32:46 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 12:39:56 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/28 18:00:39 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_hashmap.h"
 
-t_list	**get_buckets(t_hashmap m, const char *key)
+t_list	**get_hash_buckets(t_hashmap m, const char *key)
 {
 	t_hashmap_	*map;
 	size_t		index;
-	t_list		**ptr;
 
+	index = get_hash_index(m, key);
 	map = m;
-	index = ft_hash(key, ft_strlen(key)) % map->size;
-	ptr = map->data;
-	return (&ptr[index]);
+	return (&map->data[index]);
 }
