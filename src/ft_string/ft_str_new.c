@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 15:40:41 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/25 01:22:46 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/27 20:44:44 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ t_string	ft_str_new(char *cstr)
 			return (NULL);
 		}
 		str->capacity = 1;
-		return (str);
+		return ((t_string)str);
 	}
 	str->data = cstr;
 	str->len = ft_strlen(cstr);
