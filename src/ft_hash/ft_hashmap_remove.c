@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 12:30:32 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 18:04:10 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/28 18:27:56 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,25 @@
 #include "ft_hashmap.h"
 #include <stdlib.h>
 
-bool	ft_hashmap_remove(t_hashmap m, const char *key, void (*del)(void *))
+static void	remove_elem(t_hashmap map, t_list *elem)
+{
+	t_hashmap_	*m;
+	t_pair		*pair;
+
+	m = map;
+	pair = elem->content;
+	delete_pair(pair, m->del);
+	free(elem);
+}
+
+bool	ft_hashmap_remove(t_hashmap map, const char *key)
 {
 	t_list		**buckets;
 	t_list		*tmp;
 	t_list		*lst;
 	t_pair		*pair;
 
-	buckets = get_hash_buckets(m, key);
+	buckets = get_hash_buckets(map, key);
 	lst = *buckets;
 	tmp = NULL;
 	while (lst)
@@ -33,8 +44,7 @@ bool	ft_hashmap_remove(t_hashmap m, const char *key, void (*del)(void *))
 				tmp->next = lst->next;
 			else
 				*buckets = lst->next;
-			delete_pair(pair, del);
-			free(lst);
+			remove_elem(map, lst);
 			return (true);
 		}
 		tmp = lst;

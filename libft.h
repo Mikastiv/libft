@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 12:53:46 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/28 18:23:08 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -270,11 +270,11 @@ void		ft_hash_combine(size_t *seed, char byte);
 
 typedef void	*t_hashmap;
 
-t_hashmap	ft_hashmap_new(size_t size);
-size_t		ft_hashmap_size(t_hashmap m);
-bool		ft_hashmap_insert(t_hashmap m, const char *key, void *value);
-bool		ft_hashmap_remove(t_hashmap m, const char *key, void (*d)(void *));
-void		*ft_hashmap_find(t_hashmap m, const char *key);
-void		ft_hashmap_free(t_hashmap m, void (*del)(void *));
+t_hashmap	ft_hashmap_new(size_t size, void (*del)(void *));
+size_t		ft_hashmap_size(t_hashmap map);
+bool		ft_hashmap_insert(t_hashmap map, const char *key, void *value);
+bool		ft_hashmap_remove(t_hashmap map, const char *key);
+void		*ft_hashmap_find(t_hashmap map, const char *key);
+void		ft_hashmap_free(t_hashmap map);
 
 #endif
