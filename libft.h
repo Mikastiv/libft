@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/26 16:26:12 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/27 21:19:54 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,7 +137,7 @@ void		ft_strarr_remove(char **arr, size_t index);
 void		ft_strarr_free(char **arr);
 bool		ft_strany(const char *s, bool (*f)(char));
 bool		ft_strall(const char *s, bool (*f)(char));
-void		ft_strforeach(char *s, void (*f)(char));
+void		ft_striter(char *s, void (*f)(char));
 size_t		ft_strcount_if(const char *s, bool (*f)(char));
 
 /*
