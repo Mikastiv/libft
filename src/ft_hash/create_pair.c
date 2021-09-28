@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hashmap_free.c                                  :+:      :+:    :+:   */
+/*   create_pair.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/28 11:14:11 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 18:24:11 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/09/28 19:26:49 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/09/28 19:40:50 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "ft_hashmap.h"
+#include "ft_hmap.h"
 #include <stdlib.h>
 
-void	ft_hashmap_free(t_hashmap map)
+t_pair	*create_pair(const char *key, void *value)
 {
-	t_hashmap_	*m;
-	size_t		i;
-	t_list		*lst;
-	t_list		*tmp;
+	t_pair	*pair;
 
-	m = map;
-	i = 0;
-	while (i < m->size)
+	pair = ft_calloc(1, sizeof(t_pair));
+	if (!pair)
+		return (NULL);
+	pair->key = ft_strdup(key);
+	if (!pair->key)
 	{
-		lst = m->data[i];
-		while (lst)
-		{
-			tmp = lst->next;
-			delete_pair(lst->content, m->del);
-			free(lst);
-			lst = tmp;
-		}
-		++i;
+		free(pair);
+		return (NULL);
 	}
-	free(m->data);
-	free(m);
+	pair->value = value;
+	return (pair);
 }

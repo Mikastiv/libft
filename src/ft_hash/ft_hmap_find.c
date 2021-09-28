@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_hash_buckets.c                                 :+:      :+:    :+:   */
+/*   ft_hmap_find.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/28 12:32:46 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 18:00:39 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/09/28 11:53:20 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/09/28 19:39:44 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_hashmap.h"
+#include "ft_hmap.h"
 
-t_list	**get_hash_buckets(t_hashmap m, const char *key)
+void	*ft_hmap_find(t_hmap m, const char *key)
 {
-	t_hashmap_	*map;
-	size_t		index;
+	t_list		*lst;
+	t_pair		*pair;
 
-	index = get_hash_index(m, key);
-	map = m;
-	return (&map->data[index]);
+	lst = *get_hmap_buckets(m, key);
+	while (lst)
+	{
+		pair = lst->content;
+		if (ft_strcmp(key, pair->key) == 0)
+			return (pair->value);
+		ft_lstnext(&lst);
+	}
+	return (NULL);
 }

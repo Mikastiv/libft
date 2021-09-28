@@ -1,55 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hashmap_insert.c                                :+:      :+:    :+:   */
+/*   ft_hmap_insert_del.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/28 11:18:10 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 18:24:42 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/09/28 19:23:55 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/09/28 19:41:05 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_hashmap.h"
+#include "ft_hmap.h"
 #include <stdlib.h>
 
-static t_pair	*create_pair(const char *key, void *value)
+static bool	free_value(t_hmap map, void *value)
 {
-	t_pair	*pair;
+	t_hmap_	*m;
 
-	pair = ft_calloc(1, sizeof(t_pair));
-	if (!pair)
-		return (NULL);
-	pair->key = ft_strdup(key);
-	if (!pair->key)
-	{
-		free(pair);
-		return (NULL);
-	}
-	pair->value = value;
-	return (pair);
+	m = map;
+	m->del(value);
+	return (false);
 }
 
-bool	ft_hashmap_insert(t_hashmap map, const char *key, void *value)
+bool	ft_hmap_insert_del(t_hmap map, const char *key, void *value)
 {
 	t_list		*new;
 	t_pair		*pair;
 	void		*exists;
 
-	exists = ft_hashmap_find(map, key);
+	exists = ft_hmap_find(map, key);
 	if (exists)
-		return (false);
+		return (free_value(map, value));
 	pair = create_pair(key, value);
 	if (!pair)
-		return (false);
+		return (free_value(map, value));
 	new = ft_lstnew(pair);
 	if (!new)
 	{
 		free(pair->key);
 		free(pair);
-		return (false);
+		return (free_value(map, value));
 	}
-	ft_lstadd_back(get_hash_buckets(map, key), new);
+	ft_lstadd_back(get_hmap_buckets(map, key), new);
 	return (true);
 }

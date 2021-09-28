@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 18:23:08 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/28 19:34:33 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -268,13 +268,14 @@ void		ft_hash_combine(size_t *seed, char byte);
 ** Hash map functions
 */
 
-typedef void	*t_hashmap;
+typedef void	*t_hmap;
 
-t_hashmap	ft_hashmap_new(size_t size, void (*del)(void *));
-size_t		ft_hashmap_size(t_hashmap map);
-bool		ft_hashmap_insert(t_hashmap map, const char *key, void *value);
-bool		ft_hashmap_remove(t_hashmap map, const char *key);
-void		*ft_hashmap_find(t_hashmap map, const char *key);
-void		ft_hashmap_free(t_hashmap map);
+t_hmap		ft_hmap_new(size_t size, void (*del)(void *));
+size_t		ft_hmap_size(t_hmap map);
+bool		ft_hmap_insert(t_hmap map, const char *key, void *value);
+bool		ft_hmap_insert_del(t_hmap map, const char *key, void *value);
+bool		ft_hmap_remove(t_hmap map, const char *key);
+void		*ft_hmap_find(t_hmap map, const char *key);
+void		ft_hmap_free(t_hmap map);
 
 #endif

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hashmap_remove.c                                :+:      :+:    :+:   */
+/*   ft_hmap_remove.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 12:30:32 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 18:27:56 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/28 19:40:27 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_hashmap.h"
+#include "ft_hmap.h"
 #include <stdlib.h>
 
-static void	remove_elem(t_hashmap map, t_list *elem)
+static void	remove_elem(t_hmap map, t_list *elem)
 {
-	t_hashmap_	*m;
-	t_pair		*pair;
+	t_hmap_	*m;
+	t_pair	*pair;
 
 	m = map;
 	pair = elem->content;
@@ -25,14 +25,14 @@ static void	remove_elem(t_hashmap map, t_list *elem)
 	free(elem);
 }
 
-bool	ft_hashmap_remove(t_hashmap map, const char *key)
+bool	ft_hmap_remove(t_hmap map, const char *key)
 {
 	t_list		**buckets;
 	t_list		*tmp;
 	t_list		*lst;
 	t_pair		*pair;
 
-	buckets = get_hash_buckets(map, key);
+	buckets = get_hmap_buckets(map, key);
 	lst = *buckets;
 	tmp = NULL;
 	while (lst)

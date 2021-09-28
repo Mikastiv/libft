@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hashmap.h                                       :+:      :+:    :+:   */
+/*   ft_hmap_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/28 11:06:32 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 18:29:52 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/09/28 12:27:33 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/09/28 19:39:54 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_HASHMAP_H
-# define FT_HASHMAP_H
+#include "libft.h"
+#include "ft_hmap.h"
 
-# include "../libft.h"
-
-typedef struct s_hashmap_
+size_t	ft_hmap_size(t_hmap m)
 {
-	t_list	**data;
-	size_t	size;
-	void	(*del)(void *);
-}	t_hashmap_;
+	t_hmap_	*map;
 
-typedef struct s_pair
-{
-	char	*key;
-	void	*value;
-}	t_pair;
-
-t_list	**get_hash_buckets(t_hashmap map, const char *key);
-size_t	get_hash_index(t_hashmap map, const char *key);
-void	delete_pair(void *pair, void (*del)(void *));
-
-#endif
+	map = m;
+	return (map->size);
+}

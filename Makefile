@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/28 18:00:17 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/28 19:38:45 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ NM		=	norminette
 
 PRINT_H		=	convert.h do_printf.h flags.h utils.h
 STR_H		=	ft_string.h
-HASH_H		=	ft_hashmap.h
+HASH_H		=	ft_hmap.h
 
 CHAR_C		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c\
 				ft_isprint.c ft_isspace.c ft_isupper.c ft_tolower.c ft_toupper.c\
@@ -57,9 +57,9 @@ STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.
 				ft_str_copy.c ft_str_copy_cstr.c ft_str_data.c ft_str_dup.c ft_str_dup_cstr.c ft_str_free.c\
 				ft_str_len.c ft_str_new.c ft_str_sub.c ft_str_sub_cstr.c ft_str_trim.c ft_str_trim_cstr.c\
 				ft_str_take.c ft_str_new_copy.c ft_str_cmp.c ft_str_cmp_cstr.c
-HASH_C		=	ft_hash.c ft_hash_combine.c ft_hashmap_new.c ft_hashmap_free.c ft_hashmap_insert.c\
-				ft_hashmap_find.c ft_hashmap_size.c get_hash_buckets.c ft_hashmap_remove.c delete_pair.c\
-				get_hash_index.c
+HASH_C		=	ft_hash.c ft_hash_combine.c ft_hmap_new.c ft_hmap_free.c ft_hmap_insert.c\
+				ft_hmap_find.c ft_hmap_size.c get_hmap_buckets.c ft_hmap_remove.c delete_pair.c\
+				get_hmap_index.c create_pair.c ft_hmap_insert_del.c
 
 CHAR_DIR	=	$(SRC)/ft_char
 CONV_DIR	=	$(SRC)/ft_convert

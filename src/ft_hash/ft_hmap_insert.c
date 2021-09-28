@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hashmap_find.c                                  :+:      :+:    :+:   */
+/*   ft_hmap_insert.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/28 11:53:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 18:01:19 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/09/28 11:18:10 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/09/28 19:39:38 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_hashmap.h"
+#include "ft_hmap.h"
+#include <stdlib.h>
 
-void	*ft_hashmap_find(t_hashmap m, const char *key)
+bool	ft_hmap_insert(t_hmap map, const char *key, void *value)
 {
-	t_list		*lst;
+	t_list		*new;
 	t_pair		*pair;
+	void		*exists;
 
-	lst = *get_hash_buckets(m, key);
-	while (lst)
+	exists = ft_hmap_find(map, key);
+	if (exists)
+		return (false);
+	pair = create_pair(key, value);
+	if (!pair)
+		return (false);
+	new = ft_lstnew(pair);
+	if (!new)
 	{
-		pair = lst->content;
-		if (ft_strcmp(key, pair->key) == 0)
-			return (pair->value);
-		ft_lstnext(&lst);
+		free(pair->key);
+		free(pair);
+		return (false);
 	}
-	return (NULL);
+	ft_lstadd_back(get_hmap_buckets(map, key), new);
+	return (true);
 }

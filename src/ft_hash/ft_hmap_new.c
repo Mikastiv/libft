@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hashmap_new.c                                   :+:      :+:    :+:   */
+/*   ft_hmap_new.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 10:58:32 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 18:25:06 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/28 19:38:56 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_hashmap.h"
+#include "ft_hmap.h"
 #include <stdlib.h>
 
-t_hashmap	ft_hashmap_new(size_t size, void (*del)(void *))
+t_hmap	ft_hmap_new(size_t size, void (*del)(void *))
 {
-	t_hashmap_	*map;
+	t_hmap_	*map;
 
-	map = ft_calloc(1, sizeof(t_hashmap_));
+	map = ft_calloc(1, sizeof(t_hmap_));
 	if (!map)
 		return (NULL);
 	map->data = ft_calloc(size, sizeof(t_list *));
