@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/27 21:20:39 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/28 12:44:21 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ NM		=	norminette
 
 PRINT_H		=	convert.h do_printf.h flags.h utils.h
 STR_H		=	ft_string.h
+HASH_H		=	ft_hashmap.h
 
 CHAR_C		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c\
 				ft_isprint.c ft_isspace.c ft_isupper.c ft_tolower.c ft_toupper.c\
@@ -56,6 +57,8 @@ STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.
 				ft_str_copy.c ft_str_copy_cstr.c ft_str_data.c ft_str_dup.c ft_str_dup_cstr.c ft_str_free.c\
 				ft_str_len.c ft_str_new.c ft_str_sub.c ft_str_sub_cstr.c ft_str_trim.c ft_str_trim_cstr.c\
 				ft_str_take.c ft_str_new_copy.c ft_str_cmp.c ft_str_cmp_cstr.c
+HASH_C		=	ft_hash.c ft_hash_combine.c ft_hashmap_new.c ft_hashmap_free.c ft_hashmap_insert.c\
+				ft_hashmap_find.c ft_hashmap_size.c get_buckets.c ft_hashmap_remove.c delete_pair.c
 
 CHAR_DIR	=	$(SRC)/ft_char
 CONV_DIR	=	$(SRC)/ft_convert
@@ -68,6 +71,7 @@ PUT_DIR		=	$(SRC)/ft_put
 CSTR_DIR	=	$(SRC)/ft_cstr
 BTREE_DIR	=	$(SRC)/ft_btree
 STR_DIR		=	$(SRC)/ft_string
+HASH_DIR	=	$(SRC)/ft_hash
 
 CHAR_SRC	=	$(addprefix $(CHAR_DIR)/, $(CHAR_C))
 CONV_SRC	=	$(addprefix $(CONV_DIR)/, $(CONV_C))
@@ -80,21 +84,23 @@ PUT_SRC		=	$(addprefix $(PUT_DIR)/, $(PUT_C))
 CSTR_SRC	=	$(addprefix $(CSTR_DIR)/, $(CSTR_C))
 BTREE_SRC	=	$(addprefix $(BTREE_DIR)/, $(BTREE_C))
 STR_SRC		=	$(addprefix $(STR_DIR)/, $(STR_C))
+HASH_SRC	=	$(addprefix $(HASH_DIR)/, $(HASH_C))
 
 PRINT_INCS	=	$(addprefix $(INC)/, $(PRINT_H))
 STR_INCS	=	$(addprefix $(INC)/, $(STR_H))
+HASH_INCS	=	$(addprefix $(INC)/, $(HASH_H))
 
 OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
 			$(MEM_C:.c=.o) $(PRINT_C:.c=.o) $(PUT_C:.c=.o) $(CSTR_C:.c=.o)\
-			$(BTREE_C:.c=.o) $(STR_C:.c=.o) $(DLIST_C:.c=.o)
-HFILES	=	$(PRINT_H) $(STR_H)
+			$(BTREE_C:.c=.o) $(STR_C:.c=.o) $(DLIST_C:.c=.o) $(HASH_C:.c=.o)
+HFILES	=	$(PRINT_H) $(STR_H) $(HASH_H)
 
 HEADERS	=	$(addprefix $(INC)/, $(HFILES))
 OBJS	=	$(addprefix $(OBJ)/, $(OFILES))
-SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(CSTR_SRC) $(BTREE_SRC) $(STR_SRC) $(DLIST_SRC)
+SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(CSTR_SRC) $(BTREE_SRC) $(STR_SRC) $(DLIST_SRC) $(HASH_SRC)
 INCS	=	$(PRINT_INCS) $(STR_INCS)
 
-VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(CSTR_DIR) $(BTREE_DIR) $(STR_DIR) $(DLIST_DIR)
+VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(CSTR_DIR) $(BTREE_DIR) $(STR_DIR) $(DLIST_DIR) $(HASH_DIR)
 
 $(OBJ)/%.o:	%.c
 			$(CC) $(CFLAGS) -c -I. -I$(INC) $< -o $@

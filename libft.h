@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/27 21:19:54 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/28 12:53:46 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,5 +256,25 @@ size_t		ft_str_capacity(t_string str);
 void		ft_str_free(t_string str);
 char		*ft_str_data(t_string str);
 char		*ft_str_take(t_string str);
+
+/*
+** Hash functions
+*/
+
+size_t		ft_hash(const void *b, size_t size);
+void		ft_hash_combine(size_t *seed, char byte);
+
+/*
+** Hash map functions
+*/
+
+typedef void	*t_hashmap;
+
+t_hashmap	ft_hashmap_new(size_t size);
+size_t		ft_hashmap_size(t_hashmap m);
+bool		ft_hashmap_insert(t_hashmap m, const char *key, void *value);
+bool		ft_hashmap_remove(t_hashmap m, const char *key, void (*d)(void *));
+void		*ft_hashmap_find(t_hashmap m, const char *key);
+void		ft_hashmap_free(t_hashmap m, void (*del)(void *));
 
 #endif
