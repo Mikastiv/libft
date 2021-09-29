@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 15:40:41 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/27 20:44:44 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/29 10:33:55 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ t_string	ft_str_new(char *cstr)
 		return (NULL);
 	if (!cstr)
 	{
-		str->data = ft_calloc(1, sizeof(char));
+		str->data = ft_calloc(INITIAL_CAPACITY, sizeof(char));
 		if (!str->data)
 		{
 			free(str);
 			return (NULL);
 		}
-		str->capacity = 1;
+		str->capacity = INITIAL_CAPACITY;
 		return ((t_string)str);
 	}
 	str->data = cstr;
