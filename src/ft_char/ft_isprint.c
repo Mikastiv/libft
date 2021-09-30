@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 09:33:55 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/16 10:00:39 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/30 17:55:29 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 bool	ft_isprint(char c)
 {
-	return ((unsigned char)c >= ' ' && (unsigned char)c <= '~');
+	return (c >= ' ' && c <= '~');
 }

@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 16:23:51 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/26 16:25:32 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/30 17:56:09 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 bool	ft_isxdigit(char c)
 {
-	return (ft_isdigit(c)
-		|| ((unsigned char)c >= 'a' && (unsigned char)c <= 'f')
-		|| ((unsigned char)c >= 'A' && (unsigned char)c <= 'F'));
+	return (ft_isdigit(c) || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F'));
 }

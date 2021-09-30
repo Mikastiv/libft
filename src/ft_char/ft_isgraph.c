@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 16:22:07 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/26 16:22:37 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/30 17:55:16 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 bool	ft_isgraph(char c)
 {
-	return ((unsigned char)c > ' ' && (unsigned char)c <= '~');
+	return (c > ' ' && c <= '~');
 }

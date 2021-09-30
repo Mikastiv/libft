@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 09:14:47 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/16 10:00:20 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/30 17:56:42 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 bool	ft_isascii(char c)
 {
-	return (((unsigned char)c & 0x80) == 0);
+	return ((c & 0x80) == 0);
 }

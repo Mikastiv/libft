@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 16:26:22 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/26 16:29:40 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/30 17:55:34 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 bool	ft_ispunct(char c)
 {
-	return (ft_isprint(c) && (unsigned char)c != ' ' && !ft_isalnum(c));
+	return (ft_isprint(c) && c != ' ' && !ft_isalnum(c));
 }
