@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/09/28 19:38:45 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/09/30 15:21:15 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ CFLAGS	=	-Wall -Werror -Wextra -O2
 RM		=	rm -rf
 NM		=	norminette
 
-PRINT_H		=	convert.h do_printf.h flags.h utils.h
+PRINT_H_DIR	=	ft_printf
+PRTF_HFILES	=	convert.h do_printf.h flags.h utils.h
+PRINT_H		=	$(addprefix $(PRINT_H_DIR)/, $(PRTF_HFILES))
 STR_H		=	ft_string.h
 HASH_H		=	ft_hmap.h
 
@@ -104,7 +106,7 @@ INCS	=	$(PRINT_INCS) $(STR_INCS)
 VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(CSTR_DIR) $(BTREE_DIR) $(STR_DIR) $(DLIST_DIR) $(HASH_DIR)
 
 $(OBJ)/%.o:	%.c
-			$(CC) $(CFLAGS) -c -I. -I$(INC) $< -o $@
+			$(CC) $(CFLAGS) -c -I. -I$(INC) -I$(INC)/$(PRINT_H_DIR) $< -o $@
 
 $(NAME):	$(OBJ) $(OBJS)
 			$(LIBC) $(NAME) $(OBJS)
