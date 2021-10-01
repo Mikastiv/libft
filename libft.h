@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/30 21:53:10 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/01 00:53:12 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -464,9 +464,9 @@ void		ft_btreeclear(t_btree **tree, void (*del)(void *));
 // RETURN: 0 if EOF is hit, 1 if a line was read and -1 if error occured
 int			get_next_line(int fd, char **line);
 
-// Read whole content of file descriptor to a string
+// Read whole content of file to a string
 // RETURN: file content or NULL if error occured
-char		*read_to_str(int fd);
+char		*read_to_str(const char *file);
 
 // Count lines in file
 // RETURN: line count or -1 if error occured

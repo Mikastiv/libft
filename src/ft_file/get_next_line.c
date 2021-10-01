@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 20:33:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/19 23:42:56 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/01 00:56:27 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	read_file(char	**file_buffer, int fd)
 	ssize_t		bytes;
 
 	bytes = read(fd, read_buffer, BUFFER_SIZE);
-	if (bytes < 0)
+	if (bytes == -1)
 		return (-1);
 	read_buffer[bytes] = '\0';
 	tmp = ft_strjoin(*file_buffer, read_buffer);
@@ -92,7 +92,7 @@ int	get_next_line(int fd, char **line)
 		if (code < 1)
 			break ;
 	}
-	if (code < 0)
+	if (code == -1)
 	{
 		free_and_set(&buffer[fd], NULL);
 		return (-1);
