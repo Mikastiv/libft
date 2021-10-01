@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 15:05:29 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/01 00:55:32 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/01 02:03:52 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,5 @@ ssize_t	count_lines(const char *file)
 		count += count_newlines(buf);
 	}
 	close(fd);
-	return (count + 1);
+	return (count);
 }
