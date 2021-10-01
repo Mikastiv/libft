@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 21:24:00 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/09/30 21:53:10 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -592,7 +592,7 @@ t_hmap		ft_hmap_new(size_t size, void (*del)(void *));
 // Size of hash map
 size_t		ft_hmap_size(t_hmap map);
 
-// Insert key-value pair if key doesn't exist
+// Insert key-value pair if key doesn't exist. Fails if key is already in hmap
 // RETURN: true if inserted or false if failed
 bool		ft_hmap_insert(t_hmap map, const char *key, void *value);
 
@@ -601,7 +601,7 @@ bool		ft_hmap_insert(t_hmap map, const char *key, void *value);
 bool		ft_hmap_insert_del(t_hmap map, const char *key, void *value);
 
 // Remove key-value pair
-// RETURN: true if removed otherwise false
+// RETURN: true if exists and removed otherwise false
 bool		ft_hmap_remove(t_hmap map, const char *key);
 
 // Find value using key
