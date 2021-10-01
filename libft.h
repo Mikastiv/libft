@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/01 00:53:12 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/01 19:12:47 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -278,14 +278,14 @@ char		**ft_split(const char *s, char delim);
 
 // Duplicate NUL-terminated array of string
 // RETURN: new duplicated array or NULL if error occured
-char		**ft_strarr_dup(char **arr);
+char		**ft_strarr_dup(char *const *arr);
 
 // Extend NUL-terminated array of string with back_str. Free old arr
 // RETURN: new extended array of string or NULL if error occured
 char		**ft_strarr_extend(char **arr, char *back_str);
 
 // Size of NUL-terminated array of string
-size_t		ft_strarr_size(char **arr);
+size_t		ft_strarr_size(char *const *arr);
 
 // Replace string at index with new from NUL-terminated array. Free old string
 void		ft_strarr_replace(char **arr, char *new, size_t index);

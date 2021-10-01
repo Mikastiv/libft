@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 14:01:24 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/21 00:10:46 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/01 19:13:00 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strarr_dup(char **arr)
+char	**ft_strarr_dup(char *const *arr)
 {
 	size_t	i;
 	char	**dup;
