@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 16:01:22 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/11 18:33:33 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/04 19:22:33 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@ static bool	grow_buffer(t_string_ *str)
 	size_t	newsize;
 
 	newsize = (size_t)((str->capacity + 1) * 1.5);
-	buf = ft_calloc(newsize, sizeof(char));
+	buf = ft_realloc(str->data,
+		str->capacity * sizeof(char), newsize * sizeof(char));
 	if (!buf)
 		return (false);
-	ft_strlcpy(buf, str->data, newsize);
-	free(str->data);
 	str->data = buf;
-	str->len = ft_strnlen(buf, newsize);
 	str->capacity = newsize;
 	return (true);
 }

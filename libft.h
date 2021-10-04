@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/01 19:12:47 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/04 18:05:27 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,12 @@
 */
 
 // Allocate memory and initialize to 0
-// RETURN: ptr to memory block
+// RETURN: ptr to memory block of NULL if failed
 void		*ft_calloc(size_t count, size_t size);
+
+// Change size of memory block ptr to size
+// RETURN: ptr to memory block or NULL if failed
+void		*ft_realloc(void *ptr, size_t oldsize, size_t size);
 
 // Set memory block to c
 // RETURN: b
