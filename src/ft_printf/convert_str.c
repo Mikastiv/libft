@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 16:45:36 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/05 00:49:26 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 16:53:19 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,10 @@ static int	extra_space(const wchar_t *s, int precision, bool has_prec_flag)
 
 	prec = precision;
 	size = (int)ft_wstr_size(s);
-	while (has_prec_flag && *s && (int)ft_wchar_size((wint_t)*s) <= precision)
+	while (has_prec_flag && *s
+		&& (int)ft_wchar_size(*(wint_t *)s) <= precision)
 	{
-		precision -= (int)ft_wchar_size((wint_t)*s);
+		precision -= (int)ft_wchar_size(*(wint_t *)s);
 		++s;
 	}
 	if (has_prec_flag && prec < size)
@@ -67,10 +68,10 @@ static bool	convert_wstr(t_pinfo *info)
 	if (!(info->flags & F_LEFTALIGN))
 		while (extra-- > 0 && info->width > len)
 			info->count += info->ft_putc(' ');
-	while (*str && (int)ft_wchar_size((wint_t)*str) <= info->precision)
+	while (*str && (int)ft_wchar_size(*(wint_t *)str) <= info->precision)
 	{
-		info->precision -= ft_wchar_size((wint_t)*str);
-		info->count += info->ft_putwc((wint_t)*str++);
+		info->precision -= ft_wchar_size(*(wint_t *)str);
+		info->count += info->ft_putwc(*(wint_t *)str++);
 	}
 	if (info->flags & F_LEFTALIGN)
 		add_padding(info, len, ' ');
