@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 18:53:44 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/25 15:52:12 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:50:25 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 static unsigned long long	get_number(t_pinfo *info)
 {
 	if (info->flags & F_LONG_LONG)
-		return (va_arg(info->va, long long));
+		return ((unsigned long long)va_arg(info->va, long long));
 	else if (info->flags & F_LONG)
 		return ((unsigned long)va_arg(info->va, long));
 	else if (info->flags & F_HALF_HALF)

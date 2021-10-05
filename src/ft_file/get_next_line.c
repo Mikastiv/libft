@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 20:33:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/01 00:56:27 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:45:26 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static int	get_line(char **buffer, char **line)
 	if (!newline)
 		*line = ft_strdup(*buffer);
 	else
-		*line = ft_substr(*buffer, 0, newline - *buffer);
+		*line = ft_substr(*buffer, 0, (size_t)newline - (size_t)*buffer);
 	if (!*line)
 		return (-1);
 	if (!newline)
@@ -66,7 +66,8 @@ static int	get_line(char **buffer, char **line)
 	}
 	else
 	{
-		tmp = ft_substr(*buffer, ft_strlen(*line) + 1, BUFFER_SIZE);
+		tmp = ft_substr(*buffer,
+				(unsigned int)ft_strlen(*line) + 1, BUFFER_SIZE);
 		if (!tmp)
 			return (-1);
 		free_and_set(buffer, tmp);
@@ -76,7 +77,7 @@ static int	get_line(char **buffer, char **line)
 
 int	get_next_line(int fd, char **line)
 {
-	static char	*buffer[OPEN_MAX] = {};
+	static char	*buffer[OPEN_MAX] = {NULL};
 	int			code;
 
 	if (!line)

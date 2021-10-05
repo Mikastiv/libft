@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 13:10:12 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:48:07 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:42:18 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ static void	calc_info(double n, int precision, t_floatinfo *info)
 	if (info->negative)
 		info->str_len++;
 	info->whole = (unsigned long)n;
-	info->tmp = (n - info->whole) * g_power[precision];
+	info->tmp = (n - (double)info->whole) * g_power[precision];
 	info->frac = (unsigned long)info->tmp;
-	info->diff = info->tmp - info->frac;
+	info->diff = info->tmp - (double)info->frac;
 	if (info->diff > 0.5)
 	{
 		info->frac++;
-		if (info->frac >= g_power[precision])
+		if ((double)info->frac >= g_power[precision])
 		{
 			info->frac = 0;
 			info->whole++;
@@ -62,7 +62,7 @@ static void	write_padding(char *b, int precision, t_floatinfo *info)
 	size_t	i;
 
 	i = 0;
-	info->zero_pad = precision - info->frac_len;
+	info->zero_pad = (size_t)precision - info->frac_len;
 	while (i < info->zero_pad)
 		b[info->whole_len + 1 + i++] = '0';
 }

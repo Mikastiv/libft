@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 22:12:49 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/11 20:55:30 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:52:48 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,12 @@ void	ft_putwchar_fd(wint_t c, int fd)
 		ft_putchar_fd((char)c, fd);
 	else
 	{
-		ft_putchar_fd(header | (((c >> shift) & mask)), fd);
+		ft_putchar_fd((char)(header | (((c >> shift) & mask))), fd);
 		shift -= 6;
 	}
 	while (shift >= 0)
 	{
-		ft_putchar_fd(0x80 | ((c >> shift) & 0x3F), fd);
+		ft_putchar_fd((char)(0x80 | ((c >> shift) & 0x3F)), fd);
 		shift -= 6;
 	}
 }

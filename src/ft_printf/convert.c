@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 14:10:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/26 01:57:22 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:50:43 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ bool	convert(const char **fmt, t_pinfo *info)
 	else if (**fmt == 'f' && ++(*fmt))
 		return (convert_float(info));
 	else
-		return (convert_char(info, *((*fmt)++)));
+		return (convert_char(info, (wint_t)*((*fmt)++)));
 }

@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 19:07:16 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/11 20:55:12 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:52:26 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,12 @@ static int	ft_putwchar(wint_t c)
 		ft_putchar((char)c);
 	else
 	{
-		ft_putchar(info.header | (((c >> info.shift) & info.mask)));
+		ft_putchar((char)(info.header | (((c >> info.shift) & info.mask))));
 		info.shift -= 6;
 	}
 	while (info.shift >= 0)
 	{
-		ft_putchar(0x80 | ((c >> info.shift) & 0x3F));
+		ft_putchar((char)(0x80 | ((c >> info.shift) & 0x3F)));
 		info.shift -= 6;
 	}
 	return (info.size);
@@ -86,7 +86,7 @@ int	ft_printf(const char *format, ...)
 
 	if (!format)
 		return (-1);
-	info = (t_pinfo){};
+	info = (t_pinfo){0};
 	va_start(info.va, format);
 	info.ft_putc = ft_putchar;
 	info.ft_putwc = ft_putwchar;

@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 14:23:59 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:48:37 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:43:45 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_ltoa_base(long n, const char *base)
 	size_t	base_len;
 
 	base_len = ft_strlen(base);
-	len = ft_numlen(n, base_len);
+	len = ft_numlen(n, (long long)base_len);
 	size = len + 1;
 	if (n < 0)
 		size += 1;

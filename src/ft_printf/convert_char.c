@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 14:26:13 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/26 01:58:26 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:45:39 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ bool	convert_char(t_pinfo *info, wint_t c)
 
 	pad_char = get_pad_char(info);
 	if (info->flags & F_LONG)
-		char_width = ft_wchar_size(c);
+		char_width = (int)ft_wchar_size(c);
 	else
 		char_width = sizeof(char);
 	if (!(info->flags & F_LEFTALIGN))

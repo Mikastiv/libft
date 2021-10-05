@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 21:24:02 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/25 15:51:45 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:45:51 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	calculate_padding_f(t_pinfo *info, char *str)
 {
 	int	len;
 
-	len = ft_strnlen(str, INT_MAX);
+	len = (int)ft_strnlen(str, INT_MAX);
 	info->width -= len;
 	if (info->precision == 0 && info->flags & F_HASH)
 		info->width--;

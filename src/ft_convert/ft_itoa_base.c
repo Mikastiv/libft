@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 00:32:01 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:48:13 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:42:43 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_itoa_base(int n, const char *base)
 	size_t	base_len;
 
 	base_len = ft_strlen(base);
-	len = ft_numlen(n, base_len);
+	len = ft_numlen(n, (long long)base_len);
 	size = len + 1;
 	if (n < 0)
 		size += 1;

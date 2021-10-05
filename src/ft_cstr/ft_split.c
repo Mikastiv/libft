@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 15:27:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/22 19:47:46 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:53:14 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static bool	append_words(char **arr, const char *s, char delim)
 		w_end = word_end(&s, delim);
 		if (w_start != w_end)
 		{
-			arr[i] = ft_substr(w_start, 0, w_end - w_start);
+			arr[i] = ft_substr(w_start, 0, (size_t)w_end - (size_t)w_start);
 			if (!arr[i])
 				return (false);
 		}

@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 18:49:21 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/15 20:23:41 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/05 00:36:58 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*ptr;
 
-	ptr = (const unsigned char *)s;
+	ptr = s;
 	while (n-- > 0)
 	{
 		if (*ptr == (unsigned char)c)
