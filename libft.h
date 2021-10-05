@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/04 18:05:27 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/04 23:18:16 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@
 void		*ft_calloc(size_t count, size_t size);
 
 // Change size of memory block ptr to size
-// RETURN: ptr to memory block or NULL if failed
+// RETURN: ptr to memory block or NULL if failed or size == 0
 void		*ft_realloc(void *ptr, size_t oldsize, size_t size);
 
 // Set memory block to c
