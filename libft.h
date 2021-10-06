@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 11:16:40 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 17:02:36 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,7 +182,7 @@ size_t		ft_strlen(const char *s);
 size_t		ft_strnlen(const char *s, size_t maxlen);
 
 // Size in bytes of a unicode character
-size_t		ft_wchar_size(wint_t c);
+size_t		ft_wchar_size(wchar_t c);
 
 // Size in bytes of a unicode string
 size_t		ft_wstr_size(const wchar_t *s);
@@ -291,7 +291,7 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(const char *s, int fd);
 
 // Write unicode char to file descriptor
-void		ft_putwchar_fd(wint_t c, int fd);
+void		ft_putwchar_fd(wchar_t c, int fd);
 
 // Write unicode string to file descriptor
 void		ft_putwstr_fd(const wchar_t *s, int fd);

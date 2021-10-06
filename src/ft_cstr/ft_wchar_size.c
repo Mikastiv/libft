@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 21:59:09 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 01:17:38 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 17:03:31 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_wchar_size(wint_t c)
+size_t	ft_wchar_size(wchar_t c)
 {
 	if (c > 0x3FFFFFF)
 		return (5);
