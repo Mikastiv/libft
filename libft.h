@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 01:45:42 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:59:32 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,10 @@
 # define FT_BMAG "\033[95m"
 # define FT_BCYA "\033[96m"
 # define FT_BWHI "\033[97m"
+
+/*
+** Integer types
+*/
 
 typedef uint_least8_t	t_u8;
 typedef int_least8_t	t_i8;
