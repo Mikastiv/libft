@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 01:34:11 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:45:42 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -250,7 +250,7 @@ char		*ft_strdup(const char *s);
 
 // Create substring of s from start of size len
 // RETURN: new substring of s or NULL if error occured
-char		*ft_substr(const char *s, t_u32 start, size_t len);
+char		*ft_substr(const char *s, size_t start, size_t len);
 
 // Join string s1 with string s2
 // RETURN: new joined string or NULL if error occured
@@ -513,11 +513,11 @@ t_string	ft_str_dup_cstr(const char *str);
 
 // Create substring of s from start of size len
 // RETURN: new substring of s or NULL if error occured
-t_string	ft_str_sub(t_string str, t_u32 index, size_t len);
+t_string	ft_str_sub(t_string str, size_t index, size_t len);
 
 // Create substring of s from start of size len
 // RETURN: new substring of s or NULL if error occured
-t_string	ft_str_sub_cstr(const char *str, t_u32 index, size_t len);
+t_string	ft_str_sub_cstr(const char *str, size_t index, size_t len);
 
 // Trim characters in set at beginning and end of str
 // RETURN: new trimmed string or NULL if error occured
