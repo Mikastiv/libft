@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 01:30:02 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:34:11 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,6 @@ typedef int_least32_t	t_i32;
 
 typedef uint_least64_t	t_u64;
 typedef int_least64_t	t_i64;
-
-typedef float			t_f32;
-typedef double			t_f64;
 
 /*
 ** Memory functions
