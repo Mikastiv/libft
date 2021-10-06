@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 02:17:54 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 11:16:40 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,16 +156,16 @@ t_i32		ft_atoi(const char *str);
 // Ascii to long integer
 t_i64		ft_atol(const char *str);
 
-// Convert n to long using decimal base
+// Convert n to ascii using decimal base
 char		*ft_itoa(t_i32 n);
 
-// Convert n to long using base
+// Convert n to ascii using base
 char		*ft_itoa_base(t_i32 n, const char *base);
 
-// Convert n to long using decimal base
+// Convert n to ascii using decimal base
 char		*ft_ltoa(t_i64 n);
 
-// Convert n to long using base
+// Convert n to ascii using base
 char		*ft_ltoa_base(t_i64 n, const char *base);
 
 // Count digits in n using radix
