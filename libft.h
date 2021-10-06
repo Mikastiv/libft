@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 01:59:32 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 02:16:17 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,31 +154,13 @@ char		ft_tolower(char c);
 t_i32		ft_atoi(const char *str);
 
 // Ascii to long integer
-long		ft_atol(const char *str);
+t_i64		ft_atol(const char *str);
 
-// Convert n to a number string using base. Write output to b
-void		ft_ntoa_base(char *b, t_i64 n, size_t len, const char *base);
-
-// Convert n to a number string using decimal base. Write output to b
-void		ft_ntoa(char *b, t_i64 n, size_t len);
-
-// Convert n to a number string using base. Write output to b
-void		ft_untoa_base(char *b, t_u64 n, size_t len, const char *base);
-
-// Convert n to a number string using decimal base. Write output to b
-void		ft_untoa(char *b, t_u64 n, size_t len);
-
-// Convert n to integer using decimal base
+// Convert n to long using decimal base
 char		*ft_itoa(t_i32 n);
 
-// Convert n to integer using base
+// Convert n to long using base
 char		*ft_itoa_base(t_i32 n, const char *base);
-
-// Convert n to unsigned integer using decimal base
-char		*ft_utoa(t_u32 n);
-
-// Convert n to unsigned integer using base
-char		*ft_utoa_base(t_u32 n, const char *base);
 
 // Convert n to long using decimal base
 char		*ft_ltoa(t_i64 n);
@@ -186,17 +168,8 @@ char		*ft_ltoa(t_i64 n);
 // Convert n to long using base
 char		*ft_ltoa_base(t_i64 n, const char *base);
 
-// Convert n to unsigned long using decimal base
-char		*ft_ultoa(t_u64 n);
-
-// Convert n to unsigned long using base
-char		*ft_ultoa_base(t_u64 n, const char *base);
-
 // Count digits in n using radix
 size_t		ft_numlen(t_i64 n, t_i64 radix);
-
-// Count digits in n using radix
-size_t		ft_unumlen(t_u64 n, t_u64 radix);
 
 /*
 ** C-string functions
