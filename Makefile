@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/10/05 00:40:18 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/10/05 19:58:10 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ INC		=	include
 NAME	=	libft.a
 CC		=	clang
 LIBC	=	ar rcs
-CFLAGS	=	-Wall -Werror -Wextra -Wpedantic -Wconversion -O2
+CFLAGS	=	-Wall -Werror -Wextra -Wpedantic -Wconversion
 RM		=	rm -rf
 NM		=	norminette
 
@@ -100,10 +100,12 @@ HFILES	=	$(PRINT_H) $(STR_H) $(HASH_H)
 
 HEADERS	=	$(addprefix $(INC)/, $(HFILES))
 OBJS	=	$(addprefix $(OBJ)/, $(OFILES))
-SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC) $(PUT_SRC) $(CSTR_SRC) $(BTREE_SRC) $(STR_SRC) $(DLIST_SRC) $(HASH_SRC)
+SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC)\
+			$(PUT_SRC) $(CSTR_SRC) $(BTREE_SRC) $(STR_SRC) $(DLIST_SRC) $(HASH_SRC)
 INCS	=	$(PRINT_INCS) $(STR_INCS)
 
-VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR) $(PUT_DIR) $(CSTR_DIR) $(BTREE_DIR) $(STR_DIR) $(DLIST_DIR) $(HASH_DIR)
+VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR)\
+			$(PUT_DIR) $(CSTR_DIR) $(BTREE_DIR) $(STR_DIR) $(DLIST_DIR) $(HASH_DIR)
 
 $(OBJ)/%.o:	%.c
 			$(CC) $(CFLAGS) -c -I. -I$(INC) -I$(INC)/$(PRINT_H_DIR) $< -o $@
@@ -117,7 +119,11 @@ $(OBJ):
 norme:
 			@$(NM) libft.h $(INCS) $(SRCS) $(HEADERS)
 
+all:		CFLAGS += -O2 -DNDEBUG
 all:		$(NAME)
+
+debug:		CFLAGS += -g
+debug:		$(NAME)
 
 clean:
 			@$(RM) $(OBJS)
@@ -127,4 +133,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		all clean fclean re norme
+.PHONY:		all clean fclean re norme debug
