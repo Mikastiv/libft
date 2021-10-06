@@ -5,3 +5,4 @@ main.c
 *.o
 .DS_Store
 test.txt
+*dSYM/*
