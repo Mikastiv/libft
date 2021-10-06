@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 20:33:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/05 16:51:36 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:27:58 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	free_and_set(char **ptr, char *value)
 	*ptr = value;
 }
 
-static int	read_file(char	**file_buffer, int fd)
+static t_i32	read_file(char	**file_buffer, int fd)
 {
 	char		read_buffer[BUFFER_SIZE + 1];
 	char		*tmp;
@@ -47,7 +47,7 @@ static int	read_file(char	**file_buffer, int fd)
 	return (1);
 }
 
-static int	get_line(char **buffer, char **line)
+static t_i32	get_line(char **buffer, char **line)
 {
 	char	*tmp;
 	char	*newline;
@@ -66,8 +66,7 @@ static int	get_line(char **buffer, char **line)
 	}
 	else
 	{
-		tmp = ft_substr(*buffer,
-				(unsigned int)ft_strlen(*line) + 1, BUFFER_SIZE);
+		tmp = ft_substr(*buffer, (t_u32)ft_strlen(*line) + 1, BUFFER_SIZE);
 		if (!tmp)
 			return (-1);
 		free_and_set(buffer, tmp);

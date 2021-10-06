@@ -6,20 +6,20 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 18:49:21 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/05 00:36:58 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:07:48 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, char c, size_t n)
 {
-	const unsigned char	*ptr;
+	const char	*ptr;
 
 	ptr = s;
 	while (n-- > 0)
 	{
-		if (*ptr == (unsigned char)c)
+		if (*ptr == c)
 			return ((void *)ptr);
 		++ptr;
 	}

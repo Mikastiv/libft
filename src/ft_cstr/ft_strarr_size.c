@@ -6,11 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 19:15:17 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/01 19:13:14 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:13:48 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strarr_size(char *const *arr)
 {

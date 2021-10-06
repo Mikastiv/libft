@@ -6,12 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 16:16:50 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/16 09:59:53 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:15:23 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdbool.h>
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strcount_if(const char *s, bool (*f)(char))
 {

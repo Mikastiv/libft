@@ -6,13 +6,12 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 15:27:20 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/05 00:53:14 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:11:17 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdbool.h>
 
 static char	*word_start(const char **s, char delim)
 {

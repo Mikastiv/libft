@@ -6,11 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 05:11:05 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/23 11:15:24 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:14:54 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(const char *s1, const char *s2)
+#include "libft.h"
+
+t_i32	ft_strcmp(const char *s1, const char *s2)
 {
 	while (*s1 == *s2)
 	{
@@ -19,5 +21,5 @@ int	ft_strcmp(const char *s1, const char *s2)
 		++s1;
 		++s2;
 	}
-	return (*(unsigned char *)s1 - *(unsigned char *)s2);
+	return (*s1 - *s2);
 }

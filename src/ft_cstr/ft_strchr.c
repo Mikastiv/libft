@@ -6,15 +6,15 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 10:33:58 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/05 12:04:28 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:14:12 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, char c)
 {
-	while (*s != (unsigned char)c)
+	while (*s != c)
 	{
 		if (*s++ == '\0')
 			return (NULL);

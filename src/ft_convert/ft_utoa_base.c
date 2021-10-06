@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 01:50:27 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/24 16:48:57 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:07:48 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_utoa_base(unsigned int n, const char *base)
+char	*ft_utoa_base(t_u32 n, const char *base)
 {
 	char	*ret;
 	size_t	len;

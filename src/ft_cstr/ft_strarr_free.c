@@ -6,10 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 03:39:16 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/21 00:10:53 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:13:31 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 
 void	ft_strarr_free(char **arr)

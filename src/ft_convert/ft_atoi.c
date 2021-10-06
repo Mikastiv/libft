@@ -6,16 +6,16 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 20:14:11 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/06/15 20:22:58 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:07:48 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+t_i32	ft_atoi(const char *str)
 {
-	int	result;
-	int	sign;
+	t_i32	result;
+	t_i32	sign;
 
 	sign = 1;
 	result = 0;

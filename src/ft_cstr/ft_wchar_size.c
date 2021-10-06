@@ -6,11 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 21:59:09 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/05/25 22:04:19 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:17:38 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <wchar.h>
+#include "libft.h"
 
 size_t	ft_wchar_size(wint_t c)
 {

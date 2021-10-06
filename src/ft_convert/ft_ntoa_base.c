@@ -6,18 +6,18 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 18:39:26 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/05 00:43:57 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:07:48 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_ntoa_base(char *b, long long n, size_t len, const char *base)
+void	ft_ntoa_base(char *b, t_i64 n, size_t len, const char *base)
 {
-	long long	base_len;
-	long long	i;
+	t_i64	base_len;
+	t_i64	i;
 
-	base_len = (long long)ft_strlen(base);
+	base_len = (t_i64)ft_strlen(base);
 	if (n < 0)
 		*b++ = '-';
 	while (len > 0)

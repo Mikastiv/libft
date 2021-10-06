@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 10:35:32 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/18 16:04:35 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:22:54 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (lst)
-	{
-		if (*lst && new)
-			new->next = *lst;
-		*lst = new;
-	}
+	if (*lst && new)
+		new->next = *lst;
+	*lst = new;
 }

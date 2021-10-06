@@ -6,11 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 15:36:42 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/16 09:59:47 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:12:35 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdbool.h>
+#include "libft.h"
 
 bool	ft_strany(const char *s, bool (*f)(char))
 {

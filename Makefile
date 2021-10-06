@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/10/05 19:58:10 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/10/06 00:28:58 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,19 +20,14 @@ CFLAGS	=	-Wall -Werror -Wextra -Wpedantic -Wconversion
 RM		=	rm -rf
 NM		=	norminette
 
-PRINT_H_DIR	=	ft_printf
-PRTF_HFILES	=	convert.h do_printf.h flags.h utils.h
-PRINT_H		=	$(addprefix $(PRINT_H_DIR)/, $(PRTF_HFILES))
 STR_H		=	ft_string.h
 HASH_H		=	ft_hmap.h
 
 CHAR_C		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c\
 				ft_isprint.c ft_isspace.c ft_isupper.c ft_tolower.c ft_toupper.c\
 				ft_isblank.c ft_isgraph.c ft_isxdigit.c ft_ispunct.c
-CONV_C		=	ft_atoi.c ft_atol.c ft_float_len.c ft_ftoa.c ft_itoa_base.c\
-				ft_itoa.c ft_lltoa_base.c ft_lltoa.c ft_ltoa_base.c ft_ltoa.c\
-				ft_ntoa_base.c ft_ntoa.c ft_numlen.c ft_ptoa_base.c ft_ptoa.c\
-				ft_ulltoa_base.c ft_ulltoa.c ft_ultoa_base.c ft_ultoa.c\
+CONV_C		=	ft_atoi.c ft_atol.c ft_itoa_base.c ft_itoa.c ft_ltoa_base.c ft_ltoa.c\
+				ft_ntoa_base.c ft_ntoa.c ft_numlen.c ft_ultoa_base.c ft_ultoa.c\
 				ft_untoa_base.c ft_untoa.c ft_unumlen.c ft_utoa_base.c ft_utoa.c
 FILE_C		=	count_lines.c get_next_line.c read_to_str.c file_size.c
 LIST_C		=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
@@ -43,9 +38,6 @@ DLIST_C		=	ft_dlstadd_back.c ft_dlstadd_front.c ft_dlstclear.c	ft_dlstdelone.c\
 				ft_dlstprev.c
 MEM_C		=	ft_bzero.c ft_calloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c\
 				ft_memcpy.c ft_memmove.c ft_memset.c ft_realloc.c
-PRINT_C		=	convert_char.c convert_float.c convert_int.c convert_n.c\
-				convert_num_utils.c convert_percent.c convert_ptr.c convert_str.c\
-				convert_uint.c convert.c do_printf.c ft_printf.c printf_utils.c
 PUT_C		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
 				ft_putstr_fd.c ft_putunbr_base_fd.c ft_putwchar_fd.c\
 				ft_putwstr_fd.c
@@ -69,7 +61,6 @@ FILE_DIR	=	$(SRC)/ft_file
 LIST_DIR	=	$(SRC)/ft_list
 DLIST_DIR	=	$(SRC)/ft_dlist
 MEM_DIR		=	$(SRC)/ft_memory
-PRINT_DIR	=	$(SRC)/ft_printf
 PUT_DIR		=	$(SRC)/ft_put
 CSTR_DIR	=	$(SRC)/ft_cstr
 BTREE_DIR	=	$(SRC)/ft_btree
@@ -82,33 +73,31 @@ FILE_SRC	=	$(addprefix $(FILE_DIR)/, $(FILE_C))
 LIST_SRC	=	$(addprefix $(LIST_DIR)/, $(LIST_C))
 DLIST_SRC	=	$(addprefix $(DLIST_DIR)/, $(DLIST_C))
 MEM_SRC		=	$(addprefix $(MEM_DIR)/, $(MEM_C))
-PRINT_SRC	=	$(addprefix $(PRINT_DIR)/, $(PRINT_C))
 PUT_SRC		=	$(addprefix $(PUT_DIR)/, $(PUT_C))
 CSTR_SRC	=	$(addprefix $(CSTR_DIR)/, $(CSTR_C))
 BTREE_SRC	=	$(addprefix $(BTREE_DIR)/, $(BTREE_C))
 STR_SRC		=	$(addprefix $(STR_DIR)/, $(STR_C))
 HASH_SRC	=	$(addprefix $(HASH_DIR)/, $(HASH_C))
 
-PRINT_INCS	=	$(addprefix $(INC)/, $(PRINT_H))
 STR_INCS	=	$(addprefix $(INC)/, $(STR_H))
 HASH_INCS	=	$(addprefix $(INC)/, $(HASH_H))
 
 OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
-			$(MEM_C:.c=.o) $(PRINT_C:.c=.o) $(PUT_C:.c=.o) $(CSTR_C:.c=.o)\
-			$(BTREE_C:.c=.o) $(STR_C:.c=.o) $(DLIST_C:.c=.o) $(HASH_C:.c=.o)
-HFILES	=	$(PRINT_H) $(STR_H) $(HASH_H)
+			$(MEM_C:.c=.o) $(PUT_C:.c=.o) $(CSTR_C:.c=.o) $(BTREE_C:.c=.o)\
+			$(STR_C:.c=.o) $(DLIST_C:.c=.o) $(HASH_C:.c=.o)
+HFILES	=	$(STR_H) $(HASH_H)
 
 HEADERS	=	$(addprefix $(INC)/, $(HFILES))
 OBJS	=	$(addprefix $(OBJ)/, $(OFILES))
-SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PRINT_SRC)\
-			$(PUT_SRC) $(CSTR_SRC) $(BTREE_SRC) $(STR_SRC) $(DLIST_SRC) $(HASH_SRC)
-INCS	=	$(PRINT_INCS) $(STR_INCS)
+SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PUT_SRC)\
+			$(CSTR_SRC) $(BTREE_SRC) $(STR_SRC) $(DLIST_SRC) $(HASH_SRC)
+INCS	=	$(STR_INCS) $(HASH_INCS)
 
-VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PRINT_DIR)\
-			$(PUT_DIR) $(CSTR_DIR) $(BTREE_DIR) $(STR_DIR) $(DLIST_DIR) $(HASH_DIR)
+VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PUT_DIR)\
+			$(CSTR_DIR) $(BTREE_DIR) $(STR_DIR) $(DLIST_DIR) $(HASH_DIR)
 
 $(OBJ)/%.o:	%.c
-			$(CC) $(CFLAGS) -c -I. -I$(INC) -I$(INC)/$(PRINT_H_DIR) $< -o $@
+			$(CC) $(CFLAGS) -c -I. -I$(INC) $< -o $@
 
 $(NAME):	$(OBJ) $(OBJS)
 			$(LIBC) $(NAME) $(OBJS)

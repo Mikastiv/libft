@@ -6,9 +6,11 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 15:41:07 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/27 21:20:11 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 01:15:39 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char))
 {
