@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 22:12:49 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 01:21:54 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 14:56:11 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_u32	get_header(wint_t c)
+static t_i32	get_header(wint_t c)
 {
 	if (c > 0x3FFFFFF)
 		return (0xF1);
@@ -26,7 +26,7 @@ static t_u32	get_header(wint_t c)
 		return (0x00);
 }
 
-static t_u32	get_mask(wint_t c)
+static t_i32	get_mask(wint_t c)
 {
 	if (c > 0x3FFFFFF)
 		return (0x03);
@@ -56,8 +56,8 @@ static t_i32	get_shift(wint_t c)
 
 void	ft_putwchar_fd(wint_t c, int fd)
 {
-	t_u32	header;
-	t_u32	mask;
+	t_i32	header;
+	t_i32	mask;
 	t_i32	shift;
 
 	header = get_header(c);
