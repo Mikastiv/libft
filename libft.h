@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 17:02:36 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 19:59:21 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void		*ft_realloc(void *ptr, size_t oldsize, size_t size);
 
 // Set memory block to c
 // RETURN: b
-void		*ft_memset(void *b, char c, size_t len);
+void		*ft_memset(void *b, t_i8 c, size_t len);
 
 // Copy src memory block to dst
 // RETURN: dst
@@ -83,7 +83,7 @@ void		*ft_memcpy(void *dst, const void *src, size_t n);
 
 // Copy src memory block to dst. Stop if c is found
 // RETURN: ptr to the next character in dest after c or NULL if not found
-void		*ft_memccpy(void *dst, const void *src, char c, size_t n);
+void		*ft_memccpy(void *dst, const void *src, t_i8 c, size_t n);
 
 // Copy src memory block to dst. Dst and src can overlap
 // RETURN: dst
@@ -91,7 +91,7 @@ void		*ft_memmove(void *dst, const void *src, size_t len);
 
 // Search c in memory block
 // RETURN: ptr to first matching byte or NULL if not found
-void		*ft_memchr(const void *s, char c, size_t n);
+void		*ft_memchr(const void *s, t_i8 c, size_t n);
 
 // Set memory block to 0
 void		ft_bzero(void *s, size_t n);

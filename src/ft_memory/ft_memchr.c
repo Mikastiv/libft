@@ -6,15 +6,15 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 18:49:21 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 01:07:48 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 19:58:00 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, char c, size_t n)
+void	*ft_memchr(const void *s, t_i8 c, size_t n)
 {
-	const char	*ptr;
+	const t_i8	*ptr;
 
 	ptr = s;
 	while (n-- > 0)
