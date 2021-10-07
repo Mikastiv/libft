@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 19:59:21 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 21:04:53 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -535,7 +535,7 @@ char		*ft_str_take(t_string str);
 size_t		ft_hash(const void *b, size_t size);
 
 // Combine hash seed with hash of byte
-void		ft_hash_combine(size_t *seed, char byte);
+void		ft_hash_combine(size_t *seed, t_i8 byte);
 
 /*
 ** Hash map functions

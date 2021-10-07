@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 10:42:07 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 10:44:57 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/06 21:04:12 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 size_t	ft_hash(const void *b, size_t size)
 {
 	size_t		hash;
-	const char	*ptr;
+	const t_i8	*ptr;
 
 	hash = HASH_SEED;
 	ptr = b;
