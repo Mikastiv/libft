@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 21:04:53 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/08 16:03:09 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -348,16 +348,20 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 // Apply f on every node
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 
-// Apply f on every node content of s
+// Apply f on every node content of lst
 // RETURN: true if any result of f is true otherwise false
 bool		ft_lstany(t_list *lst, bool (*f)(void *));
 
-// Apply f on every node content of s
+// Apply f on every node content of lst
 // RETURN: true if every result of f is true otherwise false
 bool		ft_lstall(t_list *lst, bool (*f)(void *));
 
 // Size of the list
 size_t		ft_lstsize(t_list *lst);
+
+// Apply f on every node of lst
+// RETURN: how many times f returned true
+size_t		ft_lstcount_if(t_list *lst, bool (*f)(void *));
 
 /*
 ** Doubly linked list functions

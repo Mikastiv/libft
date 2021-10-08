@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/10/08 13:23:43 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/10/08 16:05:54 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ CONV_C		=	ft_atoi.c ft_atol.c ft_ltoa_base.c ft_ltoa.c ft_numlen.c\
 FILE_C		=	count_lines.c get_next_line.c read_to_str.c file_size.c
 LIST_C		=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
 				ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c\
-				ft_lstpop_front.c ft_lstsize.c ft_lstnext.c ft_lstall.c
+				ft_lstpop_front.c ft_lstsize.c ft_lstnext.c ft_lstall.c ft_lstcount_if.c
 DLIST_C		=	ft_dlstadd_back.c ft_dlstadd_front.c ft_dlstclear.c	ft_dlstdelone.c\
 				ft_dlstlast.c ft_dlstnew.c ft_dlstfirst.c ft_dlstsize.c ft_dlstnext.c\
 				ft_dlstprev.c
