@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 18:07:04 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/07 12:36:14 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/08 13:36:28 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_realloc(void *ptr, size_t oldsize, size_t size)
 {
-	char	*newptr;
+	t_i8	*newptr;
 
 	if (!ptr)
 		return (malloc(size));
