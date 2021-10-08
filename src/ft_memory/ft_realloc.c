@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 18:07:04 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/08 13:36:28 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/08 13:43:04 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_realloc(void *ptr, size_t oldsize, size_t size)
 	t_i8	*newptr;
 
 	if (!ptr)
-		return (malloc(size));
+		return (ft_calloc(size, 1));
 	if (size == 0 || oldsize == 0)
 	{
 		free(ptr);
@@ -26,7 +26,7 @@ void	*ft_realloc(void *ptr, size_t oldsize, size_t size)
 	}
 	if (oldsize == size)
 		return (ptr);
-	newptr = malloc(size);
+	newptr = ft_calloc(size, 1);
 	if (!newptr)
 		return (NULL);
 	if (oldsize < size)
