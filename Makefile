@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/10/08 01:01:34 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/10/08 13:23:43 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,7 +97,9 @@ VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PUT_DIR)\
 $(OBJ)/%.o:	%.c
 			$(CC) $(CFLAGS) -c -I. -I$(INC) $< -o $@
 
-$(NAME):	CFLAGS += -O2 -DNDEBUG
+all:		CFLAGS += -O2 -DNDEBUG
+all:		$(NAME)
+
 $(NAME):	$(OBJ) $(OBJS)
 			$(LIBC) $(NAME) $(OBJS)
 
@@ -106,8 +108,6 @@ $(OBJ):
 
 norme:
 			@$(NM) libft.h $(INCS) $(SRCS) $(HEADERS)
-
-all:		$(NAME)
 
 debug:		CFLAGS += -g
 debug:		$(NAME)
