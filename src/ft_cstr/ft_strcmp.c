@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 05:11:05 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 01:14:54 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/09 00:51:50 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_i32	ft_strcmp(const char *s1, const char *s2)
+int32_t	ft_strcmp(const char *s1, const char *s2)
 {
 	while (*s1 == *s2)
 	{

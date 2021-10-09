@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 21:31:10 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 02:18:57 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/09 00:52:20 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(t_i64 n, int fd)
+void	ft_putnbr_fd(int64_t n, int fd)
 {
 	if (n < 0 && n / 10 == 0)
 		ft_putchar_fd('-', fd);

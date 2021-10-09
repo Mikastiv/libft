@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 18:21:02 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 00:57:40 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/09 00:52:20 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_numlen(t_i64 n, t_i64 radix)
+size_t	ft_numlen(int64_t n, int64_t radix)
 {
 	size_t	len;
 

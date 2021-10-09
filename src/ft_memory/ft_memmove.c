@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 17:27:44 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/08 13:36:20 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/09 00:53:05 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	t_i8		*d;
-	const t_i8	*s;
+	int8_t			*d;
+	const int8_t	*s;
 
 	d = dst;
 	s = src;

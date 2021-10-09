@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/08 16:03:09 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/09 00:52:20 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,22 +46,6 @@
 # define FT_BWHI "\033[97m"
 
 /*
-** Integer types
-*/
-
-typedef uint_least8_t	t_u8;
-typedef int_least8_t	t_i8;
-
-typedef uint_least16_t	t_u16;
-typedef int_least16_t	t_i16;
-
-typedef uint_least32_t	t_u32;
-typedef int_least32_t	t_i32;
-
-typedef uint_least64_t	t_u64;
-typedef int_least64_t	t_i64;
-
-/*
 ** Memory functions
 */
 
@@ -75,7 +59,7 @@ void		*ft_realloc(void *ptr, size_t oldsize, size_t size);
 
 // Set memory block to c
 // RETURN: b
-void		*ft_memset(void *b, t_i8 c, size_t len);
+void		*ft_memset(void *b, int8_t c, size_t len);
 
 // Copy src memory block to dst
 // RETURN: dst
@@ -83,7 +67,7 @@ void		*ft_memcpy(void *dst, const void *src, size_t n);
 
 // Copy src memory block to dst. Stop if c is found
 // RETURN: ptr to the next character in dest after c or NULL if not found
-void		*ft_memccpy(void *dst, const void *src, t_i8 c, size_t n);
+void		*ft_memccpy(void *dst, const void *src, int8_t c, size_t n);
 
 // Copy src memory block to dst. Dst and src can overlap
 // RETURN: dst
@@ -91,14 +75,14 @@ void		*ft_memmove(void *dst, const void *src, size_t len);
 
 // Search c in memory block
 // RETURN: ptr to first matching byte or NULL if not found
-void		*ft_memchr(const void *s, t_i8 c, size_t n);
+void		*ft_memchr(const void *s, int8_t c, size_t n);
 
 // Set memory block to 0
 void		ft_bzero(void *s, size_t n);
 
 // Compare two memory blocks
 // RETURN: 0 if equal otherwise the difference between byte s1 and s2
-t_i32		ft_memcmp(const void *s1, const void *s2, size_t n);
+int32_t		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /*
 ** Character classification and convertion functions
@@ -151,25 +135,25 @@ char		ft_tolower(char c);
 */
 
 // Ascii to integer
-t_i32		ft_atoi(const char *str);
+int32_t		ft_atoi(const char *str);
 
 // Ascii to long integer
-t_i64		ft_atol(const char *str);
+int64_t		ft_atol(const char *str);
 
 // Convert n to ascii using decimal base
-char		*ft_itoa(t_i32 n);
+char		*ft_itoa(int32_t n);
 
 // Convert n to ascii using base
-char		*ft_itoa_base(t_i32 n, const char *base);
+char		*ft_itoa_base(int32_t n, const char *base);
 
 // Convert n to ascii using decimal base
-char		*ft_ltoa(t_i64 n);
+char		*ft_ltoa(int64_t n);
 
 // Convert n to ascii using base
-char		*ft_ltoa_base(t_i64 n, const char *base);
+char		*ft_ltoa_base(int64_t n, const char *base);
 
 // Count digits in n using radix
-size_t		ft_numlen(t_i64 n, t_i64 radix);
+size_t		ft_numlen(int64_t n, int64_t radix);
 
 /*
 ** C-string functions
@@ -203,11 +187,11 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 // Compare two strings
 // RETURN: 0 if equal otherwise the difference between char s1 and s2
-t_i32		ft_strcmp(const char *s1, const char *s2);
+int32_t		ft_strcmp(const char *s1, const char *s2);
 
 // Compare two strings, compare at most n characters
 // RETURN: 0 if equal otherwise the difference between char s1 and s2
-t_i32		ft_strncmp(const char *s1, const char *s2, size_t n);
+int32_t		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 // Search c in string
 // RETURN: ptr to first matching char or NULL if not found
@@ -239,7 +223,7 @@ char		*ft_strtrim(const char *s1, const char *set);
 
 // Create new string using f applied on all characters of s
 // RETURN: new mapped string or NULL if error occured
-char		*ft_strmapi(const char *s, char (*f)(t_u32, char));
+char		*ft_strmapi(const char *s, char (*f)(uint32_t, char));
 
 // Split s using delimiter delim
 // RETURN: NUL-terminated array of string or NULL if error occured
@@ -300,10 +284,10 @@ void		ft_putwstr_fd(const wchar_t *s, int fd);
 void		ft_putendl_fd(const char *s, int fd);
 
 // Write signed number to file descriptor using decimal base
-void		ft_putnbr_fd(t_i64 n, int fd);
+void		ft_putnbr_fd(int64_t n, int fd);
 
 // Write signed number to file descriptor using base
-void		ft_putnbr_base_fd(t_i64 n, const char *base, int fd);
+void		ft_putnbr_base_fd(int64_t n, const char *base, int fd);
 
 /*
 ** Linked list functions
@@ -432,7 +416,7 @@ void		ft_btreeclear(t_btree **tree, void (*del)(void *));
 
 // Read a line from file descriptor into line
 // RETURN: 0 if EOF is hit, 1 if a line was read and -1 if error occured
-t_i32		get_next_line(int fd, char **line);
+int32_t		get_next_line(int fd, char **line);
 
 // Read whole content of file to a string
 // RETURN: file content or NULL if error occured
@@ -510,11 +494,11 @@ t_string	ft_str_clear(t_string str);
 
 // Compare two strings, compare at most n characters
 // RETURN: 0 if equal otherwise the difference between char s1 and s2
-t_i32		ft_str_cmp(const t_string s1, const t_string s2, size_t n);
+int32_t		ft_str_cmp(const t_string s1, const t_string s2, size_t n);
 
 // Compare a string and a cstring, compare at most n characters
 // RETURN: 0 if equal otherwise the difference between char s1 and s2
-t_i32		ft_str_cmp_cstr(const t_string s1, const char *s2, size_t n);
+int32_t		ft_str_cmp_cstr(const t_string s1, const char *s2, size_t n);
 
 // Length of string
 size_t		ft_str_len(t_string str);
@@ -539,7 +523,7 @@ char		*ft_str_take(t_string str);
 size_t		ft_hash(const void *b, size_t size);
 
 // Combine hash seed with hash of byte
-void		ft_hash_combine(size_t *seed, t_i8 byte);
+void		ft_hash_combine(size_t *seed, int8_t byte);
 
 /*
 ** Hash map functions
