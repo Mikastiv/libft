@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/16 18:33:33 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/16 19:05:31 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,19 +141,22 @@ int32_t		ft_atoi(const char *str);
 int64_t		ft_atol(const char *str);
 
 // Convert n to ascii using decimal base
-char		*ft_itoa(int32_t n);
-
-// Convert n to ascii using base
-char		*ft_itoa_base(int32_t n, const char *base);
-
-// Convert n to ascii using decimal base
 char		*ft_ltoa(int64_t n);
 
 // Convert n to ascii using base
 char		*ft_ltoa_base(int64_t n, const char *base);
 
+// Convert n to ascii using decimal base
+char		*ft_ultoa(uint64_t n);
+
+// Convert n to ascii using base
+char		*ft_ultoa_base(uint64_t n, const char *base);
+
 // Count digits in n using radix
 size_t		ft_numlen(int64_t n, int64_t radix);
+
+// Count digits in n using radix
+size_t		ft_unumlen(uint64_t n, uint64_t radix);
 
 /*
 ** C-string functions

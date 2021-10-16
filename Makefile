@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/10/16 18:33:26 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/10/16 19:04:04 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,8 @@ HASH_H		=	ft_hmap.h
 CHAR_C		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c\
 				ft_isprint.c ft_isspace.c ft_isupper.c ft_tolower.c ft_toupper.c\
 				ft_isblank.c ft_isgraph.c ft_isxdigit.c ft_ispunct.c
-CONV_C		=	ft_atoi.c ft_atol.c ft_ltoa_base.c ft_ltoa.c ft_numlen.c\
-				ft_itoa_base.c ft_itoa.c
+CONV_C		=	ft_atoi.c ft_atol.c ft_ltoa_base.c ft_ltoa.c ft_numlen.c ft_unumlen.c\
+				ft_ultoa_base.c ft_ultoa.c
 FILE_C		=	count_lines.c get_next_line.c read_to_str.c file_size.c
 LIST_C		=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
 				ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c\
