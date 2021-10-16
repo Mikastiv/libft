@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/09 00:52:20 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/16 17:14:04 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -245,6 +245,9 @@ void		ft_strarr_replace(char **arr, char *new, size_t index);
 
 // Remove string at index from NUL-terminated array
 void		ft_strarr_remove(char **arr, size_t index);
+
+// Sort NUL-terminated array based on ASCII ordering
+void		ft_strarr_sort(char **arr);
 
 // Free NUL-terminated array of string
 void		ft_strarr_free(char **arr);
