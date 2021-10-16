@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/16 17:14:04 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/16 18:33:33 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -291,6 +291,9 @@ void		ft_putnbr_fd(int64_t n, int fd);
 
 // Write signed number to file descriptor using base
 void		ft_putnbr_base_fd(int64_t n, const char *base, int fd);
+
+// Write unsigned number to file descriptor using base
+void		ft_putunbr_base_fd(uint64_t n, const char *base, int fd);
 
 /*
 ** Linked list functions

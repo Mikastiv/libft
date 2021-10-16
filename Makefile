@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/10/16 17:05:25 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/10/16 18:33:26 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ DLIST_C		=	ft_dlstadd_back.c ft_dlstadd_front.c ft_dlstclear.c	ft_dlstdelone.c\
 MEM_C		=	ft_bzero.c ft_calloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c\
 				ft_memcpy.c ft_memmove.c ft_memset.c ft_realloc.c
 PUT_C		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
-				ft_putstr_fd.c ft_putwchar_fd.c ft_putwstr_fd.c
+				ft_putstr_fd.c ft_putwchar_fd.c ft_putwstr_fd.c ft_putunbr_base_fd.c
 CSTR_C		=	ft_strarr_dup.c ft_strarr_free.c ft_split.c ft_strany.c ft_strcount_if.c ft_striter.c\
 				ft_strarr_extend.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strall.c\
 				ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnlen.c ft_strarr_replace.c\
