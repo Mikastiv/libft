@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/16 19:05:31 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/16 23:02:04 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@
 ** ANSI Colors
 */
 
-# define FT_RST "\033[m"
+# define FT_RST "\033[0m"
+# define FT_BOLD "\033[1m"
 
 # define FT_BLA "\033[30m"
 # define FT_RED "\033[31m"
