@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/19 15:30:32 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/19 15:31:28 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,26 +25,26 @@
 ** ANSI Colors
 */
 
-# define FT_RST "\e[0m"
-# define FT_BOLD "\e[1m"
+# define FT_RST "\033[0m"
+# define FT_BOLD "\033[1m"
 
-# define FT_BLA "\e[30m"
-# define FT_RED "\e[31m"
-# define FT_GRE "\e[32m"
-# define FT_YEL "\e[33m"
-# define FT_BLU "\e[34m"
-# define FT_MAG "\e[35m"
-# define FT_CYA "\e[36m"
-# define FT_WHI "\e[37m"
+# define FT_BLA "\033[30m"
+# define FT_RED "\033[31m"
+# define FT_GRE "\033[32m"
+# define FT_YEL "\033[33m"
+# define FT_BLU "\033[34m"
+# define FT_MAG "\033[35m"
+# define FT_CYA "\033[36m"
+# define FT_WHI "\033[37m"
 
-# define FT_BBLA "\e[90m"
-# define FT_BRED "\e[91m"
-# define FT_BGRE "\e[92m"
-# define FT_BYEL "\e[93m"
-# define FT_BBLU "\e[94m"
-# define FT_BMAG "\e[95m"
-# define FT_BCYA "\e[96m"
-# define FT_BWHI "\e[97m"
+# define FT_BBLA "\033[90m"
+# define FT_BRED "\033[91m"
+# define FT_BGRE "\033[92m"
+# define FT_BYEL "\033[93m"
+# define FT_BBLU "\033[94m"
+# define FT_BMAG "\033[95m"
+# define FT_BCYA "\033[96m"
+# define FT_BWHI "\033[97m"
 
 /*
 ** Memory functions
