@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/16 23:02:04 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/10/18 20:22:07 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -240,6 +240,10 @@ char		**ft_strarr_dup(char *const *arr);
 // Extend NUL-terminated array of string with back_str. Free old arr
 // RETURN: new extended array of string or NULL if error occured
 char		**ft_strarr_extend(char **arr, char *back_str);
+
+// Get pointer to last string of NUL-terminated array
+// RETURN: pointer to last string or NULL if empty array
+char		*ft_strarr_last(char **arr);
 
 // Size of NUL-terminated array of string
 size_t		ft_strarr_size(char *const *arr);
