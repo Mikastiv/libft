@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/08 22:40:55 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/09 11:48:37 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -582,6 +582,12 @@ typedef struct s_vec2
 	float	x;
 	float	y;
 }	t_vec2;
+
+typedef struct s_vec2i
+{
+	int32_t	x;
+	int32_t	y;
+}	t_vec2i;
 
 // Add vectors a and b
 t_vec2		vec2_add(t_vec2 a, t_vec2 b);
