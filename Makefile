@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/10/18 20:23:09 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/11/08 22:42:11 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.
 HASH_C		=	ft_hash.c ft_hash_combine.c ft_hmap_new.c ft_hmap_free.c ft_hmap_insert.c\
 				ft_hmap_find.c ft_hmap_size.c get_hmap_buckets.c ft_hmap_remove.c delete_pair.c\
 				get_hmap_index.c create_pair.c ft_hmap_insert_del.c
+MATH_C		=	vec2_add.c vec2_sub.c vec2_mul.c deg_to_rad.c rad_to_deg.c
 
 CHAR_DIR	=	$(SRC)/ft_char
 CONV_DIR	=	$(SRC)/ft_convert
@@ -65,6 +66,7 @@ CSTR_DIR	=	$(SRC)/ft_cstr
 BTREE_DIR	=	$(SRC)/ft_btree
 STR_DIR		=	$(SRC)/ft_string
 HASH_DIR	=	$(SRC)/ft_hash
+MATH_DIR	=	$(SRC)/ft_math
 
 CHAR_SRC	=	$(addprefix $(CHAR_DIR)/, $(CHAR_C))
 CONV_SRC	=	$(addprefix $(CONV_DIR)/, $(CONV_C))
@@ -77,23 +79,24 @@ CSTR_SRC	=	$(addprefix $(CSTR_DIR)/, $(CSTR_C))
 BTREE_SRC	=	$(addprefix $(BTREE_DIR)/, $(BTREE_C))
 STR_SRC		=	$(addprefix $(STR_DIR)/, $(STR_C))
 HASH_SRC	=	$(addprefix $(HASH_DIR)/, $(HASH_C))
+MATH_SRC	=	$(addprefix $(MATH_DIR)/, $(MATH_C))
 
 STR_INCS	=	$(addprefix $(INC)/, $(STR_H))
 HASH_INCS	=	$(addprefix $(INC)/, $(HASH_H))
 
 OFILES	=	$(CHAR_C:.c=.o) $(CONV_C:.c=.o) $(FILE_C:.c=.o) $(LIST_C:.c=.o)\
 			$(MEM_C:.c=.o) $(PUT_C:.c=.o) $(CSTR_C:.c=.o) $(BTREE_C:.c=.o)\
-			$(STR_C:.c=.o) $(DLIST_C:.c=.o) $(HASH_C:.c=.o)
+			$(STR_C:.c=.o) $(DLIST_C:.c=.o) $(HASH_C:.c=.o) $(MATH_C:.c=.o)
 HFILES	=	$(STR_H) $(HASH_H)
 
 HEADERS	=	$(addprefix $(INC)/, $(HFILES))
 OBJS	=	$(addprefix $(OBJ)/, $(OFILES))
 SRCS	=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(MEM_SRC) $(PUT_SRC)\
-			$(CSTR_SRC) $(BTREE_SRC) $(STR_SRC) $(DLIST_SRC) $(HASH_SRC)
+			$(CSTR_SRC) $(BTREE_SRC) $(STR_SRC) $(DLIST_SRC) $(HASH_SRC) $(MATH_SRC)
 INCS	=	$(STR_INCS) $(HASH_INCS)
 
 VPATH	=	$(CHAR_DIR) $(CONV_DIR) $(FILE_DIR) $(LIST_DIR) $(MEM_DIR) $(PUT_DIR)\
-			$(CSTR_DIR) $(BTREE_DIR) $(STR_DIR) $(DLIST_DIR) $(HASH_DIR)
+			$(CSTR_DIR) $(BTREE_DIR) $(STR_DIR) $(DLIST_DIR) $(HASH_DIR) $(MATH_DIR)
 
 $(OBJ)/%.o:	%.c
 			$(CC) $(CFLAGS) -c -I. -I$(INC) $< -o $@

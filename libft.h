@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/19 15:31:28 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/08 22:40:55 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stdbool.h>
 # include <unistd.h>
 # include <stdint.h>
+
+# define PI 3.14159265358979323846
 
 # define WHITESPACE " \t\n\v\f\r"
 
@@ -570,5 +572,30 @@ void		*ft_hmap_find(t_hmap map, const char *key);
 
 // Free hash map
 void		ft_hmap_free(t_hmap map);
+
+/*
+** Math functions
+*/
+
+typedef struct s_vec2
+{
+	float	x;
+	float	y;
+}	t_vec2;
+
+// Add vectors a and b
+t_vec2		vec2_add(t_vec2 a, t_vec2 b);
+
+// Subtract vectors a and b
+t_vec2		vec2_sub(t_vec2 a, t_vec2 b);
+
+// Multiply vector a by b
+t_vec2		vec2_mul(t_vec2 a, float b);
+
+// Convert degrees to radians
+float		deg_to_rad(float degrees);
+
+// Convert radians to degrees
+float		rad_to_deg(float radians);
 
 #endif
