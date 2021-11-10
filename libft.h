@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/10 13:42:39 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/10 16:55:41 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -605,6 +605,9 @@ t_vec2		vec2_rotate(t_vec2 v, float angle);
 
 // Normalize vector
 t_vec2		vec2_normalize(t_vec2 v);
+
+// Distance between a and b
+float		vec2_dist(t_vec2 a, t_vec2 b);
 
 // Length of vector
 float		vec2_length(t_vec2 v);
