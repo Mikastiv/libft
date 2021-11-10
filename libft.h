@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/10 11:24:52 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/10 12:09:37 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdbool.h>
 # include <unistd.h>
 # include <stdint.h>
+# include <sys/time.h>
 
 # define PI 3.14159265358979323846
 # define PI_F (float)PI
@@ -604,5 +605,20 @@ float		deg_to_rad(float degrees);
 
 // Convert radians to degrees
 float		rad_to_deg(float radians);
+
+/*
+** Time functions
+*/
+
+typedef struct s_time
+{
+	struct timeval	tp;
+}	t_time;
+
+// Get timestamp
+int			ft_gettime(t_time *t);
+
+// Get time difference in sec
+float		ft_timediff(t_time t1, t_time t2);
 
 #endif
