@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/09 11:48:37 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/10 11:24:52 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdint.h>
 
 # define PI 3.14159265358979323846
+# define PI_F (float)PI
 
 # define WHITESPACE " \t\n\v\f\r"
 
