@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/10 12:09:37 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/10 12:58:50 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -600,11 +600,20 @@ t_vec2		vec2_sub(t_vec2 a, t_vec2 b);
 // Multiply vector a by b
 t_vec2		vec2_mul(t_vec2 a, float b);
 
+// Rotate vector
+t_vec2		vec2_rotate(t_vec2 v, float angle);
+
+// Length of vector
+float		vec2_length(t_vec2 v);
+
 // Convert degrees to radians
 float		deg_to_rad(float degrees);
 
 // Convert radians to degrees
 float		rad_to_deg(float radians);
+
+// Wrap angle
+float		wrap_angle(float angle);
 
 /*
 ** Time functions
