@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/11 12:41:16 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/11 12:44:09 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -634,6 +634,6 @@ typedef struct s_time
 int			ft_gettime(t_time *t);
 
 // Get time difference in sec
-float		ft_timediff(t_time t1, t_time t2);
+double		ft_timediff(t_time t1, t_time t2);
 
 #endif
