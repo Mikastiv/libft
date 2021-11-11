@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/10 16:55:41 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/11 12:41:16 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -581,8 +581,8 @@ void		ft_hmap_free(t_hmap map);
 
 typedef struct s_vec2
 {
-	float	x;
-	float	y;
+	double	x;
+	double	y;
 }	t_vec2;
 
 typedef struct s_vec2i
@@ -598,28 +598,28 @@ t_vec2		vec2_add(t_vec2 a, t_vec2 b);
 t_vec2		vec2_sub(t_vec2 a, t_vec2 b);
 
 // Multiply vector a by b
-t_vec2		vec2_mul(t_vec2 a, float b);
+t_vec2		vec2_mul(t_vec2 a, double b);
 
 // Rotate vector
-t_vec2		vec2_rotate(t_vec2 v, float angle);
+t_vec2		vec2_rotate(t_vec2 v, double angle);
 
 // Normalize vector
 t_vec2		vec2_normalize(t_vec2 v);
 
 // Distance between a and b
-float		vec2_dist(t_vec2 a, t_vec2 b);
+double		vec2_dist(t_vec2 a, t_vec2 b);
 
 // Length of vector
-float		vec2_length(t_vec2 v);
+double		vec2_length(t_vec2 v);
 
 // Convert degrees to radians
-float		deg_to_rad(float degrees);
+double		deg_to_rad(double degrees);
 
 // Convert radians to degrees
-float		rad_to_deg(float radians);
+double		rad_to_deg(double radians);
 
 // Wrap angle
-float		wrap_angle(float angle);
+double		wrap_angle(double angle);
 
 /*
 ** Time functions

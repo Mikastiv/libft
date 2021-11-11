@@ -6,14 +6,14 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 12:56:31 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/10 12:58:00 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/11 12:39:40 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <math.h>
 
-float	vec2_length(t_vec2 v)
+double	vec2_length(t_vec2 v)
 {
-	return (sqrtf(v.x * v.x + v.y * v.y));
+	return (sqrt(v.x * v.x + v.y * v.y));
 }
