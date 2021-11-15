@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/09 11:48:37 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/15 17:37:03 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -603,5 +603,9 @@ float		deg_to_rad(float degrees);
 
 // Convert radians to degrees
 float		rad_to_deg(float radians);
+
+int64_t		ft_absl(int64_t v);
+
+int32_t		ft_abs(int32_t v);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/11/08 22:42:11 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/11/15 17:38:28 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.
 HASH_C		=	ft_hash.c ft_hash_combine.c ft_hmap_new.c ft_hmap_free.c ft_hmap_insert.c\
 				ft_hmap_find.c ft_hmap_size.c get_hmap_buckets.c ft_hmap_remove.c delete_pair.c\
 				get_hmap_index.c create_pair.c ft_hmap_insert_del.c
-MATH_C		=	vec2_add.c vec2_sub.c vec2_mul.c deg_to_rad.c rad_to_deg.c
+MATH_C		=	vec2_add.c vec2_sub.c vec2_mul.c deg_to_rad.c rad_to_deg.c ft_abs.c ft_absl.c
 
 CHAR_DIR	=	$(SRC)/ft_char
 CONV_DIR	=	$(SRC)/ft_convert
