@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   deg_to_rad.c                                       :+:      :+:    :+:   */
+/*   vec2_normalize.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 22:03:38 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/11 12:39:01 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/10 13:42:53 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/11/11 12:41:00 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	deg_to_rad(double degrees)
+t_vec2	vec2_normalize(t_vec2 v)
 {
-	return (degrees * (2.0 * PI) / 360.0);
+	double	len;
+
+	len = vec2_length(v);
+	if (len == 0.0)
+		return ((t_vec2){0.0, 0.0});
+	v.x = v.x / len;
+	v.y = v.y / len;
+	return (v);
 }

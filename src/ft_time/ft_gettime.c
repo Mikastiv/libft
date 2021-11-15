@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   deg_to_rad.c                                       :+:      :+:    :+:   */
+/*   ft_gettime.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 22:03:38 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/11 12:39:01 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/10 11:57:31 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/11/10 12:00:47 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	deg_to_rad(double degrees)
+int	ft_gettime(t_time *t)
 {
-	return (degrees * (2.0 * PI) / 360.0);
+	return (gettimeofday(&t->tp, NULL));
 }

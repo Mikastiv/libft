@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   deg_to_rad.c                                       :+:      :+:    :+:   */
+/*   vec2_length.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 22:03:38 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/11 12:39:01 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/10 12:56:31 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/11/11 12:39:40 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <math.h>
 
-double	deg_to_rad(double degrees)
+double	vec2_length(t_vec2 v)
 {
-	return (degrees * (2.0 * PI) / 360.0);
+	return (sqrt(v.x * v.x + v.y * v.y));
 }

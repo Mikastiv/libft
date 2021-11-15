@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/15 17:37:03 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/15 17:41:05 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@
 # include <stdbool.h>
 # include <unistd.h>
 # include <stdint.h>
+# include <sys/time.h>
 
 # define PI 3.14159265358979323846
+# define PI_F (float)PI
 
 # define WHITESPACE " \t\n\v\f\r"
 
@@ -579,8 +581,8 @@ void		ft_hmap_free(t_hmap map);
 
 typedef struct s_vec2
 {
-	float	x;
-	float	y;
+	double	x;
+	double	y;
 }	t_vec2;
 
 typedef struct s_vec2i
@@ -596,13 +598,43 @@ t_vec2		vec2_add(t_vec2 a, t_vec2 b);
 t_vec2		vec2_sub(t_vec2 a, t_vec2 b);
 
 // Multiply vector a by b
-t_vec2		vec2_mul(t_vec2 a, float b);
+t_vec2		vec2_mul(t_vec2 a, double b);
+
+// Rotate vector
+t_vec2		vec2_rotate(t_vec2 v, double angle);
+
+// Normalize vector
+t_vec2		vec2_normalize(t_vec2 v);
+
+// Distance between a and b
+double		vec2_dist(t_vec2 a, t_vec2 b);
+
+// Length of vector
+double		vec2_length(t_vec2 v);
 
 // Convert degrees to radians
-float		deg_to_rad(float degrees);
+double		deg_to_rad(double degrees);
 
 // Convert radians to degrees
-float		rad_to_deg(float radians);
+double		rad_to_deg(double radians);
+
+// Wrap angle
+double		wrap_angle(double angle);
+
+/*
+** Time functions
+*/
+
+typedef struct s_time
+{
+	struct timeval	tp;
+}	t_time;
+
+// Get timestamp
+int			ft_gettime(t_time *t);
+
+// Get time difference in sec
+double		ft_timediff(t_time t1, t_time t2);
 
 int64_t		ft_absl(int64_t v);
 

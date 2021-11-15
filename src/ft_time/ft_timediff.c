@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   deg_to_rad.c                                       :+:      :+:    :+:   */
+/*   ft_timediff.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 22:03:38 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/11 12:39:01 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/10 12:01:05 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/11/11 12:45:38 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	deg_to_rad(double degrees)
+double	ft_timediff(t_time t1, t_time t2)
 {
-	return (degrees * (2.0 * PI) / 360.0);
+	double	diff;
+
+	diff = (double)(t2.tp.tv_sec - t1.tp.tv_sec);
+	diff += (double)(t2.tp.tv_usec - t1.tp.tv_usec) / 1000000.0;
+	return (diff);
 }

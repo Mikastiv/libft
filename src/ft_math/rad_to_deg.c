@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 22:04:49 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/08 22:34:06 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/11 12:40:52 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-float	rad_to_deg(float radians)
+double	rad_to_deg(double radians)
 {
-	return (radians * 360.0f / (2.0f * (float)PI));
+	return (radians * 360.0 / (2.0 * PI));
 }
