@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/15 21:12:28 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/17 02:13:06 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -600,8 +600,8 @@ t_vec2		vec2_sub(t_vec2 a, t_vec2 b);
 // Multiply vector a by b
 t_vec2		vec2_mul(t_vec2 a, double b);
 
-// Rotate vector
-t_vec2		vec2_rotate(t_vec2 v, double angle);
+// Unit vector at angle
+t_vec2		vec2_unit(double angle);
 
 // Normalize vector
 t_vec2		vec2_normalize(t_vec2 v);
