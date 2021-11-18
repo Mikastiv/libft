@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 17:37:38 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/15 17:38:53 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/17 22:02:15 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int32_t	ft_abs(int32_t v)
 {
-	return ((v + (v >> 31)) ^ (v >> 31));
+	if (v < 0)
+		return (-v);
+	return (v);
 }

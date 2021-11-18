@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 17:31:52 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/15 21:12:44 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/17 22:02:07 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int64_t	ft_labs(int64_t v)
 {
-	return ((v + (v >> 63)) ^ (v >> 63));
+	if (v < 0)
+		return (-v);
+	return (v);
 }
