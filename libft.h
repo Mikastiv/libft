@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/17 02:13:06 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/18 10:53:36 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -636,8 +636,13 @@ int			ft_gettime(t_time *t);
 // Get time difference in sec
 double		ft_timediff(t_time t1, t_time t2);
 
+// Absolute value
 int64_t		ft_labs(int64_t v);
 
+// Absolute value
 int32_t		ft_abs(int32_t v);
+
+// Clamp value between min and max
+int32_t		ft_clamp(int32_t v, int32_t min, int32_t max);
 
 #endif
