@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/18 10:53:36 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/11/19 19:50:46 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -643,6 +643,9 @@ int64_t		ft_labs(int64_t v);
 int32_t		ft_abs(int32_t v);
 
 // Clamp value between min and max
-int32_t		ft_clamp(int32_t v, int32_t min, int32_t max);
+int64_t		ft_clamp(int64_t v, int64_t min, int64_t max);
+
+// Clamp value between min and max
+double		ft_clampd(double v, double min, double max);
 
 #endif
