@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_absl.c                                          :+:      :+:    :+:   */
+/*   vec2_unit.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 17:31:52 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/15 17:38:50 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/10 12:52:24 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/11/17 02:12:43 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <math.h>
 
-int64_t	ft_absl(int64_t v)
+t_vec2	vec2_unit(double angle)
 {
-	return ((v + (v >> 63)) ^ (v >> 63));
+	return ((t_vec2){.x = cos(angle), .y = sin(angle)});
 }

@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_clamp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 17:37:38 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/17 22:02:15 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/18 10:53:10 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/11/19 19:57:20 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int32_t	ft_abs(int32_t v)
+int64_t	ft_clamp(int64_t v, int64_t min, int64_t max)
 {
-	if (v < 0)
-		return (-v);
+	if (v < min)
+		return (min);
+	if (v > max)
+		return (max);
 	return (v);
 }
