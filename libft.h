@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/19 19:50:46 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/01 06:58:58 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -227,7 +227,7 @@ char		*ft_strjoin(const char *s1, const char *s2);
 
 // Trim characters in set at beginning and end of s1
 // RETURN: new trimmed string or NULL if error occured
-char		*ft_strtrim(const char *s1, const char *set);
+char		*ft_strtrim(const char *s, const char *set);
 
 // Create new string using f applied on all characters of s
 // RETURN: new mapped string or NULL if error occured
