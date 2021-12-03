@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec2_add.c                                         :+:      :+:    :+:   */
+/*   ft_wrap_angle.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 22:32:16 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/08 22:33:11 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/10 12:50:17 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/12/03 00:57:09 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_vec2	vec2_add(t_vec2 a, t_vec2 b)
+double	ft_wrap_angle(double angle)
 {
-	return ((t_vec2){.x = a.x + b.x, .y = a.y + b.y});
+	if (angle < 0.0)
+		return (angle + 2.0 * PI);
+	if (angle > 2.0 * PI)
+		return (angle - 2.0 * PI);
+	return (angle);
 }

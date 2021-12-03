@@ -6,7 +6,7 @@
 #    By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/07 13:43:15 by mleblanc          #+#    #+#              #
-#    Updated: 2021/12/01 06:41:21 by mleblanc         ###   ########.fr        #
+#    Updated: 2021/12/03 00:58:18 by mleblanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ CHAR_C		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c\
 				ft_isblank.c ft_isgraph.c ft_isxdigit.c ft_ispunct.c
 CONV_C		=	ft_atoi.c ft_atol.c ft_ltoa_base.c ft_ltoa.c ft_numlen.c ft_unumlen.c\
 				ft_ultoa_base.c ft_ultoa.c
-FILE_C		=	count_lines.c get_next_line.c read_to_str.c file_size.c
+FILE_C		=	ft_count_lines.c ft_get_next_line.c ft_read_to_str.c ft_file_size.c
 LIST_C		=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
 				ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c\
 				ft_lstpop_front.c ft_lstsize.c ft_lstnext.c ft_lstall.c ft_lstcount_if.c
@@ -53,8 +53,9 @@ STR_C		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.
 HASH_C		=	ft_hash.c ft_hash_combine.c ft_hmap_new.c ft_hmap_free.c ft_hmap_insert.c\
 				ft_hmap_find.c ft_hmap_size.c get_hmap_buckets.c ft_hmap_remove.c delete_pair.c\
 				get_hmap_index.c create_pair.c ft_hmap_insert_del.c
-MATH_C		=	vec2_add.c vec2_sub.c vec2_mul.c deg_to_rad.c rad_to_deg.c vec2_length.c vec2_unit.c\
-				wrap_angle.c vec2_normalize.c vec2_dist.c ft_abs.c ft_labs.c ft_clamp.c ft_clampd.c
+MATH_C		=	ft_vec2_add.c ft_vec2_sub.c ft_vec2_mul.c ft_deg_to_rad.c ft_rad_to_deg.c ft_vec2_length.c\
+				ft_vec2_unit.c ft_wrap_angle.c ft_vec2_normalize.c ft_vec2_dist.c ft_abs.c ft_labs.c\
+				ft_clamp.c ft_clampd.c
 TIME_C		=	ft_gettime.c ft_timediff.c
 
 CHAR_DIR	=	$(SRC)/ft_char

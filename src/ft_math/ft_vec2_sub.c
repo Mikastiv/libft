@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec2_mul.c                                         :+:      :+:    :+:   */
+/*   ft_vec2_sub.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 22:41:21 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/11 12:39:46 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/08 22:37:57 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/12/03 00:57:03 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_vec2	vec2_mul(t_vec2 a, double b)
+t_vec2	ft_vec2_sub(t_vec2 a, t_vec2 b)
 {
-	return ((t_vec2){.x = a.x * b, .y = a.y * b});
+	return ((t_vec2){.x = a.x - b.x, .y = a.y - b.y});
 }

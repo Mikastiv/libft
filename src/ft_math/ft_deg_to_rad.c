@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec2_sub.c                                         :+:      :+:    :+:   */
+/*   ft_deg_to_rad.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 22:37:57 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/08 22:38:24 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/08 22:03:38 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/12/03 00:56:35 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_vec2	vec2_sub(t_vec2 a, t_vec2 b)
+double	ft_deg_to_rad(double degrees)
 {
-	return ((t_vec2){.x = a.x - b.x, .y = a.y - b.y});
+	return (degrees * (2.0 * PI) / 360.0);
 }

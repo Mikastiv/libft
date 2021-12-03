@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wrap_angle.c                                       :+:      :+:    :+:   */
+/*   ft_vec2_unit.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 12:50:17 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/11 12:40:47 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/10 12:52:24 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/12/03 00:57:06 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <math.h>
 
-double	wrap_angle(double angle)
+t_vec2	ft_vec2_unit(double angle)
 {
-	if (angle < 0.0)
-		return (angle + 2.0 * PI);
-	if (angle > 2.0 * PI)
-		return (angle - 2.0 * PI);
-	return (angle);
+	return ((t_vec2){.x = cos(angle), .y = sin(angle)});
 }

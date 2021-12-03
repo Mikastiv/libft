@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec2_length.c                                      :+:      :+:    :+:   */
+/*   ft_vec2_add.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 12:56:31 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/11 12:39:40 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/08 22:32:16 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/12/03 00:56:44 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <math.h>
 
-double	vec2_length(t_vec2 v)
+t_vec2	ft_vec2_add(t_vec2 a, t_vec2 b)
 {
-	return (sqrt(v.x * v.x + v.y * v.y));
+	return ((t_vec2){.x = a.x + b.x, .y = a.y + b.y});
 }

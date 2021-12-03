@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/12/01 07:17:24 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/03 00:57:31 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -434,19 +434,19 @@ void		ft_btreeclear(t_btree **tree, void (*del)(void *));
 
 // Read a line from file descriptor into line
 // RETURN: 0 if EOF is hit, 1 if a line was read and -1 if error occured
-int32_t		get_next_line(int fd, char **line);
+int32_t		ft_get_next_line(int fd, char **line);
 
 // Read whole content of file to a string
 // RETURN: file content or NULL if error occured
-char		*read_to_str(const char *file);
+char		*ft_read_to_str(const char *file);
 
 // Count lines in file
 // RETURN: line count or -1 if error occured
-ssize_t		count_lines(const char *file);
+ssize_t		ft_count_lines(const char *file);
 
 // Size of file
 // RETURN: size in bytes or -1 if error occured
-ssize_t		file_size(const char *file);
+ssize_t		ft_file_size(const char *file);
 
 /*
 ** String functions
@@ -592,34 +592,46 @@ typedef struct s_vec2i
 }	t_vec2i;
 
 // Add vectors a and b
-t_vec2		vec2_add(t_vec2 a, t_vec2 b);
+t_vec2		ft_vec2_add(t_vec2 a, t_vec2 b);
 
 // Subtract vectors a and b
-t_vec2		vec2_sub(t_vec2 a, t_vec2 b);
+t_vec2		ft_vec2_sub(t_vec2 a, t_vec2 b);
 
 // Multiply vector a by b
-t_vec2		vec2_mul(t_vec2 a, double b);
+t_vec2		ft_vec2_mul(t_vec2 a, double b);
 
 // Unit vector at angle
-t_vec2		vec2_unit(double angle);
+t_vec2		ft_vec2_unit(double angle);
 
 // Normalize vector
-t_vec2		vec2_normalize(t_vec2 v);
+t_vec2		ft_vec2_normalize(t_vec2 v);
 
 // Distance between a and b
-double		vec2_dist(t_vec2 a, t_vec2 b);
+double		ft_vec2_dist(t_vec2 a, t_vec2 b);
 
 // Length of vector
-double		vec2_length(t_vec2 v);
+double		ft_vec2_length(t_vec2 v);
 
 // Convert degrees to radians
-double		deg_to_rad(double degrees);
+double		ft_deg_to_rad(double degrees);
 
 // Convert radians to degrees
-double		rad_to_deg(double radians);
+double		ft_rad_to_deg(double radians);
 
 // Wrap angle
-double		wrap_angle(double angle);
+double		ft_wrap_angle(double angle);
+
+// Absolute value
+int64_t		ft_labs(int64_t v);
+
+// Absolute value
+int32_t		ft_abs(int32_t v);
+
+// Clamp value between min and max
+int64_t		ft_clamp(int64_t v, int64_t min, int64_t max);
+
+// Clamp value between min and max
+double		ft_clampd(double v, double min, double max);
 
 /*
 ** Time functions
@@ -635,17 +647,5 @@ int			ft_gettime(t_time *t);
 
 // Get time difference in sec
 double		ft_timediff(t_time t1, t_time t2);
-
-// Absolute value
-int64_t		ft_labs(int64_t v);
-
-// Absolute value
-int32_t		ft_abs(int32_t v);
-
-// Clamp value between min and max
-int64_t		ft_clamp(int64_t v, int64_t min, int64_t max);
-
-// Clamp value between min and max
-double		ft_clampd(double v, double min, double max);
 
 #endif

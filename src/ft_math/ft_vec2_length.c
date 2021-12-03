@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec2_normalize.c                                   :+:      :+:    :+:   */
+/*   ft_vec2_length.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 13:42:53 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/11/11 12:41:00 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/11/10 12:56:31 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/12/03 00:56:52 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <math.h>
 
-t_vec2	vec2_normalize(t_vec2 v)
+double	ft_vec2_length(t_vec2 v)
 {
-	double	len;
-
-	len = vec2_length(v);
-	if (len == 0.0)
-		return ((t_vec2){0.0, 0.0});
-	v.x = v.x / len;
-	v.y = v.y / len;
-	return (v);
+	return (sqrt(v.x * v.x + v.y * v.y));
 }
