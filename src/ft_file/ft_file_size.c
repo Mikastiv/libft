@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 20:45:52 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/12/03 00:41:06 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/03 01:08:41 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # define BUFFER_SIZE (1024)
 #endif
 
-ssize_t	file_size(const char *file)
+ssize_t	ft_file_size(const char *file)
 {
 	char	buffer[BUFFER_SIZE];
 	ssize_t	bytes;

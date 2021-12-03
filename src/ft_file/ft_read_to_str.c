@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_to_str.c                                      :+:      :+:    :+:   */
+/*   ft_read_to_str.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 18:25:38 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/01 01:00:17 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/03 01:08:51 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*cleanup_and_exit(int fd, t_string str)
 	return (NULL);
 }
 
-char	*read_to_str(const char *file)
+char	*ft_read_to_str(const char *file)
 {
 	char		buffer[BUFFER_SIZE + 1];
 	int			fd;

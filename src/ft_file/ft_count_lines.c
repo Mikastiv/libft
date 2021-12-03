@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 15:05:29 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/12/03 01:06:50 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/03 01:08:37 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static ssize_t	count_newlines(const char *str)
 	return (count);
 }
 
-ssize_t	count_lines(const char *file)
+ssize_t	ft_count_lines(const char *file)
 {
 	char	buf[BUFFER_SIZE + 1];
 	ssize_t	bytes;
