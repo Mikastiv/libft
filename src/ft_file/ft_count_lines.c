@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_lines.c                                      :+:      :+:    :+:   */
+/*   ft_count_lines.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 15:05:29 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/01 02:03:52 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/03 01:06:50 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ ssize_t	count_lines(const char *file)
 	fd = open(file, O_RDONLY);
 	if (fd == -1)
 		return (-1);
-	count = 0;
+	count = 1;
 	bytes = BUFFER_SIZE;
 	while (bytes == BUFFER_SIZE)
 	{
