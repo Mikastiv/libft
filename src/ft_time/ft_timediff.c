@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 12:01:05 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/12/04 21:35:18 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/06 14:15:11 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ double	ft_timediff(t_time t1, t_time t2)
 	double	diff;
 
 	diff = (double)(t2.tp.tv_sec - t1.tp.tv_sec);
-	diff += (double)(t2.tp.tv_usec - t1.tp.tv_usec) * 0.000001;
+	diff += (double)(t2.tp.tv_usec - t1.tp.tv_usec);
+	diff *= 0.000001;
 	return (diff);
 }
