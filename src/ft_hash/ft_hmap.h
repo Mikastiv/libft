@@ -6,14 +6,14 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 11:06:32 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/28 19:37:42 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/09 17:26:58 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_HMAP_H
 # define FT_HMAP_H
 
-# include "../libft.h"
+# include "libft.h"
 
 typedef struct s_hmap_
 {

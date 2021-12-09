@@ -1,10 +1,9 @@
 OBJ			=	obj
 SRC			=	src
-INC			=	include
 NAME		=	libft.a
 CC			=	clang
 AR			=	ar rcs
-CFLAGS		=	-Wall -Werror -Wextra -Wpedantic -Wfloat-conversion -Wsign-conversion -c -I. -I$(INC)
+CFLAGS		=	-Wall -Werror -Wextra -Wpedantic -Wfloat-conversion -Wsign-conversion -c -I.
 RM			=	rm -rf
 NM			=	norminette
 
@@ -67,7 +66,7 @@ $(NAME):		$(OBJ) $(OBJS)
 $(OBJ):
 				@mkdir -p $(OBJ)
 
-norme:
+norm:
 				@$(NM) | grep Error
 
 debug:			CFLAGS += -g
@@ -83,4 +82,4 @@ fclean:			clean
 
 re:				fclean all
 
-.PHONY:		all clean fclean re norme debug
+.PHONY:		all clean fclean re norm debug
