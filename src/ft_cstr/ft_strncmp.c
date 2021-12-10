@@ -6,13 +6,13 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 11:47:58 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/06 01:16:26 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/10 16:23:59 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int32_t	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	while (n-- > 0)
 	{
