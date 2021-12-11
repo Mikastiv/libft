@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:39:54 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/12/03 00:57:31 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/10 23:46:27 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,17 @@
 ** Memory functions
 */
 
+// Allocate memory
+// RETURN: ptr to memory block or exit program if failed
+void		*ft_xmalloc(size_t size);
+
 // Allocate memory and initialize to 0
-// RETURN: ptr to memory block of NULL if failed
+// RETURN: ptr to memory block or NULL if failed
 void		*ft_calloc(size_t count, size_t size);
+
+// Allocate memory and initialize to 0
+// RETURN: ptr to memory block or exit program if failed
+void		*ft_xcalloc(size_t count, size_t size);
 
 // Change size of memory block ptr to size
 // RETURN: ptr to memory block or NULL if failed or size == 0

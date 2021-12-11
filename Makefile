@@ -19,8 +19,8 @@ LIST_SRC	=	ft_lstadd_back.c ft_lstadd_front.c ft_lstany.c ft_lstclear.c\
 DLIST_SRC	=	ft_dlstadd_back.c ft_dlstadd_front.c ft_dlstclear.c	ft_dlstdelone.c\
 				ft_dlstlast.c ft_dlstnew.c ft_dlstfirst.c ft_dlstsize.c ft_dlstnext.c\
 				ft_dlstprev.c
-MEM_SRC		=	ft_bzero.c ft_calloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c\
-				ft_memcpy.c ft_memmove.c ft_memset.c ft_realloc.c
+MEM_SRC		=	ft_bzero.c ft_calloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c\
+				ft_memmove.c ft_memset.c ft_realloc.c ft_xcalloc.c ft_xmalloc.c
 PUT_SRC		=	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_base_fd.c ft_putnbr_fd.c\
 				ft_putstr_fd.c ft_putwchar_fd.c ft_putwstr_fd.c ft_putunbr_base_fd.c
 CSTR_SRC	=	ft_strarr_dup.c ft_strarr_free.c ft_split.c ft_strany.c ft_strcount_if.c ft_striter.c\
