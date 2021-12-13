@@ -6,11 +6,12 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 14:01:24 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/10/01 19:13:00 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/13 15:08:29 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	**ft_strarr_dup(char *const *arr)
 {
@@ -18,7 +19,7 @@ char	**ft_strarr_dup(char *const *arr)
 	char	**dup;
 
 	i = ft_strarr_size(arr);
-	dup = ft_calloc(i + 1, sizeof(char *));
+	dup = malloc((i + 1) * sizeof(char *));
 	if (!dup)
 		return (NULL);
 	i = 0;
@@ -32,5 +33,6 @@ char	**ft_strarr_dup(char *const *arr)
 		}
 		++i;
 	}
+	dup[i] = NULL;
 	return (dup);
 }
