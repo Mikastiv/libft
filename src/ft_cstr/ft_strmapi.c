@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 19:33:10 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/12/13 15:12:40 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/12/13 22:48:17 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char	*ft_strmapi(const char *s, char (*f)(uint32_t, char))
 		ret[i] = f(i, s[i]);
 		++i;
 	}
-	ret[i] = NULL;
+	ret[i] = '\0';
 	return (ret);
 }
