@@ -66,9 +66,6 @@ $(NAME):		$(OBJ) $(OBJS)
 $(OBJ):
 				@mkdir -p $(OBJ)
 
-norm:
-				@$(NM) | grep Error
-
 debug:			CFLAGS += -g
 debug:			$(NAME)
 
