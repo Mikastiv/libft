@@ -5,7 +5,6 @@ CC			=	clang
 AR			=	ar rcs
 CFLAGS		=	-Wall -Werror -Wextra -Wpedantic -Wfloat-conversion -Wsign-conversion -c -I.
 RM			=	rm -rf
-NM			=	norminette
 
 CHAR_SRC	=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c\
 				ft_isprint.c ft_isspace.c ft_isupper.c ft_tolower.c ft_toupper.c\
@@ -45,6 +44,7 @@ TIME_SRC	=	ft_gettime.c ft_timediff.c
 SRCS		=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(DLIST_SRC)\
 				$(MEM_SRC) $(PUT_SRC) $(CSTR_SRC) $(BTREE_SRC) $(STR_SRC)\
 				$(HASH_SRC) $(MATH_SRC) $(TIME_SRC)
+
 OBJS		=	$(SRCS:%=$(OBJ)/%.o)
 
 VPATH		=	$(SRC)/ft_btree $(SRC)/ft_char $(SRC)/ft_convert $(SRC)/ft_cstr\
@@ -79,4 +79,4 @@ fclean:			clean
 
 re:				fclean all
 
-.PHONY:		all clean fclean re norm debug
+.PHONY:		all clean fclean re debug
