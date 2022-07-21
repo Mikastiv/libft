@@ -15,5 +15,5 @@ Contains:
 - Math functions
 - Memory functions
 - Output functions (to file descriptors)
-- C++ style string implementation and functions
+- Dynamic string implementation and functions
 - Time functions
