@@ -28,7 +28,6 @@ CSTR_SRC	=	ft_strarr_dup.c ft_strarr_free.c ft_split.c ft_strany.c ft_strcount_i
 				ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_wchar_size.c ft_strcmp.c\
 				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c ft_strarr_size.c ft_strarr_remove.c\
 				ft_strarr_sort.c ft_strarr_last.c
-BTREE_SRC	=	ft_btreeclear.c ft_btreedelone.c ft_btreenew.c
 STR_SRC		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.c ft_str_clear.c\
 				ft_str_copy.c ft_str_copy_cstr.c ft_str_data.c ft_str_dup.c ft_str_dup_cstr.c ft_str_free.c\
 				ft_str_len.c ft_str_new.c ft_str_sub.c ft_str_sub_cstr.c ft_str_trim.c ft_str_trim_cstr.c\
@@ -42,15 +41,14 @@ MATH_SRC	=	ft_vec2_add.c ft_vec2_sub.c ft_vec2_mul.c ft_deg_to_rad.c ft_rad_to_d
 TIME_SRC	=	ft_gettime.c ft_timediff.c
 
 SRCS		=	$(CHAR_SRC) $(CONV_SRC) $(FILE_SRC) $(LIST_SRC) $(DLIST_SRC)\
-				$(MEM_SRC) $(PUT_SRC) $(CSTR_SRC) $(BTREE_SRC) $(STR_SRC)\
-				$(HASH_SRC) $(MATH_SRC) $(TIME_SRC)
+				$(MEM_SRC) $(PUT_SRC) $(CSTR_SRC) $(STR_SRC) $(HASH_SRC)\
+				$(MATH_SRC) $(TIME_SRC)
 
 OBJS		=	$(SRCS:%=$(OBJ)/%.o)
 
-VPATH		=	$(SRC)/ft_btree $(SRC)/ft_char $(SRC)/ft_convert $(SRC)/ft_cstr\
-				$(SRC)/ft_dlist $(SRC)/ft_file $(SRC)/ft_hash $(SRC)/ft_list\
-				$(SRC)/ft_math $(SRC)/ft_memory $(SRC)/ft_put $(SRC)/ft_string\
-				$(SRC)/ft_time
+VPATH		=	$(SRC)/ft_char $(SRC)/ft_convert $(SRC)/ft_cstr $(SRC)/ft_dlist\
+				$(SRC)/ft_file $(SRC)/ft_hash $(SRC)/ft_list $(SRC)/ft_math\
+				$(SRC)/ft_memory $(SRC)/ft_put $(SRC)/ft_string $(SRC)/ft_time
 
 $(OBJ)/%.c.o:	%.c
 				@$(CC) $(CFLAGS) $< -o $@
