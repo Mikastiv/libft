@@ -1,9 +1,9 @@
 # libft
+
 My personal C library used for 42 school projects
 
 Contains:
 
-- Binary tree functions
 - Character test functions
 - Conversion functions (c-strings to number and numbers to c-strings)
 - C-string functions

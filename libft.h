@@ -260,8 +260,9 @@ char		*ft_strarr_last(char **arr);
 // Size of NUL-terminated array of string
 size_t		ft_strarr_size(char *const *arr);
 
-// Replace string at index with new from NUL-terminated array. Free old string
-void		ft_strarr_replace(char **arr, char *new, size_t index);
+// Replace string at index with newstr from NUL-terminated array. Frees old
+// string
+void		ft_strarr_replace(char **arr, char *newstr, size_t index);
 
 // Remove string at index from NUL-terminated array
 void		ft_strarr_remove(char **arr, size_t index);
@@ -344,10 +345,10 @@ t_list		*ft_lstnext(t_list **lst);
 void		*ft_lstpop_front(t_list **lst);
 
 // Add node to front of list
-void		ft_lstadd_front(t_list **lst, t_list *new);
+void		ft_lstadd_front(t_list **lst, t_list *node);
 
 // Add node to back of list
-void		ft_lstadd_back(t_list **lst, t_list *new);
+void		ft_lstadd_back(t_list **lst, t_list *node);
 
 // Delete node using del
 void		ft_lstdelone(t_list *lst, void (*del)(void *));
@@ -401,10 +402,10 @@ t_dlist		*ft_dlstnext(t_dlist **lst);
 t_dlist		*ft_dlstprev(t_dlist **lst);
 
 // Add node to front of list
-void		ft_dlstadd_front(t_dlist **lst, t_dlist *new);
+void		ft_dlstadd_front(t_dlist **lst, t_dlist *node);
 
 // Add node to back of list
-void		ft_dlstadd_back(t_dlist **lst, t_dlist *new);
+void		ft_dlstadd_back(t_dlist **lst, t_dlist *node);
 
 // Delete node using del
 void		ft_dlstdelone(t_dlist *lst, void (*del)(void *));
@@ -414,27 +415,6 @@ void		ft_dlstclear(t_dlist **lst, void (*del)(void *));
 
 // Size of the list
 size_t		ft_dlstsize(t_dlist *lst);
-
-/*
-** Binary tree functions
-*/
-
-typedef struct s_btree
-{
-	void			*content;
-	struct s_btree	*left;
-	struct s_btree	*right;
-}	t_btree;
-
-// Create new btree node
-// RETURN: new node or NULL if error occured
-t_btree		*ft_btreenew(void *content);
-
-// Delete node using del
-void		ft_btreedelone(t_btree *tree, void (*del)(void *));
-
-// Delete every node in tree using del
-void		ft_btreeclear(t_btree **tree, void (*del)(void *));
 
 /*
 ** File functions
