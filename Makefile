@@ -28,10 +28,8 @@ CSTR_SRC	=	ft_strarr_dup.c ft_strarr_free.c ft_split.c ft_strany.c ft_strcount_i
 				ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_wchar_size.c ft_strcmp.c\
 				ft_wstr_size.c ft_wstrlen.c ft_wstrnlen.c ft_strarr_size.c ft_strarr_remove.c\
 				ft_strarr_sort.c ft_strarr_last.c
-STR_SRC		=	ft_str_add_back.c ft_str_append_cstr.c ft_str_append.c ft_str_capacity.c ft_str_clear.c\
-				ft_str_copy.c ft_str_copy_cstr.c ft_str_data.c ft_str_dup.c ft_str_dup_cstr.c ft_str_free.c\
-				ft_str_len.c ft_str_new.c ft_str_sub.c ft_str_sub_cstr.c ft_str_trim.c ft_str_trim_cstr.c\
-				ft_str_take.c ft_str_new_copy.c ft_str_cmp.c ft_str_cmp_cstr.c
+STR_SRC		=	ft_str_push.c ft_str_append.c ft_str_clear.c ft_str_copy.c ft_str_dup.c ft_str_free.c\
+				ft_str_new.c ft_str_sub.c ft_str_trim.c ft_str_take.c
 HASH_SRC	=	ft_hash.c ft_hash_combine.c ft_hmap_new.c ft_hmap_free.c ft_hmap_insert.c\
 				ft_hmap_find.c ft_hmap_size.c get_hmap_buckets.c ft_hmap_remove.c delete_pair.c\
 				get_hmap_index.c create_pair.c ft_hmap_insert_del.c

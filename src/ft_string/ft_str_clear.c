@@ -11,14 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_string.h"
 
-t_string	ft_str_clear(t_string str)
+void	ft_str_clear(t_string *str)
 {
-	t_string_	*s;
-
-	s = (t_string_ *)str;
-	s->data[0] = '\0';
-	s->len = 0;
-	return (str);
+	str->data[0] = '\0';
+	str->len = 0;
 }

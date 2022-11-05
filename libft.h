@@ -441,85 +441,49 @@ ssize_t		ft_file_size(const char *file);
 */
 
 // String similar to cpp std::string
-typedef void			*t_string;
+typedef struct s_string
+{
+	char	*data;
+	size_t	cap;
+	size_t	len;
+}	t_string;
 
-// Create new string taking ownership of cstr. Value is empty if cstr is NULL
-// RETURN: string or NULL if error occured
-t_string	ft_str_new(char *cstr);
+// Create new string taking ownership of cstr. Also accepts NULL
+// RETURN: str
+t_string	*ft_str_new(t_string *str, char *cstr);
 
-// Create new string by copying cstr
-// RETURN: string or NULL if error occured
-t_string	ft_str_new_copy(const char *cstr);
+// Duplicate cstr into dst
+// RETURN: dst or NULL if error occured
+t_string	*ft_str_dup(t_string *dst, const char *cstr);
 
 // Append c to string to str, realloc if not enough space
-// RETURN: string or NULL if error occured
-t_string	ft_str_add_back(t_string str, char c);
+// RETURN: dst or NULL if error occured
+t_string	*ft_str_push(t_string *dst, char c);
 
 // Append src to dst, realloc if not enough space
 // RETURN: dst or NULL if error occured
-t_string	ft_str_append(t_string dst, const t_string src);
-
-// Append src to dst, realloc if not enough space
-// RETURN: dst or NULL if error occured
-t_string	ft_str_append_cstr(t_string dst, const char *src);
+t_string	*ft_str_append(t_string *dst, const char *src);
 
 // Copy src into dst
 // RETURN: dst or NULL if error occured
-t_string	ft_str_copy(t_string dst, const t_string src);
+t_string	*ft_str_copy(t_string *dst, const char *src);
 
-// Copy src into dst
-// RETURN: dst or NULL if error occured
-t_string	ft_str_copy_cstr(t_string dst, const char *src);
-
-// Duplicate str
-// RETURN: new string or NULL if error occured
-t_string	ft_str_dup(const t_string str);
-
-// Duplicate str
-// RETURN: new string or NULL if error occured
-t_string	ft_str_dup_cstr(const char *str);
-
-// Create substring of s from start of size len
+// Create substring of s from start of size len in dst
 // RETURN: new substring of s or NULL if error occured
-t_string	ft_str_sub(t_string str, size_t index, size_t len);
+t_string	*ft_str_sub(t_string *dst, const char *str, size_t index, size_t len);
 
-// Create substring of s from start of size len
-// RETURN: new substring of s or NULL if error occured
-t_string	ft_str_sub_cstr(const char *str, size_t index, size_t len);
-
-// Trim characters in set at beginning and end of str
+// Trim characters in set at beginning and end of str and put it in dst
 // RETURN: new trimmed string or NULL if error occured
-t_string	ft_str_trim(const t_string str, const char *set);
-
-// Trim characters in set at beginning and end of str
-// RETURN: new trimmed string or NULL if error occured
-t_string	ft_str_trim_cstr(const char *str, const char *set);
+t_string	*ft_str_trim(t_string *dst, const char *str, const char *set);
 
 // Set string to empty string
-t_string	ft_str_clear(t_string str);
-
-// Compare two strings, compare at most n characters
-// RETURN: 0 if equal otherwise the difference between char s1 and s2
-int32_t		ft_str_cmp(const t_string s1, const t_string s2, size_t n);
-
-// Compare a string and a cstring, compare at most n characters
-// RETURN: 0 if equal otherwise the difference between char s1 and s2
-int32_t		ft_str_cmp_cstr(const t_string s1, const char *s2, size_t n);
-
-// Length of string
-size_t		ft_str_len(t_string str);
-
-// Capacity of string
-size_t		ft_str_capacity(t_string str);
+void		ft_str_clear(t_string *str);
 
 // Free the string
-void		ft_str_free(t_string str);
+void		ft_str_free(t_string *str);
 
-// Ptr to raw cstring of string
-char		*ft_str_data(t_string str);
-
-// Return raw cstring and free string
-char		*ft_str_take(t_string str);
+// Return raw cstring and take ownership
+char		*ft_str_take(t_string *str);
 
 /*
 ** Hash functions

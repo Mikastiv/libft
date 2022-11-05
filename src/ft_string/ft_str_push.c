@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_append_cstr.c                               :+:      :+:    :+:   */
+/*   ft_str_add_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 19:46:12 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/09/26 18:57:14 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/23 16:01:22 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/10/08 13:54:26 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_string	ft_str_append_cstr(t_string dst, const char *src)
+
+t_string	*ft_str_push(t_string *dst, char c)
 {
-	while (*src)
-	{
-		if (!ft_str_add_back(dst, *src++))
-			return (NULL);
-	}
-	return (dst);
+	char	cstr[2];
+
+	cstr[0] = c;
+	cstr[1] = '\0';
+	return (ft_str_append(dst, cstr));
 }

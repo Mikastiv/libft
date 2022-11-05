@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_trim.c                                      :+:      :+:    :+:   */
+/*   ft_str_trim_cstr.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/25 01:35:17 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/25 02:18:01 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/08/25 02:14:09 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/08/25 02:17:17 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_string	ft_str_trim(const t_string str, const char *set)
+t_string	*ft_str_trim(t_string *dst, const char *str, const char *set)
 {
-	return (ft_str_trim_cstr(ft_str_data(str), set));
+	char	*trim;
+
+	trim = ft_strtrim(str, set);
+	if (!trim)
+		return (NULL);
+	return (ft_str_new(dst, trim));
 }

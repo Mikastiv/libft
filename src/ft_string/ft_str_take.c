@@ -11,16 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_string.h"
 
-char	*ft_str_take(t_string str)
+char	*ft_str_take(t_string *str)
 {
-	t_string_	*ptr;
 	char		*ret;
 
-	ptr = str;
-	ret = ptr->data;
-	ptr->data = NULL;
-	ft_str_free(ptr);
+	ret = str->data;
+	str->data = NULL;
+	ft_str_free(str);
 	return (ret);
 }

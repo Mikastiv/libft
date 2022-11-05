@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_dup.c                                       :+:      :+:    :+:   */
+/*   ft_str_new_copy.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 14:11:55 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/08/25 02:05:34 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/09/15 11:53:57 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/09/15 16:56:11 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-t_string	ft_str_dup(const t_string str)
+t_string	*ft_str_dup(t_string *dst, const char *cstr)
 {
-	return (ft_str_dup_cstr(ft_str_data(str)));
+	char	*copy;
+
+	copy = ft_strdup(cstr);
+	if (!copy)
+		return (false);
+	ft_str_free(dst);
+	dst->data = copy;
+	dst->len = ft_strlen(copy);
+	dst->cap = dst->len + 1;
+	return (dst);
 }

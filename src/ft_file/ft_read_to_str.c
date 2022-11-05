@@ -17,7 +17,7 @@
 # define BUFFER_SIZE (1024)
 #endif
 
-char	*cleanup_and_exit(int fd, t_string str)
+static char	*cleanup_and_exit(int fd, t_string *str)
 {
 	close(fd);
 	ft_str_free(str);
@@ -34,19 +34,17 @@ char	*ft_read_to_str(const char *file)
 	fd = open(file, O_RDONLY);
 	if (fd == -1)
 		return (NULL);
-	content = ft_str_new(NULL);
-	if (!content)
-		cleanup_and_exit(fd, content);
+	ft_str_new(&content, NULL);
 	bytes = BUFFER_SIZE;
 	while (bytes == BUFFER_SIZE)
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes == -1)
-			cleanup_and_exit(fd, content);
+			cleanup_and_exit(fd, &content);
 		buffer[bytes] = '\0';
-		if (!ft_str_append_cstr(content, buffer))
-			cleanup_and_exit(fd, content);
+		if (!ft_str_append(&content, buffer))
+			cleanup_and_exit(fd, &content);
 	}
 	close(fd);
-	return (ft_str_take(content));
+	return (ft_str_take(&content));
 }
