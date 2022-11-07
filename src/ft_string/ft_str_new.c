@@ -19,7 +19,7 @@ t_string	*ft_str_new(t_string *dst, char *cstr)
 	if (cstr)
 		dst->len = ft_strlen(cstr);
 	else
-		str->len = 0;
-	dst->cap = str->len + 1;
+		dst->len = 0;
+	dst->cap = dst->len + 1;
 	return (dst);
 }
