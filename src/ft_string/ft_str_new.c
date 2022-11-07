@@ -13,13 +13,13 @@
 #include "libft.h"
 #include <stdlib.h>
 
-t_string	*ft_str_new(t_string *str, char *cstr)
+t_string	*ft_str_new(t_string *dst, char *cstr)
 {
-	str->data = cstr;
+	dst->data = cstr;
 	if (cstr)
-		str->len = ft_strlen(cstr);
+		dst->len = ft_strlen(cstr);
 	else
 		str->len = 0;
-	str->cap = str->len + 1;
-	return (str);
+	dst->cap = str->len + 1;
+	return (dst);
 }

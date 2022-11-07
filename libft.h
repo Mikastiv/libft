@@ -449,8 +449,8 @@ typedef struct s_string
 }	t_string;
 
 // Create new string taking ownership of cstr. Also accepts NULL
-// RETURN: str
-t_string	*ft_str_new(t_string *str, char *cstr);
+// RETURN: dst
+t_string	*ft_str_new(t_string *dst, char *cstr);
 
 // Duplicate cstr into dst
 // RETURN: dst or NULL if error occured
